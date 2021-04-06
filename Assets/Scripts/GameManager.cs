@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameManager : MonoBehaviour
+{
+    public GameObject character1;
+    public GameObject enemy1;
+
+    private GameObject char1;
+    private GameObject ene1;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void SpawnPlayer()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if(sceneName == "Tutorial")
+        {
+            char1 = Instantiate(character1, new Vector3(0, 2 , -45), Quaternion.identity);
+        }
+        if(sceneName == "TownHub")
+        {
+            char1 = Instantiate(character1, new Vector3(10, 2, 10), Quaternion.identity);
+        }
+        if (sceneName == "Hostile Area 1")
+        {
+            char1 = Instantiate(character1, new Vector3(10, 2, 10), Quaternion.identity);
+        }
+    }
+    
+    public void SpawnEnemy()
+    {
+        ene1 = Instantiate(enemy1, new Vector3(15, 2, 15), Quaternion.identity);
+    }
+}
