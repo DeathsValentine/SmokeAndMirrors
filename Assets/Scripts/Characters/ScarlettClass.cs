@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ScarlettClass : BaseCharacter
 {
-    public void ScarlettClass()
+    public void Scarlett()
     {
         CharacterName="Scarlett";
 
@@ -12,7 +12,5 @@ public class ScarlettClass : BaseCharacter
         Strength=7;
         Intelligence=3;
         Dexterity=7;
-
-        Level=1;
     }
 }

@@ -1,24 +1,21 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseCharacter
+public class BasePlayer
 {
-    private string characterName;
-
-    //stats
+    private string playerName;
+    private int playerLevel;
+    private BaseCharacter playerClass;
     private int endurance;
     private int strength;
     private int intelligence;
     private int dexterity;
-    
-    public int baseHealth=100;
-    public int baseMana=100;
-    public int baseManaRegen=5;
-
 
     //getter and setter methods
-    public string CharacterName {get;set;}
+    public string PlayerName {get;set;}
+    public int PlayerLevel {get;set;}
+    public BaseCharacter PlayerClass {get;set;}
     public int Endurance {get;set;}
     public int Strength {get;set;}
     public int Intelligence {get;set;}

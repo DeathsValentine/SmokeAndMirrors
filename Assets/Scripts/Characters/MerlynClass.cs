@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MerlynClass : BaseCharacter
 {
-    public void MerlynClass()
+    public void Merlyn()
     {
         CharacterName="Merlyn";
 
@@ -12,7 +12,5 @@ public class MerlynClass : BaseCharacter
         Strength=3;
         Intelligence=7;
         Dexterity=5;
-
-        Level=1;
     }
 }
