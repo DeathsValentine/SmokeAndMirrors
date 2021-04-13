@@ -15,10 +15,7 @@ public class CameraView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-
-        }
+        
         this.transform.position = GameObject.FindWithTag("Player").transform.position + camPos;
     }
 }

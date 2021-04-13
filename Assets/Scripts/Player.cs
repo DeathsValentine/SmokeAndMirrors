@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    Animator animator;
     public Rigidbody rb;
     //public GameObject goldObj;
     public GameObject target;
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     {
         /*        target=GameObject.FindWithTag("Player");*/
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
     
     // Update is called once per frame
@@ -64,10 +66,11 @@ public class Player : MonoBehaviour
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
 
         //rotate the player object towards mouse
-        transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
+        transform.rotation = Quaternion.Euler(new Vector3(0f, angle + 180, 0f));
 
         //Shoot me pls
         /*ShootingUpdate();*/
+        Animation();
     }
     
 
@@ -80,8 +83,7 @@ public class Player : MonoBehaviour
     {
         Vector3 Movement = new Vector3(x ,0, z);
         transform.position += Movement * speed * Time.deltaTime;
-        /*Debug.Log(x + " " + z);
-        Debug.Log(this.transform.position);*/
+        //Debug.Log(x + " " + z);
     }
 
     public void rotate(float angle)
@@ -97,5 +99,49 @@ public class Player : MonoBehaviour
             WeaponScript.gun.Shoot();
         }
     }*/
-    
+
+    void Animation()
+    {
+        bool isRunning = animator.GetBool("isRunning");
+        bool isWalking = animator.GetBool("isWalking");
+        bool isBackwards = animator.GetBool("isBackwards");
+        bool movePressed = Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("d");
+        bool walkPressed = Input.GetKey("left shift");
+        bool jumpPressed = Input.GetKey("space");
+        bool inAir = animator.GetBool("inAir");
+        bool backwardsPressed = Input.GetKey("s");
+
+        if (!isRunning && movePressed) // run state on w key
+        {
+            animator.SetBool("isRunning", true);
+        }
+        if (isRunning && !movePressed) // return to idle if no w key from run state
+        {
+            animator.SetBool("isRunning", false);
+        }
+        if (!isWalking && (movePressed && walkPressed)) // walk state when running on w + left shift
+        {
+            animator.SetBool("isWalking", true);
+        }
+        if (isWalking && (!movePressed || !walkPressed)) // return to idle if no w key from walk state
+        {
+            animator.SetBool("isWalking", false);
+        }
+        if (jumpPressed && !inAir) // jump if inAir is false
+        {
+            animator.SetBool("inAir", true);
+        }
+        if (!jumpPressed && inAir) // jump if inAir is true
+        {
+            animator.SetBool("inAir", false);
+        }
+        if (!isBackwards && backwardsPressed) // run state on s key
+        {
+            animator.SetBool("isBackwards", true);
+        }
+        if (isBackwards && !backwardsPressed) // 
+        {
+            animator.SetBool("isBackwards", false);
+        }
+    }
 }

@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         string sceneName = currentScene.name;
         if(sceneName == "Tutorial")
         {
-            char1 = Instantiate(character1, new Vector3(0, 2 , -45), Quaternion.identity);
+            char1 = Instantiate(character1, new Vector3(0, 1, -45), Quaternion.identity);
         }
         if(sceneName == "TownHub")
         {

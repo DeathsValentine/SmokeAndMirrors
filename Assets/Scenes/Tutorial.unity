@@ -3848,7 +3848,7 @@ GameObject:
   - component: {fileID: 561026103}
   - component: {fileID: 561026102}
   - component: {fileID: 561026101}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9017,6 +9017,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f9e7f1053b38c41b83321d0efbe230, type: 3}
+--- !u!1 &1450287871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 124316, guid: 32f9e7f1053b38c41b83321d0efbe230,
+    type: 3}
+  m_PrefabInstance: {fileID: 1450287870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1450287872
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450287871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!1 &1450287873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 143082, guid: 32f9e7f1053b38c41b83321d0efbe230,
+    type: 3}
+  m_PrefabInstance: {fileID: 1450287870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1450287874
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450287873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 53352d3589f6e18448a302d1f975ce50, type: 3}
 --- !u!1001 &1456140494
 PrefabInstance:
   m_ObjectHideFlags: 0
