@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 433b65b3216ee45dca323305e5090ae5
+=======
+guid: 52c4a49d5d467f245ae3d3838dc00af3
+>>>>>>> origin/Characters-and-Skills
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 15600000
