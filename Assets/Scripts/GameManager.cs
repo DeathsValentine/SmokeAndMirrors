@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         }
         if(sceneName == "TownHub")
         {
-            char1 = Instantiate(character1, new Vector3(10, 2, 10), Quaternion.identity);
+            char1 = Instantiate(character1, new Vector3(485, 2, 475), Quaternion.identity);
         }
         if (sceneName == "Hostile Area 1")
         {
