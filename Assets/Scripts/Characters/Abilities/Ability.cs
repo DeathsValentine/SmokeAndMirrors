@@ -22,6 +22,15 @@ public class Ability
         this.requiresTarget = false;
     }
 
+    public Ability(ObjectInformation info,float cd)
+    {
+        this.info = info;
+        this.behaviors = new List<AbilityBehaviors>();
+        this.cooldown = cd;
+        this.manaCost = 0f;
+        this.requiresTarget = false;
+    }
+
     public Ability(ObjectInformation info, List<AbilityBehaviors> behaviors)
     {
         this.info = info;
@@ -32,7 +41,7 @@ public class Ability
         requiresTarget = false;
     }
 
-    public Ability(ObjectInformation info, List<AbilityBehaviors> behaviors, bool requiresTarget,float manaCost, float cd, GameObject particle)
+    public Ability(ObjectInformation info, List<AbilityBehaviors> behaviors, bool requiresTarget, float manaCost, float cd, GameObject particle)
     {
         this.info = info;
         this.behaviors = new List<AbilityBehaviors>();
