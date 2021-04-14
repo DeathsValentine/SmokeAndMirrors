@@ -13,15 +13,15 @@ public class DamageOverTime : AbilityBehaviors
     private Stopwatch timer = new Stopwatch();
     private float duration;
     private const float baseDamage = 50;
-    private float multiplier;
+    //for when we calculate damage system
+    /*private float multiplier;*/
     private bool isHitting;
     private float timeBetweenTicks;
 
     //base() calls the parent class constructor
-    public DamageOverTime(float radius, float duration,float multiplier) : base(new ObjectInformation(name, description), times)
+    public DamageOverTime(float duration) : base(new ObjectInformation(name, description), times)
     {
         this.duration = duration;
-        this.multiplier = multiplier;
         isHitting = false;
         timeBetweenTicks = 1f;
     }
@@ -38,7 +38,9 @@ public class DamageOverTime : AbilityBehaviors
         //checks duration of skill against total time elapsed
         while (timer.Elapsed.TotalSeconds <= duration)
         {
-            //deal damage
+            //deal damagehere
+
+            //comes back after a set amount of time
             yield return new WaitForSeconds(timeBetweenTicks);
         }
 

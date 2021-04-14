@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MerlynClass : BaseCharacter
 {
+    
     public void Merlyn()
     {
         CharacterName="Merlyn";
@@ -13,4 +14,5 @@ public class MerlynClass : BaseCharacter
         Intelligence=7;
         Dexterity=5;
     }
+
 }
