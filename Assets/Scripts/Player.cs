@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
 
         move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         /*this.transform.position += Movement * speed * Time.deltaTime;*/
-        rotate(angle);
+        /*rotate(angle);*/
         /*ShootingUpdate();*/
 
     }

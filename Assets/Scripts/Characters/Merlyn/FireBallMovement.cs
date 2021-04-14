@@ -16,6 +16,7 @@ public class FireBallMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         firingPoint = transform.position;
     }
 
@@ -28,9 +29,10 @@ public class FireBallMovement : MonoBehaviour
     void Move()
     {
         transform.Translate(Vector3.forward * projectileSpeed * Time.deltaTime);
+        Debug.Log("fireball at position " + transform.position);
     }
 
-    void OnCollisionEnter(GameObject other)
+    void OnCollisionEnter(Collision other)
     {
         /*ContactPoint contact = other.contacts[0];
         Vector3 collidePoint = contact.point;
