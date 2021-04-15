@@ -17,7 +17,7 @@ public class MerlynAction : MonoBehaviour
     {
         /*        target=GameObject.FindWithTag("Player");*/
         rb = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         
     }
 
@@ -45,7 +45,7 @@ public class MerlynAction : MonoBehaviour
 
         move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         /*this.transform.position += Movement * speed * Time.deltaTime;*/
-        rotate(angle);
+        /*rotate(angle);*/
         /*ShootingUpdate();*/
 
     }
@@ -55,7 +55,6 @@ public class MerlynAction : MonoBehaviour
     //character rotation towards mouse 
     void Update()
     {
-
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -66,7 +65,7 @@ public class MerlynAction : MonoBehaviour
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
 
         //rotate the player object towards mouse
-        transform.rotation = Quaternion.Euler(new Vector3(0f, angle + 180, 0f));
+        transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
 
         //Shoot me pls
         /*ShootingUpdate();*/
@@ -90,7 +89,7 @@ public class MerlynAction : MonoBehaviour
 
     public void rotate(float angle)
     {
-        transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
+        transform.rotation = Quaternion.Euler(new Vector3(0f, angle,0f));
     }
 
     /*void ShootingUpdate()
