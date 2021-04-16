@@ -23,13 +23,15 @@ public class ShootFireBall : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Shoot()
+    public bool Shoot()
     {
         if (lastShot + 1f <= Time.time)
         {
             Debug.Log("Fireball shot");
             lastShot = Time.time;
             Instantiate(fireballPrefab, shootPoint.position, shootPoint.rotation);
+            return true;
         }
+        return false;
     }
 }

@@ -103,17 +103,13 @@ public class MerlynAction : MonoBehaviour
 
     void FireballShoot()
     {
-        bool fireball = animator.GetBool("fireballSkill");
         if (Input.GetKey("e"))
         {
-            if(fireball)
+            bool shoots = ShootFireBall.dummy.Shoot();
+            if(shoots)
             {
-                ShootFireBall.dummy.Shoot();
                 animator.SetBool("fireballSkill", true);
-            }
-            else
-            {
-                animator.SetBool("fireballSkill", false);
+                Invoke("SetFireBallFalse", 0.5f);
             }
             
         }
@@ -164,5 +160,9 @@ public class MerlynAction : MonoBehaviour
         }*/
     }
 
+    void SetFireBallFalse()
+    {
+        animator.SetBool("fireballSkill", false);
+    }
 
 }
