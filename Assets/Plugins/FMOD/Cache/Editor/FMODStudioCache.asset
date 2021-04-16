@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX_Footsteps
   guid: d32958d580a3d34d9cee7f75d9a523ab
-  Banks:
-  - {fileID: 7368740777013109502}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -38,11 +37,11 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637541076409131280
+  lastModified: 637541223144863709
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 802
+    Value: 864
   Exists: 1
 --- !u!114 &-1000698184599284127
 MonoBehaviour:
@@ -58,8 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music_Hub
   guid: 69a7fa497ebd334d9fe67868c2a18cca
-  Banks:
-  - {fileID: 7368740777013109502}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -83,15 +81,107 @@ MonoBehaviour:
   - {fileID: -4261154732591705782}
   - {fileID: 7368740777013109502}
   EditorEvents:
-  - {fileID: -1000698184599284127}
-  - {fileID: -7922352387518999992}
+  - {fileID: 5005894158234348321}
+  - {fileID: 501593334533969675}
+  - {fileID: 2990366285734467956}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7368740777013109502}
   StringsBanks:
   - {fileID: -4261154732591705782}
-  stringsBankWriteTime: 637541076409131280
+  stringsBankWriteTime: 637541223144863709
   cacheVersion: 6
+--- !u!114 &501593334533969675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_IceAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_IceAttack
+  guid: 89aaec909158fc4ebff0e9edb7ba9a3c
+  Banks:
+  - {fileID: 7368740777013109502}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1280
+--- !u!114 &2990366285734467956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_Footsteps
+  guid: d32958d580a3d34d9cee7f75d9a523ab
+  Banks:
+  - {fileID: 7368740777013109502}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 206
+--- !u!114 &3640961819491643814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_IceAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_IceAttack
+  guid: 89aaec909158fc4ebff0e9edb7ba9a3c
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1280
+--- !u!114 &5005894158234348321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Hub
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Hub
+  guid: 69a7fa497ebd334d9fe67868c2a18cca
+  Banks:
+  - {fileID: 7368740777013109502}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 96778
 --- !u!114 &7368740777013109502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +197,7 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637541076409131280
+  lastModified: 637541223144853706
   LoadResult: 0
   FileSizes: []
   Exists: 1

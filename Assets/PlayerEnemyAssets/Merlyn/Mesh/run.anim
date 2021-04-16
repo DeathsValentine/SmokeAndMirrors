@@ -90047,15 +90047,15 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.3
-    functionName: PlayOneShot
-    data: 
+    functionName: PlaySound
+    data: event:/SFX/SFX_Footsteps
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.73333335
-    functionName: PlayOneShot
-    data: 
+    functionName: PlaySound
+    data: event:/SFX/SFX_Footsteps
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
