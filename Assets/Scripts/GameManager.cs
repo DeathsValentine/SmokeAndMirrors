@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject character1;
+    public GameObject merlyn;
+    public GameObject scarlett;
     public GameObject enemy1;
 
     private GameObject char1;
@@ -30,15 +31,42 @@ public class GameManager : MonoBehaviour
         string sceneName = currentScene.name;
         if(sceneName == "Tutorial")
         {
-            char1 = Instantiate(character1, new Vector3(0, 1, -45), Quaternion.identity);
+            //char1 = Instantiate(merlyn, new Vector3(0, 1, -45), Quaternion.identity);
+            if(PlayerPrefs.GetString("Character")=="Merlyn")
+            {
+                char1 = Instantiate(merlyn, new Vector3(0, 1, -45), Quaternion.identity);
+            }
+            if(PlayerPrefs.GetString("Character")=="Scarlett"
+            ){
+                char1 = Instantiate(scarlett, new Vector3(0, 1, -45), Quaternion.identity);
+            }
+            
         }
         if(sceneName == "TownHub")
         {
-            char1 = Instantiate(character1, new Vector3(485, 2, 475), Quaternion.identity);
+            //char1 = Instantiate(merlyn, new Vector3(485, 2, 475), Quaternion.identity);
+
+            if(PlayerPrefs.GetString("Character")=="Merlyn")
+            {
+                char1 = Instantiate(merlyn, new Vector3(485, 2, 475), Quaternion.identity);
+            }
+
+            if(PlayerPrefs.GetString("Character")=="Scarlett")
+            {
+                char1 = Instantiate(scarlett, new Vector3(485, 2, 475), Quaternion.identity);
+            }
         }
         if (sceneName == "Hostile Area 1")
         {
-            char1 = Instantiate(character1, new Vector3(10, 2, 10), Quaternion.identity);
+            //char1 = Instantiate(meryln, new Vector3(10, 2, 10), Quaternion.identity);
+
+            if(PlayerPrefs.GetString("Character")=="Merlyn")
+            {
+                char1 = Instantiate(merlyn, new Vector3(10, 2, 10), Quaternion.identity);
+            }
+            if(PlayerPrefs.GetString("Character")=="Scarlett"){
+                char1 = Instantiate(scarlett, new Vector3(10, 2, 10), Quaternion.identity);
+            }
         }
     }
     

@@ -7,23 +7,28 @@ public class MainMenu : MonoBehaviour
 {
     private GameObject LoginMenuPanel;
 	private GameObject RegisterMenuPanel;
+    private GameObject CharacterCreatePanel;
 
     // Start is called before the first frame update
     void Start()
     {
         LoginMenuPanel = GameObject.Find("Login Menu");
 		RegisterMenuPanel = GameObject.Find("Register Menu");
+        CharacterCreatePanel = GameObject.Find("CharacterCreation");
 
         LoginMenuPanel.SetActive(true);
         RegisterMenuPanel.SetActive(false);
+        CharacterCreatePanel.SetActive(false);
     }
 
     #region LoginMenu
     //upon clicking filling data and login button click
     public void OnLoginClick()
     {
-        SceneManager.LoadScene("Tutorial");
-        Debug.Log("Scene Loaded");
+        //SceneManager.LoadScene("Tutorial");
+        //Debug.Log("Scene Loaded");
+        LoginMenuPanel.SetActive(false);
+        CharacterCreatePanel.SetActive(true);
     }
     //upon clicking register button on login menu
     public void OnLoginRegisterClick()
@@ -47,6 +52,29 @@ public class MainMenu : MonoBehaviour
         RegisterMenuPanel.SetActive(false);
     }
     #endregion
+
+
+    #region CharacterCreation
+ 
+    public void SelectMerlyn()
+    {
+        //temporary until database is setup
+        PlayerPrefs.SetString("Character", "Merlyn");
+    }
+
+    public void SelectScarlett()
+    {
+        //temporary until database is setup
+        PlayerPrefs.SetString("Character", "Scarlett");
+    }
+    public void OnSelectClick()
+    {
+        SceneManager.LoadScene("Tutorial");
+        Debug.Log("Scene Loaded");
+    }
+
+    #endregion
+
 
     //Exit Game from Main Menu
     public void OnQuitClick()
