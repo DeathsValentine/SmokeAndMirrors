@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7949453425844682810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Hub
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Hub
+  guid: 69a7fa497ebd334d9fe67868c2a18cca
+  Banks:
+  - {fileID: -3801071982345021650}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 96778
 --- !u!114 &-7922352387518999992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,6 +66,25 @@ MonoBehaviour:
   - Name: 
     Value: 864
   Exists: 1
+--- !u!114 &-3801071982345021650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637541395820000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-1000698184599284127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +107,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 96778
+--- !u!114 &-497979228097130459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_IceAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_IceAttack
+  guid: 89aaec909158fc4ebff0e9edb7ba9a3c
+  Banks:
+  - {fileID: -3801071982345021650}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1280
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,18 +143,18 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -4261154732591705782}
-  - {fileID: 7368740777013109502}
+  - {fileID: 7565138899078726228}
+  - {fileID: -3801071982345021650}
   EditorEvents:
-  - {fileID: 5005894158234348321}
-  - {fileID: 501593334533969675}
-  - {fileID: 2990366285734467956}
+  - {fileID: -7949453425844682810}
+  - {fileID: -497979228097130459}
+  - {fileID: 528609405895178356}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 7368740777013109502}
+  - {fileID: -3801071982345021650}
   StringsBanks:
-  - {fileID: -4261154732591705782}
-  stringsBankWriteTime: 637541798244445632
+  - {fileID: 7565138899078726228}
+  stringsBankWriteTime: 637541395820000000
   cacheVersion: 6
 --- !u!114 &501593334533969675
 MonoBehaviour:
@@ -114,6 +179,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1280
+--- !u!114 &528609405895178356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_Footsteps
+  guid: d32958d580a3d34d9cee7f75d9a523ab
+  Banks:
+  - {fileID: -3801071982345021650}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 206
 --- !u!114 &2990366285734467956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,4 +288,25 @@ MonoBehaviour:
   lastModified: 637541798244435662
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &7565138899078726228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637541395820000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 864
   Exists: 1

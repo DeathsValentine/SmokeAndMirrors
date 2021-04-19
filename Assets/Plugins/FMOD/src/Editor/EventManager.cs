@@ -16,6 +16,7 @@ namespace FMODUnity
     [InitializeOnLoad]
     public class EventManager : MonoBehaviour
     {
+
         const string CacheAssetName = "FMODStudioCache";
         const string CacheAssetFullName = "Assets/Plugins/FMOD/Cache/Editor/" + CacheAssetName + ".asset";
         static EventCache eventCache;

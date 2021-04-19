@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using PlayFab;
+using PlayFab.ClientModels;
+using UnityEngine.UI;
+using System;
 
 public class MainMenu : MonoBehaviour
 {
     private GameObject LoginMenuPanel;
 	private GameObject RegisterMenuPanel;
     private GameObject CharacterCreatePanel;
+    //public InputField test;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +21,6 @@ public class MainMenu : MonoBehaviour
         LoginMenuPanel = GameObject.Find("Login Menu");
 		RegisterMenuPanel = GameObject.Find("Register Menu");
         CharacterCreatePanel = GameObject.Find("CharacterCreation");
-
         LoginMenuPanel.SetActive(true);
         RegisterMenuPanel.SetActive(false);
         CharacterCreatePanel.SetActive(false);
@@ -27,14 +32,29 @@ public class MainMenu : MonoBehaviour
     {
         //SceneManager.LoadScene("Tutorial");
         //Debug.Log("Scene Loaded");
-        LoginMenuPanel.SetActive(false);
-        CharacterCreatePanel.SetActive(true);
+        InputField[] inputs = LoginMenuPanel.GetComponentsInChildren<InputField>();
+  
+        var request = new LoginWithPlayFabRequest
+        {
+            Username = inputs[0].text,
+            Password = inputs[1].text,
+        };
+        PlayFabClientAPI.LoginWithPlayFab(request, onLoginSuccess, onError);
     }
+
     //upon clicking register button on login menu
     public void OnLoginRegisterClick()
     {
         LoginMenuPanel.SetActive(false);
         RegisterMenuPanel.SetActive(true);
+    }
+
+    //Returns prints out that Login was successfull on the console log
+    void onLoginSuccess(LoginResult result)
+    {
+        Debug.Log("Successful login");
+        LoginMenuPanel.SetActive(false);
+        CharacterCreatePanel.SetActive(true);
     }
     #endregion
 
@@ -42,9 +62,39 @@ public class MainMenu : MonoBehaviour
     //after filling out data and sending to database
     public void OnRegisterClick()
     {
-        LoginMenuPanel.SetActive(true);
-        RegisterMenuPanel.SetActive(false);
+        InputField[] inputs = RegisterMenuPanel.GetComponentsInChildren<InputField>();
+        var usernameInput = inputs[0];
+        var passwordInput = inputs[1];
+        var passwordInput2 = inputs[2];
+
+        
+        if (passwordInput.text.Length < 6)
+        {
+            Debug.Log("Password too short");
+        }
+        else if (passwordInput.Equals(passwordInput2))
+        {
+            Debug.Log("Passwords dont match");
+        }
+        else
+        {
+            var request = new RegisterPlayFabUserRequest
+            {
+                Username = usernameInput.text,
+                Password = passwordInput.text,
+                RequireBothUsernameAndEmail = false
+            };
+            PlayFabClientAPI.RegisterPlayFabUser(request, onRegisterSuccess, onError);
+        }
     }
+
+    private void onRegisterSuccess(RegisterPlayFabUserResult result)
+    {
+        Debug.Log("Registered and Logged in!");
+        RegisterMenuPanel.SetActive(false);
+        CharacterCreatePanel.SetActive(true);
+    }
+
     //clicking cancel button
     public void OnCancelClick()
     {
@@ -53,6 +103,11 @@ public class MainMenu : MonoBehaviour
     }
     #endregion
 
+
+    void onError(PlayFabError error)
+    {
+        Debug.Log(error.GenerateErrorReport());
+    }
 
     #region CharacterCreation
  
