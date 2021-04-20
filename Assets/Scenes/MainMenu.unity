@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1666,7 +1666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   merlyn: {fileID: 1701528270322337917, guid: 314f6844c4346824b892d73f306183a4, type: 3}
-  scarlett: {fileID: 1701528270322337917, guid: 314f6844c4346824b892d73f306183a4,
+  scarlett: {fileID: 5768863159136648919, guid: 72718835029055142a781c900345548b,
     type: 3}
   enemy1: {fileID: 5330077463963143751, guid: 42b18849531069747ac0b2d4f96f9a8b, type: 3}
 --- !u!4 &787498823
@@ -3322,7 +3322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 279ee6cc624de5e419a46754cdcce36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: {fileID: 0}
 --- !u!114 &1956582859
 MonoBehaviour:
   m_ObjectHideFlags: 0
