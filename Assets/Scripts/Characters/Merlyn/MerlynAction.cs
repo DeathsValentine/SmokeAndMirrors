@@ -103,7 +103,7 @@ public class MerlynAction : MonoBehaviour
 
     void FireballShoot()
     {
-        if (Input.GetKey("e"))
+        if (Input.GetKey("q"))
         {
             bool shoots = ShootFireBall.dummy.Shoot();
             if(shoots)
@@ -142,7 +142,7 @@ public class MerlynAction : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-        if (jumpPressed && !inAir) // jump if inAir is false
+        /*if (jumpPressed && !inAir) // jump if inAir is false
         {
             animator.SetBool("inAir", true);
         }
@@ -150,7 +150,7 @@ public class MerlynAction : MonoBehaviour
         {
             animator.SetBool("inAir", false);
         }
-        /*if (!isBackwards && backwardsPressed) // run state on s key
+        if (!isBackwards && backwardsPressed) // run state on s key
         {
             animator.SetBool("isBackwards", true);
         }

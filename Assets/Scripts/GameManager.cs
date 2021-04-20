@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         if(sceneName == "TownHub")
         {
             //char1 = Instantiate(merlyn, new Vector3(485, 2, 475), Quaternion.identity);
-
+            Destroy (char1);
             if(PlayerPrefs.GetString("Character")=="Merlyn")
             {
                 char1 = Instantiate(merlyn, new Vector3(485, 2, 475), Quaternion.identity);
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         if (sceneName == "Hostile Area 1")
         {
             //char1 = Instantiate(meryln, new Vector3(10, 2, 10), Quaternion.identity);
-
+            Destroy (char1);
             if(PlayerPrefs.GetString("Character")=="Merlyn")
             {
                 char1 = Instantiate(merlyn, new Vector3(10, 2, 10), Quaternion.identity);

@@ -1,19 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
     private GameObject bottomBar;
     private GameObject menuPanel;
 
+    public Button ability1;
+    public Button ability2;
+    public Button ability3;
+
+    public Sprite fireball;
+    public Sprite freeze;
+    public Sprite teleport;
+
     void Start()
     {
+        Time.timeScale = 1;
         bottomBar = GameObject.Find("BottomBar");
         menuPanel = GameObject.Find("MenuPanel");
 
         bottomBar.SetActive(true);
         menuPanel.SetActive(false);
+        
+        if(PlayerPrefs.GetString("Character")=="Merlyn")
+        {
+            ability1.image.sprite=fireball;
+            ability2.image.sprite=freeze;
+            ability3.image.sprite=teleport;
+        }
     }
 
     void Update()
@@ -26,9 +43,10 @@ public class HUD : MonoBehaviour
         }
     }
 
+
     public void OnMenuCall()
     {
-        //Debug.Log("Menu Pressed");
+        Debug.Log("Menu Pressed");
         menuPanel.SetActive(!menuPanel.activeSelf);
     }
 
