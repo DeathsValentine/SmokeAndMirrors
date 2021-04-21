@@ -37,7 +37,7 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637541715620204925
+  lastModified: 637541730229390499
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -89,7 +89,7 @@ MonoBehaviour:
   - {fileID: 7368740777013109502}
   StringsBanks:
   - {fileID: -4261154732591705782}
-  stringsBankWriteTime: 637541715620204925
+  stringsBankWriteTime: 637541730229390499
   cacheVersion: 6
 --- !u!114 &501593334533969675
 MonoBehaviour:
@@ -197,7 +197,7 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637541715619935022
+  lastModified: 637541730229380499
   LoadResult: 0
   FileSizes: []
   Exists: 1
