@@ -19,7 +19,10 @@ public class ToTownHub : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Town Hub Scene starts");
-        if (other.gameObject.tag == "Player") SceneManager.LoadScene("TownHub");
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Town Hub Scene starts");
+            SceneManager.LoadScene("TownHub");
+        }
     }
 }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/PlayerEnemyAssets/Material/Materials.meta
 guid: 667d4f27e5df04240b2bb1e69af05e6a
+=======
+guid: 457618198726acf41895bff3237f76f3
+>>>>>>> 2abed0aa174796386a7cf5b5610245b0f7bbffaf:Assets/HUDassets/Skill Icons.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
