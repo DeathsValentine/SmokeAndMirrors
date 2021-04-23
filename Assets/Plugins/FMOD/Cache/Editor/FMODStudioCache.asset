@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6572812506611128498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Menu
+  guid: e075dced48c6154a86ab4aa2893c7e80
+  Banks:
+  - {fileID: 6272193603116621814}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 84579
 --- !u!114 &-5287576638160473732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,6 +46,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 206
+--- !u!114 &-5044544185212031925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI_MenuButton
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI_MenuButton
+  guid: 159125f8d3e0ed498bcd7fd9c2490b18
+  Banks:
+  - {fileID: 6272193603116621814}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1047
 --- !u!114 &-934253411091899576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,11 +84,11 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637541715620204925
+  lastModified: 637547753084690326
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 864
+    Value: 968
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -63,12 +109,14 @@ MonoBehaviour:
   - {fileID: 3835334778271812802}
   - {fileID: 849057714701322785}
   - {fileID: -5287576638160473732}
+  - {fileID: -5044544185212031925}
+  - {fileID: -6572812506611128498}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6272193603116621814}
   StringsBanks:
   - {fileID: -934253411091899576}
-  stringsBankWriteTime: 637541715620204925
+  stringsBankWriteTime: 637547753084690326
   cacheVersion: 6
 --- !u!114 &849057714701322785
 MonoBehaviour:
@@ -131,7 +179,7 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637541715619935022
+  lastModified: 637547753084690326
   LoadResult: 0
   FileSizes: []
   Exists: 1
