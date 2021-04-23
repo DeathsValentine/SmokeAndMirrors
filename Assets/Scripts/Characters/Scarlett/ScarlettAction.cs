@@ -127,7 +127,7 @@ public class ScarlettAction : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-        if (jumpPressed && !inAir) // jump if inAir is false
+        /*if (jumpPressed && !inAir) // jump if inAir is false
         {
             animator.SetBool("inAir", true);
         }
@@ -135,7 +135,7 @@ public class ScarlettAction : MonoBehaviour
         {
             animator.SetBool("inAir", false);
         }
-        /*if (!isBackwards && backwardsPressed) // run state on s key
+        if (!isBackwards && backwardsPressed) // run state on s key
         {
             animator.SetBool("isBackwards", true);
         }

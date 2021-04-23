@@ -20,4 +20,9 @@ public class ManaBar : MonoBehaviour
     {
         slider.value=mana;
     }
+
+    public int GetMana()
+    {
+        return (int) slider.value;
+    }
 }

@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ToTownHub : MonoBehaviour
 {
+    private GameObject confirmPanel;
     // Start is called before the first frame update
     void Start()
     {
-        
+        confirmPanel = GameObject.Find("ConfirmPanel");
+        confirmPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,8 +23,21 @@ public class ToTownHub : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            /*
             Debug.Log("Town Hub Scene starts");
             SceneManager.LoadScene("TownHub");
+            */
+            confirmPanel.SetActive(true);
         }
+    }
+
+    public void onConfirmYes()
+    {
+        Debug.Log("Town Hub Scene starts");
+        SceneManager.LoadScene("TownHub");
+    }
+    public void onConfirmNo()
+    {
+        confirmPanel.SetActive(false);
     }
 }
