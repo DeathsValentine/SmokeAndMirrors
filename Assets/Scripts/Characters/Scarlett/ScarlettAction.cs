@@ -12,6 +12,12 @@ public class ScarlettAction : MonoBehaviour
     /*public static int gold;
     public static int playerName;*/
 
+    private Inventory inventory;
+
+    private void Awake()
+    {
+        inventory = new Inventory();
+    }
     void Start()
     {
         /*        target=GameObject.FindWithTag("Player");*/

@@ -13,7 +13,12 @@ public class Player : MonoBehaviour
     public static int playerName;*/
 
     private GameObject fireBallPrefab;
+    private Inventory inventory;
 
+    private void Awake()
+    {
+        inventory = new Inventory();
+    }
 
     void Start()
     {
