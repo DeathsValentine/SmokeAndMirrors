@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/HUDassets/InventoryItems/Potions.meta
 guid: cbe0be7175ad04c92abc54fe032537e5
-=======
-guid: a8c557a350f659a4cb16f613262adf04
->>>>>>> BaseGame:Assets/Scripts/Dialogue.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
