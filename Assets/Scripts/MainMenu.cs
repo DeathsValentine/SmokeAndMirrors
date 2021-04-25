@@ -14,6 +14,11 @@ public class MainMenu : MonoBehaviour
     private GameObject CharacterCreatePanel;
     //public InputField test;
     
+    private GameObject loginError;
+    private GameObject registerError;
+
+    private Text loginText;
+    private Text registerText;
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +26,22 @@ public class MainMenu : MonoBehaviour
         LoginMenuPanel = GameObject.Find("Login Menu");
 		RegisterMenuPanel = GameObject.Find("Register Menu");
         CharacterCreatePanel = GameObject.Find("CharacterCreation");
+
+        //errors when login/regsiter
+        loginError=GameObject.Find("LoginError");
+        registerError=GameObject.Find("RegisterError");
+
+        loginText=loginError.GetComponent<Text>();
+        registerText=registerError.GetComponent<Text>();
+
         LoginMenuPanel.SetActive(true);
         RegisterMenuPanel.SetActive(false);
         CharacterCreatePanel.SetActive(false);
+
+        loginError.SetActive(false);
+        registerError.SetActive(false);
     }
+    
 
     #region LoginMenu
     //upon clicking filling data and login button click
@@ -40,6 +57,7 @@ public class MainMenu : MonoBehaviour
             Password = inputs[1].text,
         };
         PlayFabClientAPI.LoginWithPlayFab(request, onLoginSuccess, onError);
+        PlayerPrefs.SetString("Username",inputs[0].text);
     }
 
     //upon clicking register button on login menu
@@ -55,7 +73,9 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Successful login");
         LoginMenuPanel.SetActive(false);
         CharacterCreatePanel.SetActive(true);
+        loginError.SetActive(false);
     }
+
     #endregion
 
     #region RegisterMEnu
@@ -70,14 +90,19 @@ public class MainMenu : MonoBehaviour
         
         if (passwordInput.text.Length < 6)
         {
+            registerError.SetActive(true);
             Debug.Log("Password too short");
+            registerText.text="Password too Short (Must Be More Than 6 Characters/Numbers)";
         }
-        else if (passwordInput.Equals(passwordInput2))
+        else if (!passwordInput.Equals(passwordInput2))
         {
+            registerError.SetActive(true);
             Debug.Log("Passwords dont match");
+            registerText.text="Passwords Don't Match";
         }
         else
         {
+            registerError.SetActive(false);
             var request = new RegisterPlayFabUserRequest
             {
                 Username = usernameInput.text,
@@ -107,6 +132,11 @@ public class MainMenu : MonoBehaviour
     void onError(PlayFabError error)
     {
         Debug.Log(error.GenerateErrorReport());
+        if(LoginMenuPanel.activeSelf==true)
+        {
+            loginError.SetActive(true);
+            loginText.text="Invalid Username or Password";
+        }
     }
 
     #region CharacterCreation

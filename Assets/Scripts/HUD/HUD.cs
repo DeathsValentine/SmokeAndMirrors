@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
+    MainMenu menuScript;
     private GameObject bottomBar;
     private GameObject menuPanel;
+    private GameObject optionPanel;
+
+    public Text playerLevel;
 
     public Button ability1;
     public Button ability2;
@@ -16,20 +20,41 @@ public class HUD : MonoBehaviour
     public Sprite freeze;
     public Sprite teleport;
 
+    public Sprite dash;
+    public Sprite bladeDance;
+    public Sprite overwhelm;
+
+
     void Start()
     {
         Time.timeScale = 1;
         bottomBar = GameObject.Find("BottomBar");
         menuPanel = GameObject.Find("MenuPanel");
+        optionPanel = GameObject.Find("OptionPanel");
 
         bottomBar.SetActive(true);
         menuPanel.SetActive(false);
+        optionPanel.SetActive(false);
+
+        Text playerName = GameObject.Find("PlayerName").GetComponent<Text>();
+        Text playerClass = GameObject.Find("PlayerClass").GetComponent<Text>();
+        playerLevel = GameObject.Find("PlayerLevel").GetComponent<Text>();
+
+        playerName.text=PlayerPrefs.GetString("Username");//temp for better way
+        playerLevel.text= "10";//temp value
+        playerClass.text=PlayerPrefs.GetString("Character");
         
         if(PlayerPrefs.GetString("Character")=="Merlyn")
         {
             ability1.image.sprite=fireball;
             ability2.image.sprite=freeze;
             ability3.image.sprite=teleport;
+        }
+        if(PlayerPrefs.GetString("Character")=="Scarlett")
+        {
+            ability1.image.sprite=dash;
+            ability2.image.sprite=bladeDance;
+            ability3.image.sprite=overwhelm;
         }
     }
 
@@ -40,15 +65,22 @@ public class HUD : MonoBehaviour
         {
             //Debug.Log("Escape Pressed");
             menuPanel.SetActive(!menuPanel.activeSelf);
+            optionPanel.SetActive(false);
         }
     }
 
-
     public void OnMenuCall()
     {
-        Debug.Log("Menu Pressed");
+        //Debug.Log("Menu Pressed");
         menuPanel.SetActive(!menuPanel.activeSelf);
     }
+    public void OnOptionsCall()
+    {
+        //Debug.Log("Menu Pressed");
+        menuPanel.SetActive(!menuPanel.activeSelf);
+        optionPanel.SetActive(true);
+    }
+
 
 #region MenuPanel
     public void OnBackClick()
@@ -65,6 +97,14 @@ public class HUD : MonoBehaviour
 #else
 		Application.Quit();
 #endif
+    }
+#endregion
+
+#region OptionsPanel
+    public void onOptionBack()
+    {
+        menuPanel.SetActive(!menuPanel.activeSelf);
+        optionPanel.SetActive(false);
     }
 #endregion
 }
