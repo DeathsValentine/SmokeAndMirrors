@@ -34,11 +34,11 @@ public class GameManager : MonoBehaviour
             //char1 = Instantiate(merlyn, new Vector3(0, 1, -45), Quaternion.identity);
             if(PlayerPrefs.GetString("Character")=="Merlyn")
             {
-                char1 = Instantiate(merlyn, new Vector3(0, 1, -45), Quaternion.identity);
+                char1 = Instantiate(merlyn, new Vector3(0, 0.5f, -45), Quaternion.identity);
             }
             if(PlayerPrefs.GetString("Character")=="Scarlett"
             ){
-                char1 = Instantiate(scarlett, new Vector3(0, 1, -45), Quaternion.identity);
+                char1 = Instantiate(scarlett, new Vector3(0, 0.5f, -45), Quaternion.identity);
             }
             
         }
@@ -48,12 +48,12 @@ public class GameManager : MonoBehaviour
             Destroy (char1);
             if(PlayerPrefs.GetString("Character")=="Merlyn")
             {
-                char1 = Instantiate(merlyn, new Vector3(480, 2, 450), Quaternion.identity);
+                char1 = Instantiate(merlyn, new Vector3(480, 1, 450), Quaternion.identity);
             }
 
             if(PlayerPrefs.GetString("Character")=="Scarlett")
             {
-                char1 = Instantiate(scarlett, new Vector3(480, 2, 450), Quaternion.identity);
+                char1 = Instantiate(scarlett, new Vector3(480, 1, 450), Quaternion.identity);
             }
         }
         if (sceneName == "Hostile Area 1")

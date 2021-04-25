@@ -8,14 +8,12 @@ public class MerlynAction : MonoBehaviour
     Animator animator;
     public Rigidbody rb;
     //public GameObject goldObj;
-    public GameObject target;
     public int speed;
     /*public static int gold;
     public static int playerName;*/
 
     void Start()
     {
-        /*        target=GameObject.FindWithTag("Player");*/
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         
@@ -66,15 +64,11 @@ public class MerlynAction : MonoBehaviour
 
         //rotate the player object towards mouse
         transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
-
-        //Shoot me pls
-        /*ShootingUpdate();*/
         Freeze();
         Teleport();
-        FireballShoot();
+        Fireball();
         Animation();
     }
-
 
     //finding angle between two points
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
@@ -86,7 +80,6 @@ public class MerlynAction : MonoBehaviour
     {
         Vector3 Movement = new Vector3(x, 0, z);
         transform.position += Movement * speed * Time.deltaTime;
-        //Debug.Log(x + " " + z);
     }
 
     public void rotate(float angle)
@@ -94,16 +87,7 @@ public class MerlynAction : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0f, angle,0f));
     }
 
-    /*void ShootingUpdate()
-    {
-        //if left mouse button
-        if (Input.GetButton("Fire1"))
-        {
-            WeaponScript.gun.Shoot();
-        }
-    }*/
-
-    void FireballShoot()
+    void Fireball()
     {
         if (Input.GetKey("q"))
         {
@@ -111,7 +95,7 @@ public class MerlynAction : MonoBehaviour
             if(shoots)
             {
                 animator.SetBool("fireballSkill", true);
-                Invoke("SetFireBallFalse", 0.5f);
+                Invoke("SetAnimationFalse", 0.5f);
             }
         }
     }
@@ -123,8 +107,8 @@ public class MerlynAction : MonoBehaviour
             bool shoots = ShootFreeze.dummy.Shoot();
             if (shoots)
             {
-                animator.SetBool("iceAttack", true);
-                Invoke("SetFreezeFalse", 0.5f);
+                animator.SetBool("iceSkill", true);
+                Invoke("SetAnimationFalse", 0.5f);
             }
         }
     }
@@ -133,7 +117,7 @@ public class MerlynAction : MonoBehaviour
     {
         if (Input.GetKey("f"))
         {
-            UseTeleport.dummy.tele();
+            UseTeleport.dummy.Tele();
         }
     }
 
@@ -141,7 +125,6 @@ public class MerlynAction : MonoBehaviour
     {
         bool isRunning = animator.GetBool("isRunning");
         bool isWalking = animator.GetBool("isWalking");
-/*        bool isBackwards = animator.GetBool("isBackwards");*/
         bool movePressed = Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("d") || Input.GetKey("s");
         bool walkPressed = Input.GetKey("left shift");
         bool jumpPressed = Input.GetKey("space");
@@ -164,33 +147,12 @@ public class MerlynAction : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-        /*if (jumpPressed && !inAir) // jump if inAir is false
-        {
-            animator.SetBool("inAir", true);
-        }
-        if (!jumpPressed && inAir) // jump if inAir is true
-        {
-            animator.SetBool("inAir", false);
-        }
-        if (!isBackwards && backwardsPressed) // run state on s key
-        {
-            animator.SetBool("isBackwards", true);
-        }
-        if (isBackwards && !backwardsPressed) // 
-        {
-            animator.SetBool("isBackwards", false);
-        }*/
     }
 
-    void SetFireBallFalse()
+    void SetAnimationFalse()
     {
-        animator.SetBool("fireballSkill", false);
+        if (animator.GetBool("fireballSkill")) animator.SetBool("fireballSkill", false);
+        if (animator.GetBool("iceSkill")) animator.SetBool("iceSkill", false);
 
     }
-
-    void SetFreezeFalse()
-    {
-        animator.SetBool("iceAttack", false);
-    }
-
 }
