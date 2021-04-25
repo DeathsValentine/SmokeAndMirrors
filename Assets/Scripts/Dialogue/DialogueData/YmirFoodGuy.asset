@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Leif
+  m_Name: YmirFoodGuy
   m_EditorClassIdentifier: Assembly-CSharp::DialogData
   sentences:
-  - 'Leif: Welcome! Please, have a look around, everything was just made this morning!'
+  - 'Ymir: Welcome! Please, have a look around, everything was just made this morning!'
