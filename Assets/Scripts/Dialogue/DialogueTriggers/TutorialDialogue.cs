@@ -6,7 +6,7 @@ public class TutorialDialogue : MonoBehaviour
 {
     public DialogManager dialogManager;
     public DialogData dialogData;
-    public GameObject introTrigger;
+    public GameObject trigger;
 
     private int count = 0;
 
@@ -20,7 +20,7 @@ public class TutorialDialogue : MonoBehaviour
         }
         else
         {
-            introTrigger.SetActive(false);
+            trigger.SetActive(false);
         }
     }
 }
