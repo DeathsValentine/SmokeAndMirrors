@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: TutorialDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogData
+  sentences:
+  - 'Narrator: Combat happens in real time. Click on an enemy to begin attacking.'
+  - 'Scarlett: Now! Shield smash them Alexander!'
+  - 'Narrator: Each character has unique abilities mapped to the Q, E, and F keys.'
+  - 'Narrator: Each ability is different and has different strengths and weaknesses.'
+  - 'Narrator: But be careful! Each ability also has its own cooldown!'
+  - 'Mori: Ugh! I''ve been hit!'
+  - 'Mori: Will this be the day I get the sweet release of death?'
+  - 'Scarlett: Hey! Mori!'
+  - 'Scarlett: When you finish painting your nails black, why don''t you take a potion
+    and get back in here!'
+  - 'Narrator: Items are a great way to restore health and mana.'
+  - 'Narrator: They are mapped to the 1-4 keys.'
+  - 'Narrator: Health and mana potions are used to restore health and mana respectively.'
+  - 'Narrator: Food and drink can also be used to restore health and mana.'

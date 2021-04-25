@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: IntroDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogData
+  sentences:
+  - 'Narrator: Our story begins with four young adventurers seeking to make their
+    mark on the world.'
+  - 'Narrator: Their journey will lead them to the town of Novis Initiis.'
+  - 'Scarlett: It''s been quite a long journey and we haven''t seen a hint of conflict
+    in ages.'
+  - 'Scarlett: I hope you''re all keeping yourselves sharp. I''d hate to see one
+    of you lost to a slime.'
+  - 'Alexander: How could *I* lose to a slime my dear?'
+  - 'Mori: Life is pain and suffering.'
+  - 'Mori: The only sure thing about life is that we die.'
+  - 'Mori: Why do we keep running from the inevitable?'
+  - 'Scarlett: Oookay... moving on.'
+  - 'Alexander: !!! Look! Up ahead! Bandits!'
+  - 'Scarlett: Shut it you oaf, you''ll give away our position.'
+  - 'Merlyn: We should take this opportunity to practice.'
+  - 'Merlyn: After all, Scarlett is right. We should keep our skills honed.'
