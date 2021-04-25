@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TutorialDialogue : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour
 {
     public DialogManager dialogManager;
     public DialogData dialogData;
-    public GameObject trigger;
 
     private int count = 0;
 
@@ -17,10 +16,6 @@ public class TutorialDialogue : MonoBehaviour
             dialogManager.dialogData = dialogData;
             dialogManager.BeginDialog();
             count++;
-        }
-        else
-        {
-            trigger.SetActive(false);
         }
     }
 }
