@@ -69,6 +69,7 @@ public class MerlynAction : MonoBehaviour
 
         //Shoot me pls
         /*ShootingUpdate();*/
+        Teleport();
         FireballShoot();
         Animation();
     }
@@ -115,11 +116,19 @@ public class MerlynAction : MonoBehaviour
         }
     }
 
+    void Teleport()
+    {
+        if (Input.GetKey("f"))
+        {
+            UseTeleport.dummy.tele();
+        }
+    }
+
     void Animation()
     {
         bool isRunning = animator.GetBool("isRunning");
         bool isWalking = animator.GetBool("isWalking");
-        bool isBackwards = animator.GetBool("isBackwards");
+/*        bool isBackwards = animator.GetBool("isBackwards");*/
         bool movePressed = Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("d") || Input.GetKey("s");
         bool walkPressed = Input.GetKey("left shift");
         bool jumpPressed = Input.GetKey("space");
@@ -163,6 +172,7 @@ public class MerlynAction : MonoBehaviour
     void SetFireBallFalse()
     {
         animator.SetBool("fireballSkill", false);
+
     }
 
 }

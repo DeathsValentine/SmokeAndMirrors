@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 889456081278615161}
   - component: {fileID: 8755369369743870720}
   - component: {fileID: 3723675796155305953}
+  - component: {fileID: 4496226497075080754}
   m_Layer: 0
   m_Name: MerlynPrefab
   m_TagString: Player
@@ -79,6 +80,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 8085642703346500275}
   ListenerNumber: -1
+--- !u!114 &4496226497075080754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701528270322337917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e59872780f7a00248a4fceffc9f603d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportFX: {fileID: 5408105405378960393, guid: 84054482479d90b4f9538a6034e2661c,
+    type: 3}
 --- !u!114 &2121752018784873762
 MonoBehaviour:
   m_ObjectHideFlags: 0
