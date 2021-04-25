@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: KingFirstTime
+  m_EditorClassIdentifier: Assembly-CSharp::DialogData
+  sentences:
+  - 'Scarlett: Excuse me sir, are you the king?'
+  - 'King Ambrose: Ah yes, I am King Ambrose, and you must be the mercenaries Leif
+    told me about.'
+  - "Scarlett: We are adventurers, sir, but yes, we were told to speak to you about
+    a problem you\u2019ve been having."
+  - "King Ambrose: My apologies! Please, call me Ambrose. Yes we\u2019ve been looking
+    for capable fighters such as yourselves to help us."
+  - "King Ambrose: My apologies! Please, call me Ambrose. Yes we\u2019ve been looking
+    for capable fighters such as yourselves to help us."
+  - "King Ambrose: You see, we\u2019ve been having a sort of monster problem."
+  - "King Ambrose: It\u2019s become incredibly dangerous to wander too far beyond
+    our town as we are very likely to be attacked."
+  - 'King Ambrose: We need help in eradicating these monsters so we may once again
+    live peacefully.'
+  - 'Merlyn: It seems you may have a bandit problem as well. We encountered a group
+    of them in an abandoned town not far from here.'
+  - 'King Ambrose: Ah yes, them.'
+  - "King Ambrose: From the way you speak it sounds as if you\u2019ve dealt with
+    them already."
+  - 'Mori: We have.'
+  - "King Ambrose: Very good! I will make sure you\u2019re compensated for that as
+    well."
+  - 'King Ambrose: Did they, by chance, have any sort of letter or missive on them?
+    If so, may I see it?'
+  - 'Scarlett: They did.'
+  - Scarlett hands King Ambrose the letter.
+  - 'King Ambrose: Thank you! Have you looked at it?'
+  - 'Mori: We have not had the chance yet.'
+  - "King Ambrose: Oh, no matter, it\u2019s not important. Thank you for bringing
+    this to me."
+  - 'King Ambrose: Now, the first group of monsters is located in the forest directly
+    outside of the town.'
+  - 'King Ambrose: Just head to the town center, we have teleporters set up for easy
+    transportation.'
+  - 'King Ambrose: They are enchanted so the monsters can not use them.'
+  - 'Scarlett: Very well, thank you Ambrose.'
+  - "Scarlett: Do not worry, we\u2019ll be back soon with news of their demise. "
+  - 'King Ambrose: Ah you bring an old king much joy with your words!'
+  - 'King Ambrose: Oh, my apologies, I was so concentrated on serious matters that
+    I have not even gotten your names!'
+  - 'Scarlett: My name is Scarlett, the brainless brute is Alexander, the magic nerd
+    is Merlyn, and the guy who always looks like he wants to die is Mori.'
+  - "King Ambrose: Well! It\u2019s been a pleasure to make your acquaintance but
+    I must be taking my leave."
+  - 'King Ambrose: Feel free to rest and stock up in the town before you leave.'
+  - 'King Ambrose: Talk to Leif before you leave.'
+  - "King Ambrose: He\u2019s the man you spoke with when you arrived, I believe he
+    should have some stuff for you all before you depart."

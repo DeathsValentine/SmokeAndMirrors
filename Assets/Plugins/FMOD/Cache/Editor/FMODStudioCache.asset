@@ -1,6 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8020000569403170451
+--- !u!114 &-9001988583867781509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Hub
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Hub
+  guid: 69a7fa497ebd334d9fe67868c2a18cca
+  Banks:
+  - {fileID: -1896719869122902308}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 96778
+--- !u!114 &-8345172277816366887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15,7 +38,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_IceAttack
   guid: 89aaec909158fc4ebff0e9edb7ba9a3c
   Banks:
-  - {fileID: 3666661969736764348}
+  - {fileID: -1896719869122902308}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -23,7 +46,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1280
---- !u!114 &11400000
+--- !u!114 &-5872758662452490357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32,24 +55,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Footsteps
   m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 7768894387595333188}
-  - {fileID: 3666661969736764348}
-  EditorEvents:
-  - {fileID: 6922207537988631009}
-  - {fileID: -8020000569403170451}
-  - {fileID: 7294227621706501308}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 3666661969736764348}
-  StringsBanks:
-  - {fileID: 7768894387595333188}
-  stringsBankWriteTime: 637548906518760805
-  cacheVersion: 6
---- !u!114 &3666661969736764348
+  Path: event:/SFX/SFX_Footsteps
+  guid: d32958d580a3d34d9cee7f75d9a523ab
+  Banks:
+  - {fileID: -1896719869122902308}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 206
+--- !u!114 &-1896719869122902308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,7 +88,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &6922207537988631009
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,44 +97,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Music_Hub
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  Path: event:/Music/Music_Hub
-  guid: 69a7fa497ebd334d9fe67868c2a18cca
-  Banks:
-  - {fileID: 3666661969736764348}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 96778
---- !u!114 &7294227621706501308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/SFX_Footsteps
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/SFX_Footsteps
-  guid: d32958d580a3d34d9cee7f75d9a523ab
-  Banks:
-  - {fileID: 3666661969736764348}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 206
---- !u!114 &7768894387595333188
+  EditorBanks:
+  - {fileID: 5888671807763975705}
+  - {fileID: -1896719869122902308}
+  EditorEvents:
+  - {fileID: -9001988583867781509}
+  - {fileID: -8345172277816366887}
+  - {fileID: -5872758662452490357}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -1896719869122902308}
+  StringsBanks:
+  - {fileID: 5888671807763975705}
+  stringsBankWriteTime: 637548906518760805
+  cacheVersion: 6
+--- !u!114 &5888671807763975705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
