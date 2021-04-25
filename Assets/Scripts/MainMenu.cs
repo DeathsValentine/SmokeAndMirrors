@@ -40,6 +40,7 @@ public class MainMenu : MonoBehaviour
             Password = inputs[1].text,
         };
         PlayFabClientAPI.LoginWithPlayFab(request, onLoginSuccess, onError);
+        PlayerPrefs.SetString("Username",inputs[0].text);
     }
 
     //upon clicking register button on login menu
@@ -72,7 +73,7 @@ public class MainMenu : MonoBehaviour
         {
             Debug.Log("Password too short");
         }
-        else if (passwordInput.Equals(passwordInput2))
+        else if (!passwordInput.Equals(passwordInput2))
         {
             Debug.Log("Passwords dont match");
         }

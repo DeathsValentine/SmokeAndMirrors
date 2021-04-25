@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
+    MainMenu menuScript;
     private GameObject bottomBar;
     private GameObject menuPanel;
     private GameObject optionPanel;
@@ -39,7 +40,7 @@ public class HUD : MonoBehaviour
         Text playerClass = GameObject.Find("PlayerClass").GetComponent<Text>();
         playerLevel = GameObject.Find("PlayerLevel").GetComponent<Text>();
 
-        playerName.text="Player1";//temp value
+        playerName.text=PlayerPrefs.GetString("Username");//temp for better way
         playerLevel.text= "10";//temp value
         playerClass.text=PlayerPrefs.GetString("Character");
         
