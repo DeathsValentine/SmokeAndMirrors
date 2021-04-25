@@ -7408,7 +7408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1005041058
 Transform:
   m_ObjectHideFlags: 0
@@ -9910,7 +9910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 222369746}
   dialogData: {fileID: 11400000, guid: 89fcfc9e3039a71489c9e2e495372c9e, type: 2}
-  child: {fileID: 1005041057}
+  trigger: {fileID: 0}
 --- !u!1001 &1399514704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11192,7 +11192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 222369746}
   dialogData: {fileID: 0}
-  introTrigger: {fileID: 1584548508}
+  trigger: {fileID: 0}
 --- !u!65 &1584548511
 BoxCollider:
   m_ObjectHideFlags: 0
