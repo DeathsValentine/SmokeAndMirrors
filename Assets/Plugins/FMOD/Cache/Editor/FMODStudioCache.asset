@@ -1,32 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 8040060510440383008}
-  - {fileID: 4448054628872419330}
-  EditorEvents:
-  - {fileID: 4341842935455000596}
-  - {fileID: 194452188906146503}
-  - {fileID: 8927695343696705342}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 4448054628872419330}
-  StringsBanks:
-  - {fileID: 8040060510440383008}
-  stringsBankWriteTime: 637547799640000000
-  cacheVersion: 6
---- !u!114 &194452188906146503
+--- !u!114 &-8020000569403170451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +15,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_IceAttack
   guid: 89aaec909158fc4ebff0e9edb7ba9a3c
   Banks:
-  - {fileID: 4448054628872419330}
+  - {fileID: 3666661969736764348}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -49,7 +23,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1280
---- !u!114 &4341842935455000596
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,21 +32,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Music_Hub
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  Path: event:/Music/Music_Hub
-  guid: 69a7fa497ebd334d9fe67868c2a18cca
-  Banks:
-  - {fileID: 4448054628872419330}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 96778
---- !u!114 &4448054628872419330
+  EditorBanks:
+  - {fileID: 7768894387595333188}
+  - {fileID: 3666661969736764348}
+  EditorEvents:
+  - {fileID: 6922207537988631009}
+  - {fileID: -8020000569403170451}
+  - {fileID: 7294227621706501308}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 3666661969736764348}
+  StringsBanks:
+  - {fileID: 7768894387595333188}
+  stringsBankWriteTime: 637548031888624516
+  cacheVersion: 6
+--- !u!114 &3666661969736764348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,11 +64,11 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637547799640000000
+  lastModified: 637548031888614540
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &5641828827140976602
+--- !u!114 &6922207537988631009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,62 +78,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/UI_MenuButton
+  m_Name: event:/Music/Music_Hub
   m_EditorClassIdentifier: 
-  Path: event:/SFX/UI_MenuButton
-  guid: 159125f8d3e0ed498bcd7fd9c2490b18
-  Banks: []
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1047
---- !u!114 &5696699485750265839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Music_Menu
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Music_Menu
-  guid: e075dced48c6154a86ab4aa2893c7e80
-  Banks: []
+  Path: event:/Music/Music_Hub
+  guid: 69a7fa497ebd334d9fe67868c2a18cca
+  Banks:
+  - {fileID: 3666661969736764348}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 84579
---- !u!114 &8040060510440383008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637547799640000000
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 864
-  Exists: 1
---- !u!114 &8927695343696705342
+  Length: 96778
+--- !u!114 &7294227621706501308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,7 +106,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Footsteps
   guid: d32958d580a3d34d9cee7f75d9a523ab
   Banks:
-  - {fileID: 4448054628872419330}
+  - {fileID: 3666661969736764348}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -179,3 +114,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 206
+--- !u!114 &7768894387595333188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637548031888624516
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 864
+  Exists: 1
