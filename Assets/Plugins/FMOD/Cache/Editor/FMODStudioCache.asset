@@ -1,29 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8799017889040385670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/SFX_Footsteps
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/SFX_Footsteps
-  guid: d32958d580a3d34d9cee7f75d9a523ab
-  Banks:
-  - {fileID: 6352369133697598379}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 206
---- !u!114 &-95652130839682209
+--- !u!114 &-9120147936776971718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,12 +15,80 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637548024104200526
+<<<<<<< HEAD
+  lastModified: 637548032102061408
+=======
+  lastModified: 637548052377507930
+>>>>>>> d8aaf9fcdcfcc959681bcd5d5fd9077105680aa1
   LoadResult: 0
   FileSizes:
   - Name: 
     Value: 864
   Exists: 1
+--- !u!114 &-3370397683115996862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_IceAttack
+  m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  EditorBanks:
+  - {fileID: -95652130839682209}
+  - {fileID: 6352369133697598379}
+  EditorEvents:
+  - {fileID: 4674415044689253084}
+  - {fileID: 4398243773299208969}
+  - {fileID: -8799017889040385670}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 6352369133697598379}
+  StringsBanks:
+  - {fileID: -95652130839682209}
+  stringsBankWriteTime: 637548032102061408
+  cacheVersion: 6
+--- !u!114 &4398243773299208969
+=======
+  Path: event:/SFX/SFX_IceAttack
+  guid: 89aaec909158fc4ebff0e9edb7ba9a3c
+  Banks:
+  - {fileID: 7566728620276778364}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1280
+--- !u!114 &-2919872153610322524
+>>>>>>> d8aaf9fcdcfcc959681bcd5d5fd9077105680aa1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_Footsteps
+  guid: d32958d580a3d34d9cee7f75d9a523ab
+  Banks:
+  - {fileID: 7566728620276778364}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 206
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,43 +102,20 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -95652130839682209}
-  - {fileID: 6352369133697598379}
+  - {fileID: -9120147936776971718}
+  - {fileID: 7566728620276778364}
   EditorEvents:
-  - {fileID: 4674415044689253084}
-  - {fileID: 4398243773299208969}
-  - {fileID: -8799017889040385670}
+  - {fileID: 850174864710888460}
+  - {fileID: -3370397683115996862}
+  - {fileID: -2919872153610322524}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 6352369133697598379}
+  - {fileID: 7566728620276778364}
   StringsBanks:
-  - {fileID: -95652130839682209}
-  stringsBankWriteTime: 637548024104200526
+  - {fileID: -9120147936776971718}
+  stringsBankWriteTime: 637548052377507930
   cacheVersion: 6
---- !u!114 &4398243773299208969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/SFX_IceAttack
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/SFX_IceAttack
-  guid: 89aaec909158fc4ebff0e9edb7ba9a3c
-  Banks:
-  - {fileID: 6352369133697598379}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1280
---- !u!114 &4674415044689253084
+--- !u!114 &850174864710888460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +130,7 @@ MonoBehaviour:
   Path: event:/Music/Music_Hub
   guid: 69a7fa497ebd334d9fe67868c2a18cca
   Banks:
-  - {fileID: 6352369133697598379}
+  - {fileID: 7566728620276778364}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -116,7 +138,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 96778
---- !u!114 &6352369133697598379
+--- !u!114 &7566728620276778364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +153,11 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637548024104170759
+<<<<<<< HEAD
+  lastModified: 637548032102041493
+=======
+  lastModified: 637548052377507930
+>>>>>>> d8aaf9fcdcfcc959681bcd5d5fd9077105680aa1
   LoadResult: 0
   FileSizes: []
   Exists: 1

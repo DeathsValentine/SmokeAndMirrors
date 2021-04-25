@@ -27,7 +27,6 @@ public class ShootFireBall : MonoBehaviour
     {
         if (lastShot + 1f <= Time.time)
         {
-            Debug.Log("Fireball shot");
             lastShot = Time.time;
             Instantiate(fireballPrefab, shootPoint.position, shootPoint.rotation);
             return true;
