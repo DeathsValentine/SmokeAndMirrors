@@ -69,6 +69,7 @@ public class MerlynAction : MonoBehaviour
 
         //Shoot me pls
         /*ShootingUpdate();*/
+        Freeze();
         Teleport();
         FireballShoot();
         Animation();
@@ -112,7 +113,19 @@ public class MerlynAction : MonoBehaviour
                 animator.SetBool("fireballSkill", true);
                 Invoke("SetFireBallFalse", 0.5f);
             }
-            
+        }
+    }
+
+    void Freeze()
+    {
+        if (Input.GetKey("e"))
+        {
+            bool shoots = ShootFreeze.dummy.Shoot();
+            if (shoots)
+            {
+                animator.SetBool("iceAttack", true);
+                Invoke("SetFreezeFalse", 0.5f);
+            }
         }
     }
 
@@ -173,6 +186,11 @@ public class MerlynAction : MonoBehaviour
     {
         animator.SetBool("fireballSkill", false);
 
+    }
+
+    void SetFreezeFalse()
+    {
+        animator.SetBool("iceAttack", false);
     }
 
 }

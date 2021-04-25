@@ -1668,7 +1668,7 @@ MonoBehaviour:
   merlyn: {fileID: 1701528270322337917, guid: 314f6844c4346824b892d73f306183a4, type: 3}
   scarlett: {fileID: 5768863159136648919, guid: 72718835029055142a781c900345548b,
     type: 3}
-  enemy1: {fileID: 5330077463963143751, guid: 42b18849531069747ac0b2d4f96f9a8b, type: 3}
+  enemy1: {fileID: 177940, guid: 0bff5de0452ee2b4ab4d0603fe171d7b, type: 3}
 --- !u!4 &787498823
 Transform:
   m_ObjectHideFlags: 0

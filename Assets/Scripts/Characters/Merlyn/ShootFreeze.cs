@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootFireBall : MonoBehaviour
+public class ShootFreeze : MonoBehaviour
 {
     [SerializeField]
     Transform shootPoint;
 
     [SerializeField]
-    GameObject fireballPrefab;
+    GameObject freezePrefab;
 
     private float lastShot = 0f;
-    private FireBall fireball;
-    public static ShootFireBall dummy;
+    private Freeze freeze;
+    public static ShootFreeze dummy;
 
 
     // Start is called before the first frame update
     void Awake()
     {
-        dummy = GetComponent<ShootFireBall>();
-        fireball = new FireBall();
+        dummy = GetComponent<ShootFreeze>();
+        freeze = new Freeze();
     }
 
     // Update is called once per frame
@@ -27,8 +27,10 @@ public class ShootFireBall : MonoBehaviour
     {
         if (lastShot + 1f <= Time.time)
         {
+            Debug.Log("Freeze Attack!");
             lastShot = Time.time;
-            Instantiate(fireballPrefab, shootPoint.position, shootPoint.rotation);
+            GameObject particles = Instantiate(freezePrefab, shootPoint.position, shootPoint.rotation);
+            Destroy(particles, 2f);
             return true;
         }
         return false;
