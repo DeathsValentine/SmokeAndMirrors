@@ -7,10 +7,13 @@ public class CreateNewCharacter : MonoBehaviour
     private BasePlayer newPlayer;
     private bool isScarlett;
     private bool isMerlyn;
+
+    public static bool selected;
     // Start is called before the first frame update
     void Start()
     {
         newPlayer= new BasePlayer();
+        selected=false;
     }
 
     // Update is called once per frame
@@ -28,6 +31,8 @@ public class CreateNewCharacter : MonoBehaviour
         newPlayer.Intelligence=newPlayer.PlayerClass.Intelligence;
         newPlayer.Dexterity=newPlayer.PlayerClass.Dexterity;
 
+        selected=true;
+
         //temporary till database is setup
         PlayerPrefs.SetString("Character", "Scarlett");
         PlayerPrefs.SetInt("Level", newPlayer.PlayerLevel);
@@ -44,6 +49,8 @@ public class CreateNewCharacter : MonoBehaviour
         newPlayer.Strength=newPlayer.PlayerClass.Strength;
         newPlayer.Intelligence=newPlayer.PlayerClass.Intelligence;
         newPlayer.Dexterity=newPlayer.PlayerClass.Dexterity;
+
+        selected=true;
 
         //temporary till database is setup
         PlayerPrefs.SetString("Character", "Merlyn");
