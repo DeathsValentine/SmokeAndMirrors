@@ -103,7 +103,7 @@ public class MainMenu : MonoBehaviour
             Debug.Log("Password too short");
             registerText.text="Password too Short (Must Be More Than 6 Characters/Numbers)";
         }
-        else if (!passwordInput.Equals(passwordInput2))
+        else if (!passwordInput.text.Equals(passwordInput2.text))
         {
             registerError.SetActive(true);
             Debug.Log("Passwords dont match");
@@ -147,9 +147,9 @@ public class MainMenu : MonoBehaviour
             loginText.text="Invalid Username or Password";
         }
     }
-    
+
     #region CharacterCreation
-    /*
+ 
     public void SelectMerlyn()
     {
         //temporary until database is setup
@@ -161,7 +161,6 @@ public class MainMenu : MonoBehaviour
         //temporary until database is setup
         PlayerPrefs.SetString("Character", "Scarlett");
     }
-    */
     public void OnSelectClick()
     {
         SceneManager.LoadScene("Tutorial");
@@ -169,7 +168,6 @@ public class MainMenu : MonoBehaviour
     }
 
     #endregion
- 
 
 
     //Exit Game from Main Menu
