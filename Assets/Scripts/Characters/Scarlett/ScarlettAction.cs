@@ -10,13 +10,16 @@ public class ScarlettAction : MonoBehaviour
     public int speed;
     /*public static int gold;
     public static int playerName;*/
-    private bool inAnimation;
-
+    private bool noMovement;
+    private bool noRotation;
+    private Vector3 scarlettRotation;
+    private Vector3 emptyRotation;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
-        
+        emptyRotation = GetComponent<Transform>().rotation.eulerAngles;
+        scarlettRotation = GetComponentInChildren<Transform>().rotation.eulerAngles;
     }
 
     // Update is called once per frame
@@ -40,7 +43,7 @@ public class ScarlettAction : MonoBehaviour
             FindObjectOfType<GameManager>().OnlineMovement(x,z,angle);
         }*/
         /*Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));*/
-        if (!inAnimation)
+        if (!noMovement)
         {
             move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         }
@@ -64,8 +67,13 @@ public class ScarlettAction : MonoBehaviour
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
 
         //rotate the player object towards mouse
-        transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
+        if (!noRotation)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
+        }
 
+        BladeDance();
+        Overwhelm();
         Dash();
         Animation();
     }
@@ -100,6 +108,21 @@ public class ScarlettAction : MonoBehaviour
         }
     }
 
+    void BladeDance()
+    {
+        if (Input.GetKey("e"))
+        {
+            bool dances = UseBladeDance.dummy.BladeDance();
+            if (dances)
+            {
+                noRotation = true;
+                animator.SetBool("spin", true);
+                Invoke("SetNoRotation", 4f);
+                Invoke("SetAnimationFalse", 3.0f);
+            }
+        }
+    }
+
     void Overwhelm()
     {
         if (Input.GetKey("f"))
@@ -107,7 +130,7 @@ public class ScarlettAction : MonoBehaviour
             bool overwhelm = UseOverwhelm.dummy.Overwhelm();
             if (overwhelm)
             {
-                inAnimation = true;
+                noMovement = true;
                 animator.SetBool("overwhelm", true);
                 Invoke("SetAnimationFalse", 0.5f);
                 Invoke("SetInAnimation", 2.5f);
@@ -159,9 +182,15 @@ public class ScarlettAction : MonoBehaviour
         if (animator.GetBool("spin")) animator.SetBool("spin", false);
     }
 
-    void SetInAnimation()
+    void SetNoRotation()
     {
-        inAnimation = false;
+        noRotation = false;
+        scarlettRotation = new Vector3(0f, 180f, 0f);
+        emptyRotation = new Vector3(0f, 0f, 0f);
     }
 
+    void SetNoMovement()
+    {
+        noMovement = false;
+    }
 }

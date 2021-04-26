@@ -31,7 +31,6 @@ public class UseDash : MonoBehaviour
             {
                 target = hit.point - transform.position;
                 target.y = 0f;
-                Debug.Log("skill activates");
                 rb.velocity = target * dashSpeed;
                 Debug.DrawRay(ray.origin, ray.origin + ray.direction * 100, Color.yellow, 1);
             }

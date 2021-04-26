@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UseOverwhelm : MonoBehaviour
+public class UseBladeDance : MonoBehaviour
 {
     private float lastUsed = 0f;
-    public static UseOverwhelm dummy;
+    public static UseBladeDance dummy;
 
     void Awake()
     {
-        dummy = GetComponent<UseOverwhelm>();
+        dummy = GetComponent<UseBladeDance>();
     }
 
-    public bool Overwhelm()
+    public bool BladeDance()
     {
         bool useSkill = false;
-        if (lastUsed + 1f <= Time.time)
+        if (lastUsed + 5f <= Time.time)
         {
-            Debug.Log("overwhelm activates");
             useSkill = true;
             lastUsed = Time.time;
         }
