@@ -16,14 +16,14 @@ public class ScarlettAction : MonoBehaviour
 
     private void Awake()
     {
-        inventory = new Inventory();
+        inventory = GetComponent<Inventory>();
     }
     void Start()
     {
         /*        target=GameObject.FindWithTag("Player");*/
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
-        
+
     }
 
     // Update is called once per frame
@@ -93,7 +93,7 @@ public class ScarlettAction : MonoBehaviour
 
     public void rotate(float angle)
     {
-        transform.rotation = Quaternion.Euler(new Vector3(0f, angle ,0f));
+        transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
     }
 
     /*void ShootingUpdate()
@@ -151,4 +151,16 @@ public class ScarlettAction : MonoBehaviour
         }*/
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        var item = other.gameObject.GetComponent<Item>();
+
+        if (item != null)
+        {
+            inventory.AddItem(item.data);
+            Debug.Log(item.data);
+            Destroy(other.gameObject);
+        }
+    }
 }
+

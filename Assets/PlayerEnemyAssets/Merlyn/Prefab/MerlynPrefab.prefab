@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8755369369743870720}
   - component: {fileID: 3723675796155305953}
   - component: {fileID: 4496226497075080754}
+  - component: {fileID: 1031035311210040817}
+  - component: {fileID: 2649938723626068218}
   m_Layer: 0
   m_Name: MerlynPrefab
   m_TagString: Player
@@ -28,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701528270322337917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.23}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 8079806193171627089}
@@ -94,6 +96,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportFX: {fileID: 5408105405378960393, guid: 84054482479d90b4f9538a6034e2661c,
     type: 3}
+--- !u!114 &1031035311210040817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701528270322337917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae02ae17f4e42b4b15a3299bf12c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &2649938723626068218
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701528270322337917}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: -0.6}
 --- !u!114 &4013292570446600671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,7 +744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4534680888835660, guid: 00928cf3ac33f3a4fa83f1df7e4ce8db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4534680888835660, guid: 00928cf3ac33f3a4fa83f1df7e4ce8db, type: 3}
       propertyPath: m_LocalRotation.w

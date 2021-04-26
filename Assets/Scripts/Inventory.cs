@@ -2,21 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory
+public class Inventory : MonoBehaviour
 {
-    private List<Item> itemlist;
+    private List<ItemData> items = new List<ItemData>();
 
-    // Initialize an Inventory
-    public Inventory()
+    public void LogInventory()
     {
-        itemlist = new List<Item>();
-        addItem(new Item { itemType = Item.ItemType.Weapon, amount = 1 });
-        Debug.Log(itemlist.Count);
+        foreach (ItemData itemData in items)
+        {
+            Debug.Log(itemData.ToString());
+        }
     }
 
-    //Adds an item to the inventory
-    public void addItem(Item item)
+    public List<ItemData> GetItems()
     {
-        itemlist.Add(item);
+        return items;
+    }
+
+    public void AddItem(ItemData itemData)
+    {
+        items.Add(itemData);
+        LogInventory();
     }
 }

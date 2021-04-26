@@ -1,10 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
+    MainMenu menuScript;
     private GameObject bottomBar;
     private GameObject menuPanel;
     private GameObject inventoryPanel;
@@ -26,12 +27,22 @@ public class HUD : MonoBehaviour
 
         bottomBar.SetActive(true);
         menuPanel.SetActive(false);
-        
-        if(PlayerPrefs.GetString("Character")=="Merlyn")
+        inventoryPanel.SetActive(false);
+        //optionPanel.SetActive(false);
+
+        //Text playerName = GameObject.Find("PlayerName").GetComponent<Text>();
+        //Text playerClass = GameObject.Find("PlayerClass").GetComponent<Text>();
+        //playerLevel = GameObject.Find("PlayerLevel").GetComponent<Text>();
+
+        //playerName.text = PlayerPrefs.GetString("Username");//temp for better way
+        //playerLevel.text = "10";//temp value
+        //playerClass.text = PlayerPrefs.GetString("Character");
+
+        if (PlayerPrefs.GetString("Character") == "Merlyn")
         {
-            ability1.image.sprite=fireball;
-            ability2.image.sprite=freeze;
-            ability3.image.sprite=teleport;
+            ability1.image.sprite = fireball;
+            ability2.image.sprite = freeze;
+            ability3.image.sprite = teleport;
         }
     }
 
@@ -44,7 +55,7 @@ public class HUD : MonoBehaviour
             menuPanel.SetActive(!menuPanel.activeSelf);
         }
 
-        if(Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             inventoryPanel.SetActive(!inventoryPanel.activeSelf);
         }
@@ -57,7 +68,7 @@ public class HUD : MonoBehaviour
         menuPanel.SetActive(!menuPanel.activeSelf);
     }
 
-#region MenuPanel
+    #region MenuPanel
     public void OnBackClick()
     {
         //Debug.Log("Menu Pressed");
@@ -73,11 +84,10 @@ public class HUD : MonoBehaviour
     public void OnQuitClick()
     {
 #if UNITY_EDITOR
-		UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
 #else
 		Application.Quit();
 #endif
     }
-#endregion
+    #endregion
 }
-        optionPanel.SetActive(false);
