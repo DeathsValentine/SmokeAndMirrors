@@ -41,7 +41,9 @@ public class HUD : MonoBehaviour
         playerLevel = GameObject.Find("PlayerLevel").GetComponent<Text>();
 
         playerName.text=PlayerPrefs.GetString("Username");//temp for better way
-        playerLevel.text= "10";//temp value
+        //playerLevel.text= "10";//temp value
+        //Debug.Log(PlayerPrefs.GetInt("Level"));
+        playerLevel.text= PlayerPrefs.GetInt("Level").ToString();
         playerClass.text=PlayerPrefs.GetString("Character");
         
         if(PlayerPrefs.GetString("Character")=="Merlyn")
