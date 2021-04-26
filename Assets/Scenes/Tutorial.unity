@@ -9815,7 +9815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 222369746}
-  dialogData: {fileID: 11400000, guid: 89fcfc9e3039a71489c9e2e495372c9e, type: 2}
+  dialogData: {fileID: 11400000, guid: 4e7bed2d24b40124aa07c396fcd5692c, type: 2}
 --- !u!1001 &1399514704
 PrefabInstance:
   m_ObjectHideFlags: 0
