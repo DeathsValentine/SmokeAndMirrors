@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShootFreeze : MonoBehaviour
 {
@@ -29,10 +30,18 @@ public class ShootFreeze : MonoBehaviour
         {
             Debug.Log("Freeze Attack!");
             lastShot = Time.time;
+            StartCoroutine(Active());
             GameObject particles = Instantiate(freezePrefab, shootPoint.position, shootPoint.rotation);
             Destroy(particles, 2f);
             return true;
         }
         return false;
+    }
+
+    IEnumerator Active()
+    {
+        GameObject.Find("Ability2").GetComponent<Button>().interactable=false;
+        yield return new WaitForSeconds(1);
+        GameObject.Find("Ability2").GetComponent<Button>().interactable=true;
     }
 }
