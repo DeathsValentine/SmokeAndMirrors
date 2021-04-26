@@ -53,27 +53,5 @@ public class CreateNewCharacter : MonoBehaviour
         PlayerPrefs.SetInt("Intelligence", newPlayer.Intelligence);
         PlayerPrefs.SetInt("Dexterity", newPlayer.Dexterity);
     }
-    
-    /*
-    void OnGUI()
-    {
-        isScarlett=GUILayout.Toggle(isScarlett,"Scarlett");
-        isMerlyn=GUILayout.Toggle(isMerlyn,"Merlyn");
-        if(GUILayout.Button("Create"))
-        {
-            if(isScarlett)
-            {
-                newPlayer.PlayerClass=new ScarlettClass();
-            }else if(isMerlyn)
-            {
-                newPlayer.PlayerClass=new MerlynClass();
-            }
-            newPlayer.PlayerLevel=1;
-            newPlayer.Endurance=newPlayer.PlayerClass.Endurance;
-            newPlayer.Strength=newPlayer.PlayerClass.Strength;
-            newPlayer.Intelligence=newPlayer.PlayerClass.Intelligence;
-            newPlayer.Dexterity=newPlayer.PlayerClass.Dexterity;
-        }
-    }
-    */
+
 }

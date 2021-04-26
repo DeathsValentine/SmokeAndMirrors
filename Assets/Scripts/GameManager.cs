@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviour
             {
                 char1 = Instantiate(merlyn, new Vector3(0, 0.5f, -45), Quaternion.identity);
             }
-            if(PlayerPrefs.GetString("Character")=="Scarlett"
-            ){
+            if(PlayerPrefs.GetString("Character")=="Scarlett")
+            {
                 char1 = Instantiate(scarlett, new Vector3(0, 0.5f, -45), Quaternion.identity);
             }
             
