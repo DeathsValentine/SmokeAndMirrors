@@ -12,14 +12,13 @@ public class ScarlettAction : MonoBehaviour
     public static int playerName;*/
     private bool noMovement;
     private bool noRotation;
+    private bool inAnimation;
     private Vector3 scarlettRotation;
     private Vector3 emptyRotation;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
-        emptyRotation = GetComponent<Transform>().rotation.eulerAngles;
-        scarlettRotation = GetComponentInChildren<Transform>().rotation.eulerAngles;
     }
 
     // Update is called once per frame
@@ -97,42 +96,50 @@ public class ScarlettAction : MonoBehaviour
 
     void Dash()
     {
-        if (Input.GetKey("q"))
+        if (Input.GetKey("q") && !inAnimation)
         {
             bool dashes = UseDash.dummy.Dash();
             if (dashes)
             {
+                inAnimation = true;
                 animator.SetBool("dash", true);
                 Invoke("SetAnimationFalse", 0.5f);
+                Invoke("SetInAnimation", 1f);
             }
         }
     }
 
     void BladeDance()
     {
-        if (Input.GetKey("e"))
+        if (Input.GetKey("e") && !inAnimation)
         {
             bool dances = UseBladeDance.dummy.BladeDance();
             if (dances)
             {
+                inAnimation = true;
                 noRotation = true;
                 animator.SetBool("spin", true);
-                Invoke("SetNoRotation", 4f);
+                Invoke("SetNoRotation", 3.0f);
                 Invoke("SetAnimationFalse", 3.0f);
+                Invoke("SetInAnimation", 3.0f);
             }
         }
     }
 
     void Overwhelm()
     {
-        if (Input.GetKey("f"))
+        if (Input.GetKey("f") && !inAnimation)
         {
             bool overwhelm = UseOverwhelm.dummy.Overwhelm();
             if (overwhelm)
             {
+                inAnimation = true;
                 noMovement = true;
+                noRotation = true;
                 animator.SetBool("overwhelm", true);
                 Invoke("SetAnimationFalse", 0.5f);
+                Invoke("SetNoMovement", 2.5f);
+                Invoke("SetNoRotation", 2.5f);
                 Invoke("SetInAnimation", 2.5f);
             }
         }
@@ -185,12 +192,15 @@ public class ScarlettAction : MonoBehaviour
     void SetNoRotation()
     {
         noRotation = false;
-        scarlettRotation = new Vector3(0f, 180f, 0f);
-        emptyRotation = new Vector3(0f, 0f, 0f);
     }
 
     void SetNoMovement()
     {
         noMovement = false;
+    }
+
+    void SetInAnimation()
+    {
+        inAnimation = false;
     }
 }

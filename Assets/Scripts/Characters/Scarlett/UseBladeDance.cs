@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UseBladeDance : MonoBehaviour
 {
@@ -18,8 +19,16 @@ public class UseBladeDance : MonoBehaviour
         if (lastUsed + 5f <= Time.time)
         {
             useSkill = true;
+            StartCoroutine(Active());
             lastUsed = Time.time;
         }
         return useSkill;
+    }
+
+    IEnumerator Active()
+    {
+        GameObject.Find("Ability2").GetComponent<Button>().interactable=false;
+        yield return new WaitForSeconds(5);
+        GameObject.Find("Ability2").GetComponent<Button>().interactable=true;
     }
 }

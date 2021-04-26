@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UseDash : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class UseDash : MonoBehaviour
         {
             useSkill = true;
             lastUsed = Time.time;
+            StartCoroutine(Active());
             Ray ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100f))
@@ -36,5 +38,12 @@ public class UseDash : MonoBehaviour
             }
         }
         return useSkill;
+    }
+
+    IEnumerator Active()
+    {
+        GameObject.Find("Ability1").GetComponent<Button>().interactable=false;
+        yield return new WaitForSeconds(1);
+        GameObject.Find("Ability1").GetComponent<Button>().interactable=true;
     }
 }

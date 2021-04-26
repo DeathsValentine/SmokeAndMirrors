@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UseOverwhelm : MonoBehaviour
 {
@@ -19,8 +20,16 @@ public class UseOverwhelm : MonoBehaviour
         {
             Debug.Log("overwhelm activates");
             useSkill = true;
+            StartCoroutine(Active());
             lastUsed = Time.time;
         }
         return useSkill;
+    }
+
+    IEnumerator Active()
+    {
+        GameObject.Find("Ability3").GetComponent<Button>().interactable=false;
+        yield return new WaitForSeconds(1);
+        GameObject.Find("Ability3").GetComponent<Button>().interactable=true;
     }
 }
