@@ -2,40 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UseTeleport : MonoBehaviour
+public class UseDash : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject teleportFX;
-
+    public Rigidbody rb;
     private float lastUsed = 0f;
-    public static UseTeleport dummy;
+    public static UseDash dummy;
+    private float dashSpeed;
     Vector3 target;
 
     void Awake()
     {
-        dummy = GetComponent<UseTeleport>();
+        rb = GetComponent<Rigidbody>();
+        dummy = GetComponent<UseDash>();
+        dashSpeed = 15;
     }
 
-    public void Tele()
+    public bool Dash()
     {
+        bool useSkill = false;
         Vector3 currentPos = transform.position;
         if (lastUsed + 1f <= Time.time)
         {
+            useSkill = true;
             lastUsed = Time.time;
             Ray ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100f))
             {
-                target = hit.point;
-                target.y = 1f;
-                transform.position = target;
+                target = hit.point - transform.position;
+                target.y = 0f;
+                rb.velocity = target * dashSpeed;
                 Debug.DrawRay(ray.origin, ray.origin + ray.direction * 100, Color.yellow, 1);
             }
-            GameObject start = Instantiate(teleportFX, currentPos, transform.rotation);
-            GameObject end = Instantiate(teleportFX, target, transform.rotation);
-
-            Destroy(start, 2.0f);
-            Destroy(end, 2.0f);
         }
+        return useSkill;
     }
 }

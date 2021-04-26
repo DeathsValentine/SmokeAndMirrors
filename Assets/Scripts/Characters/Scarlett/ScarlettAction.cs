@@ -7,17 +7,19 @@ public class ScarlettAction : MonoBehaviour
     Animator animator;
     public Rigidbody rb;
     //public GameObject goldObj;
-    public GameObject target;
     public int speed;
     /*public static int gold;
     public static int playerName;*/
-
+    private bool noMovement;
+    private bool noRotation;
+    private Vector3 scarlettRotation;
+    private Vector3 emptyRotation;
     void Start()
     {
-        /*        target=GameObject.FindWithTag("Player");*/
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
-        
+        emptyRotation = GetComponent<Transform>().rotation.eulerAngles;
+        scarlettRotation = GetComponentInChildren<Transform>().rotation.eulerAngles;
     }
 
     // Update is called once per frame
@@ -41,11 +43,12 @@ public class ScarlettAction : MonoBehaviour
             FindObjectOfType<GameManager>().OnlineMovement(x,z,angle);
         }*/
         /*Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));*/
-
-        move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (!noMovement)
+        {
+            move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        }
         /*this.transform.position += Movement * speed * Time.deltaTime;*/
         /*rotate(angle);*/
-        /*ShootingUpdate();*/
 
     }
 
@@ -64,13 +67,16 @@ public class ScarlettAction : MonoBehaviour
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
 
         //rotate the player object towards mouse
-        transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
+        if (!noRotation)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
+        }
 
-        //Shoot me pls
-        /*ShootingUpdate();*/
+        BladeDance();
+        Overwhelm();
+        Dash();
         Animation();
     }
-
 
     //finding angle between two points
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
@@ -82,7 +88,6 @@ public class ScarlettAction : MonoBehaviour
     {
         Vector3 Movement = new Vector3(x, 0, z);
         transform.position += Movement * speed * Time.deltaTime;
-        //Debug.Log(x + " " + z);
     }
 
     public void rotate(float angle)
@@ -90,15 +95,48 @@ public class ScarlettAction : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0f, angle ,0f));
     }
 
-    /*void ShootingUpdate()
+    void Dash()
     {
-        //if left mouse button
-        if (Input.GetButton("Fire1"))
+        if (Input.GetKey("q"))
         {
-            WeaponScript.gun.Shoot();
+            bool dashes = UseDash.dummy.Dash();
+            if (dashes)
+            {
+                animator.SetBool("dash", true);
+                Invoke("SetAnimationFalse", 0.5f);
+            }
         }
-    }*/
+    }
 
+    void BladeDance()
+    {
+        if (Input.GetKey("e"))
+        {
+            bool dances = UseBladeDance.dummy.BladeDance();
+            if (dances)
+            {
+                noRotation = true;
+                animator.SetBool("spin", true);
+                Invoke("SetNoRotation", 4f);
+                Invoke("SetAnimationFalse", 3.0f);
+            }
+        }
+    }
+
+    void Overwhelm()
+    {
+        if (Input.GetKey("f"))
+        {
+            bool overwhelm = UseOverwhelm.dummy.Overwhelm();
+            if (overwhelm)
+            {
+                noMovement = true;
+                animator.SetBool("overwhelm", true);
+                Invoke("SetAnimationFalse", 0.5f);
+                Invoke("SetInAnimation", 2.5f);
+            }
+        }
+    }
 
     void Animation()
     {
@@ -135,14 +173,24 @@ public class ScarlettAction : MonoBehaviour
         {
             animator.SetBool("inAir", false);
         }
-        /*if (!isBackwards && backwardsPressed) // run state on s key
-        {
-            animator.SetBool("isBackwards", true);
-        }
-        if (isBackwards && !backwardsPressed) // 
-        {
-            animator.SetBool("isBackwards", false);
-        }*/
     }
 
+    void SetAnimationFalse()
+    {
+        if (animator.GetBool("overwhelm")) animator.SetBool("overwhelm", false);
+        if (animator.GetBool("dash")) animator.SetBool("dash", false);
+        if (animator.GetBool("spin")) animator.SetBool("spin", false);
+    }
+
+    void SetNoRotation()
+    {
+        noRotation = false;
+        scarlettRotation = new Vector3(0f, 180f, 0f);
+        emptyRotation = new Vector3(0f, 0f, 0f);
+    }
+
+    void SetNoMovement()
+    {
+        noMovement = false;
+    }
 }
