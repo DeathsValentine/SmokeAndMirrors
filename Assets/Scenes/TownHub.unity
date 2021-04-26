@@ -6078,6 +6078,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 514589358}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &523501899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 523501901}
+  - component: {fileID: 523501900}
+  m_Layer: 0
+  m_Name: ScenePreloader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &523501900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523501899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3096d252d7a3df4e975c72746d6b0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneName: TownHub
+--- !u!4 &523501901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523501899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 476.04654, y: 8.197485, z: 530.00977}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &526782473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11560,8 +11604,8 @@ Transform:
   - {fileID: 1138824505}
   - {fileID: 1220682133}
   - {fileID: 1499738456}
-  - {fileID: 1915181702}
   - {fileID: 1313978415}
+  - {fileID: 1915181702}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14351,7 +14395,7 @@ Transform:
   - {fileID: 1443491614}
   - {fileID: 1507283296}
   m_Father: {fileID: 1086910729}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1317718466
 PrefabInstance:

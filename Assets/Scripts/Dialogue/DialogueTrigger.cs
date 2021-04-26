@@ -13,6 +13,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         dialogManager.dialogData = dialogData;
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (count < 1)
