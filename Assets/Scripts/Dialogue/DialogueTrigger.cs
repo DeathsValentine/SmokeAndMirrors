@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RPG.Dialogue;
 
 public class DialogueTrigger : MonoBehaviour
 {
