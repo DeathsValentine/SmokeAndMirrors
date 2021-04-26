@@ -9,6 +9,10 @@ public class DialogueTrigger : MonoBehaviour
 
     private int count = 0;
 
+    private void Awake()
+    {
+        dialogManager.dialogData = dialogData;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (count < 1)
