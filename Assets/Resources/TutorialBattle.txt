@@ -1,0 +1,9 @@
+Narrator: Combat happens in real time.
+Narrator: Abilities are mapped to the Q, E, and F keys.
+Narrator: Each ability is unique and has its own unique cooldown.
+Scarlett: Now! Shield smash them Alexander!
+Mori: Ugh! I have been hit!
+Mori: Will this be the day I get the sweet release of death?
+Scarlett: Hey! Mori, when you have finished painting your nails black, why don’t you take a potion and get back in here!
+Narrator: Items are a great way to keep health and mana up.
+Narrator: They can restore health or mana, or even both depending on the item.
