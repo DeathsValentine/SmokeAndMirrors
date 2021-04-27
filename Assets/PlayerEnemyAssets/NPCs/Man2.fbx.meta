@@ -1,59 +1,13 @@
 fileFormatVersion: 2
-guid: a95867d9405e5c543b70db0b243d7e39
+<<<<<<< HEAD
+guid: 125e3500cafea3a4ea230e378e472ae0
+=======
+guid: c0d417b4a0e1372428bb38dc8aa1bd7e
+>>>>>>> 988c5ad8657762ebd7293d412eb7676b8845056d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: female_Body_diffuse
-    second: {fileID: 2800000, guid: cf45496efdec1ee44abd3764060511f2, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: female_Body_normal
-    second: {fileID: 2800000, guid: 531e8c0e10fce194ebb66ba08062db60, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: female_Bottom_diffuse
-    second: {fileID: 2800000, guid: 9edb522fb50ab114d870f74cd94c1809, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: female_Bottom_normal
-    second: {fileID: 2800000, guid: cbfe2d35fc812544fb3123ba3a791917, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: female_Hair_diffuse
-    second: {fileID: 2800000, guid: 45071eb653ec4dd4b864e3c81d6da354, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: female_Hair_normal
-    second: {fileID: 2800000, guid: 792ae80c0c3f36a49a6388246c5208d9, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: female_Shoes_diffuse
-    second: {fileID: 2800000, guid: 7e5154c67fa9f414ead618fd0ceaa4c5, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: female_Shoes_normal
-    second: {fileID: 2800000, guid: 170633308fd332048b933ef01f4d65e0, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: female_Top_diffuse
-    second: {fileID: 2800000, guid: a8370bf01fe28fd4e91fcfdb8284912f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: female_Top_normal
-    second: {fileID: 2800000, guid: 6a50ab6c00fe9a844b2764a4dad19037, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -73,7 +27,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -138,9 +92,9 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
