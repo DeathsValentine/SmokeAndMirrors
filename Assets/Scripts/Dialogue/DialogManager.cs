@@ -7,7 +7,7 @@ public class DialogManager : MonoBehaviour
 {
     public GameObject dialogPanel;
     public TextMeshProUGUI text;
-    public DialogData dialogData;
+    public string dialogData;
 
     private bool isInDialog;
     private int index;
@@ -24,7 +24,10 @@ public class DialogManager : MonoBehaviour
         {
             isInDialog = true;
             index = 0;
-            text.SetText(dialogData.GetSentences()[index]);
+
+            List<string> temp = NewDialogueManager.GetDialogue(dialogData);
+
+            text.SetText(temp[index]);
             dialogPanel.SetActive(true);
         }
     }
@@ -45,10 +48,11 @@ public class DialogManager : MonoBehaviour
         if (isInDialog)
         {
             index = index + 1;
+            List<string> temp = NewDialogueManager.GetDialogue(dialogData);
 
-            if (index < dialogData.GetSentences().Count)
+            if (index < temp.Count)
             {
-                text.SetText(dialogData.GetSentences()[index]);
+                text.SetText(temp[index]);
             } else
             {
                 StopDialog();

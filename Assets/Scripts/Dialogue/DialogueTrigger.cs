@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public DialogManager dialogManager;
-    public DialogData dialogData;
+    public string dialogData;
 
     private int count = 0;
 
@@ -16,11 +16,14 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (count < 1)
+        if(other.gameObject.tag == "Player")
         {
-            dialogManager.dialogData = dialogData;
-            dialogManager.BeginDialog();
-            count++;
+            if (count < 1)
+            {
+                dialogManager.dialogData = dialogData;
+                dialogManager.BeginDialog();
+                count++;
+            }
         }
     }
 }

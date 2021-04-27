@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogPanel: {fileID: 1697354881}
   text: {fileID: 407050022}
-  dialogData: {fileID: 0}
+  dialogData: 
 --- !u!4 &222369747
 Transform:
   m_ObjectHideFlags: 0
@@ -9815,7 +9815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 222369746}
-  dialogData: {fileID: 11400000, guid: a7974b9888ccc9645be8ff76b88b1a30, type: 2}
+  dialogData: IntroDialogue
 --- !u!1001 &1399514704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10034,7 +10034,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
 --- !u!114 &1432826004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11096,7 +11096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 222369746}
-  dialogData: {fileID: 11400000, guid: 57c95c44c43401f45bcaab0cecf830a1, type: 2}
+  dialogData: 
 --- !u!65 &1584548511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15650,6 +15650,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 229169240907915123, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229169240907915123, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 351603258973063269, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 351603258973063269, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3035255617953599672, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.x

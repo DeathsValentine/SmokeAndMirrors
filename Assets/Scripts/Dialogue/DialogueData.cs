@@ -6,9 +6,9 @@ using UnityEngine;
 public class DialogData : ScriptableObject
 {
     [SerializeField]
-    private List<string> sentences = new List<string>();
+    private string[] sentences;
 
-    public List<string> GetSentences()
+    public IEnumerable<string> GetSentences()
     {
         return sentences;
     }
