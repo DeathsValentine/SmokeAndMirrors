@@ -5,7 +5,7 @@ using UnityEngine;
 public class MerlynClass : BaseCharacter
 {
     
-    public void Merlyn()
+    public MerlynClass()
     {
         CharacterName="Merlyn";
 

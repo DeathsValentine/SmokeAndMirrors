@@ -23,6 +23,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1280
+--- !u!114 &-1100009131306523807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Menu
+  guid: cb947f0aad0d5546ac25a5c73376fb5c
+  Banks:
+  - {fileID: 3666661969736764348}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 84000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,13 +65,38 @@ MonoBehaviour:
   - {fileID: 6922207537988631009}
   - {fileID: -8020000569403170451}
   - {fileID: 7294227621706501308}
+  - {fileID: 3431405575334124567}
+  - {fileID: -1100009131306523807}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3666661969736764348}
   StringsBanks:
   - {fileID: 7768894387595333188}
-  stringsBankWriteTime: 637548024104200526
+  stringsBankWriteTime: 637550558051677761
   cacheVersion: 6
+--- !u!114 &3431405575334124567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Fireball
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_Fireball
+  guid: 2695468658f2764dba0e5b941a54f1d4
+  Banks:
+  - {fileID: 3666661969736764348}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1650
 --- !u!114 &3666661969736764348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +112,7 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637548024104170759
+  lastModified: 637550558051664442
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -129,9 +177,9 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637548024104200526
+  lastModified: 637550558051677761
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 864
+    Value: 962
   Exists: 1
