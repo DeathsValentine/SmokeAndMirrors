@@ -3799,7 +3799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogPanel: {fileID: 328709956}
   text: {fileID: 1304979793}
-  dialogData: 
+  dialogData: {fileID: 0}
 --- !u!4 &300794161
 Transform:
   m_ObjectHideFlags: 0
@@ -5820,7 +5820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: LeifLeaving
+  dialogData: {fileID: 11400000, guid: eb103025ba83c0c479e8062976781bbf, type: 2}
 --- !u!65 &504393586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8038,7 +8038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Child3
+  dialogData: {fileID: 11400000, guid: f8a3b3100aebc9f46b460e2fbd4acaf5, type: 2}
 --- !u!135 &683624487
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9051,7 +9051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Townsman3
+  dialogData: {fileID: 11400000, guid: 2c37f0a9958e6524085a365af51a1063, type: 2}
 --- !u!135 &759633627
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10182,7 +10182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Townswoman1
+  dialogData: {fileID: 11400000, guid: a875798a3c6b49944b97521a7d016cb4, type: 2}
 --- !u!135 &951770047
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13335,7 +13335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Ophelia
+  dialogData: {fileID: 11400000, guid: 1b6f39a402ecc564a8728dea363d256a, type: 2}
 --- !u!135 &1237673942
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13395,7 +13395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Townswoman2
+  dialogData: {fileID: 11400000, guid: 410cf57246d509d4caca98222ee28402, type: 2}
 --- !u!135 &1242109795
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13885,7 +13885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Natalia
+  dialogData: {fileID: 11400000, guid: 30c8003c17a7fa2478d5f1fc934bf86f, type: 2}
 --- !u!135 &1291902208
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15696,7 +15696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Townsman1
+  dialogData: {fileID: 11400000, guid: 9eedfb24584bbbd4cbe4032c999de6e1, type: 2}
 --- !u!135 &1503190936
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17034,7 +17034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Townsman2
+  dialogData: {fileID: 11400000, guid: 410cf57246d509d4caca98222ee28402, type: 2}
 --- !u!135 &1588302129
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17969,7 +17969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Child1
+  dialogData: {fileID: 11400000, guid: 8127bd0fe79af9343b89397095027e7d, type: 2}
 --- !u!135 &1663023622
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18681,7 +18681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: MeetingTheKing
+  dialogData: {fileID: 11400000, guid: 063839c03367179459c09072620b85df, type: 2}
 --- !u!135 &1718611705
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19412,7 +19412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Ymir
+  dialogData: {fileID: 11400000, guid: 6af41884a9d2a934c9bf74bb47c7232a, type: 2}
 --- !u!4 &1792036248
 Transform:
   m_ObjectHideFlags: 0
@@ -20009,7 +20009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: FirstTimeInTown
+  dialogData: {fileID: 11400000, guid: b9e8a759869d94c47b6142320de5b85d, type: 2}
 --- !u!65 &1844921406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23263,7 +23263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Child2
+  dialogData: {fileID: 11400000, guid: 0be19f0756b93574a8561171e16c03aa, type: 2}
 --- !u!135 &2056732241
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23662,7 +23662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Townswoman3
+  dialogData: {fileID: 11400000, guid: 2c37f0a9958e6524085a365af51a1063, type: 2}
 --- !u!135 &2081451478
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23910,7 +23910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
-  dialogData: Orik
+  dialogData: {fileID: 11400000, guid: c71e09bcb2c9b594887ce5b10d7825e2, type: 2}
 --- !u!135 &2111915154
 SphereCollider:
   m_ObjectHideFlags: 0

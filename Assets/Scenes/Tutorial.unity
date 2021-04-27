@@ -11096,7 +11096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 222369746}
-  dialogData: TutorialBattle
+  dialogData: 
 --- !u!65 &1584548511
 BoxCollider:
   m_ObjectHideFlags: 0
