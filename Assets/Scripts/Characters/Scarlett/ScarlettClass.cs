@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScarlettClass : BaseCharacter
 {
-    public void Scarlett()
+    public ScarlettClass()
     {
         CharacterName="Scarlett";
 
