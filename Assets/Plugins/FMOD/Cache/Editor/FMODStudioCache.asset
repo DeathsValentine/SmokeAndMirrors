@@ -23,7 +23,43 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1280
+<<<<<<< HEAD
 --- !u!114 &-7099572531254982348
+=======
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 7768894387595333188}
+  - {fileID: 3666661969736764348}
+  EditorEvents:
+  - {fileID: 6922207537988631009}
+  - {fileID: -8020000569403170451}
+  - {fileID: 7294227621706501308}
+  - {fileID: 8986114014365368678}
+  - {fileID: 739740665853724002}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 3666661969736764348}
+  StringsBanks:
+  - {fileID: 7768894387595333188}
+<<<<<<< HEAD
+  stringsBankWriteTime: 637550558051677761
+=======
+  stringsBankWriteTime: 637550561641597868
+>>>>>>> fdc1c825a311c087abc30e4c4e56bf3af1eff8f1
+  cacheVersion: 6
+--- !u!114 &739740665853724002
+>>>>>>> 2a2ed605573270701a6cf053f91b6dea762aea65
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,10 +79,40 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
+<<<<<<< HEAD
   MinDistance: 1
   MaxDistance: 20
   Length: 206
 --- !u!114 &-4724885856573028244
+=======
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 84000
+--- !u!114 &3666661969736764348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+<<<<<<< HEAD
+  lastModified: 637550558051664442
+=======
+  lastModified: 637550561641587864
+>>>>>>> fdc1c825a311c087abc30e4c4e56bf3af1eff8f1
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6922207537988631009
+>>>>>>> 2a2ed605573270701a6cf053f91b6dea762aea65
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +173,15 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 637550677439964616
+=======
+<<<<<<< HEAD
+  lastModified: 637550558051677761
+=======
+  lastModified: 637550561641597868
+>>>>>>> fdc1c825a311c087abc30e4c4e56bf3af1eff8f1
+>>>>>>> 2a2ed605573270701a6cf053f91b6dea762aea65
   LoadResult: 0
   FileSizes:
   - Name: 
