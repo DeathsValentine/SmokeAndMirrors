@@ -57,12 +57,13 @@ public class Enemy : MonoBehaviour
         if (distanceFromPlayer <= 20)
         {
             moveEnemy(player.position.x, player.position.z);
-            //isRunning = animator.SetBool("wolfRun", true);
+            animator.SetBool("wolfRun", true);
         }
         else
         {
-            //isRunning = animator.SetBool("wolfRun", false);
+            animator.SetBool("wolfRun", false);
         }
+        Debug.Log(transform.position);
     }
     public void moveEnemy(float playerX, float playerY)
     {

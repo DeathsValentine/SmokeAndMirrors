@@ -13,7 +13,9 @@ public class ScarlettAction : MonoBehaviour
     private bool noMovement;
     private bool noRotation;
     private bool inAnimation;
+    private bool inDialogue;
 
+    private DialogManager dialogManager;
     private Vector3 scarlettRotation;
     private Vector3 emptyRotation;
 
@@ -21,6 +23,7 @@ public class ScarlettAction : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
+        dialogManager = GameObject.Find("DialogueManager").GetComponent<DialogManager>();
     }
 
     // Update is called once per frame
@@ -44,8 +47,17 @@ public class ScarlettAction : MonoBehaviour
             FindObjectOfType<GameManager>().OnlineMovement(x,z,angle);
         }*/
         /*Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));*/
-        if (!noMovement)
+        if (dialogManager.getInDialog())
         {
+            inDialogue = true;
+        }
+        else
+        {
+            inDialogue = false;
+        }
+        if (!inDialogue)
+        {
+            if (Input.GetKey("left shift")) speed = 5; 
             move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         }
         /*this.transform.position += Movement * speed * Time.deltaTime;*/
@@ -68,15 +80,21 @@ public class ScarlettAction : MonoBehaviour
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
 
         //rotate the player object towards mouse
-        if (!noRotation)
+        if (!inDialogue)
         {
-            transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
+            if (!noRotation)
+            {
+                transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
+            }
+            BladeDance();
+            Overwhelm();
+            Dash();
+            Animation();
         }
-
-        BladeDance();
-        Overwhelm();
-        Dash();
-        Animation();
+        else
+        {
+            SetAnimationFalse();
+        }
     }
 
     //finding angle between two points
@@ -89,6 +107,7 @@ public class ScarlettAction : MonoBehaviour
     {
         Vector3 Movement = new Vector3(x, 0, z);
         transform.position += Movement * speed * Time.deltaTime;
+        speed = 10;
     }
 
     public void rotate(float angle)
@@ -189,6 +208,8 @@ public class ScarlettAction : MonoBehaviour
         if (animator.GetBool("overwhelm")) animator.SetBool("overwhelm", false);
         if (animator.GetBool("dash")) animator.SetBool("dash", false);
         if (animator.GetBool("spin")) animator.SetBool("spin", false);
+        if (animator.GetBool("isRunning")) animator.SetBool("isRunning",false);
+        if (animator.GetBool("isWalking")) animator.SetBool("isWalking", false);
     }
 
     void SetNoRotation()
