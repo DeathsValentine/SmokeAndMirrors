@@ -13,8 +13,10 @@ public class ScarlettAction : MonoBehaviour
     private bool noMovement;
     private bool noRotation;
     private bool inAnimation;
+
     private Vector3 scarlettRotation;
     private Vector3 emptyRotation;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();

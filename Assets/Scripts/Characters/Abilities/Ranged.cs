@@ -9,16 +9,11 @@ public class Ranged : AbilityBehaviors
     private const BehaviorTimes times = BehaviorTimes.Start;
     /*private const Sprite icon = Resources.Load(path);*/
 
-    private float maxDistance;
+    private float stats;
 
-    public Ranged(float maxDistance): base(new ObjectInformation(name,description), times)
+    public Ranged(float stats): base(new ObjectInformation(name,description), times)
     {
-        this.maxDistance = maxDistance;
-    }
-
-    public float getMaxDist
-    {
-        get { return this.maxDistance; }
+        this.stats = stats;
     }
 
     public override void doBehavior()

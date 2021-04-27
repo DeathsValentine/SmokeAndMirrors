@@ -8,9 +8,16 @@ public class UseOverwhelm : MonoBehaviour
     private float lastUsed = 0f;
     public static UseOverwhelm dummy;
 
+    public Transform attackPoint;
+    public float atkRange = 3f;
+    public LayerMask enemyLayer;
+
+    private Overwhelm overwhelm;
+
     void Awake()
     {
         dummy = GetComponent<UseOverwhelm>();
+        overwhelm = new Overwhelm(Player.Strength);
     }
 
     public bool Overwhelm()
@@ -22,6 +29,11 @@ public class UseOverwhelm : MonoBehaviour
             useSkill = true;
             StartCoroutine(Active());
             lastUsed = Time.time;
+            Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, atkRange, enemyLayer);
+            foreach (Collider enemy in hitEnemies)
+            {
+                enemy.GetComponent<Enemy>().Damage(overwhelm.getDamage());
+            }
         }
         return useSkill;
     }

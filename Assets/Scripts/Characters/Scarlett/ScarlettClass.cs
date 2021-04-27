@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ScarlettClass : BaseCharacter
 {
-    public void Scarlett()
+    public ScarlettClass()
     {
-        CharacterName="Scarlett";
+        CharacterName = "Scarlett";
 
-        Endurance=4;
+        Endurance =4;
         Strength=7;
         Intelligence=3;
         Dexterity=7;

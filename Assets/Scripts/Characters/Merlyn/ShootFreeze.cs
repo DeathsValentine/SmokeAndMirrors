@@ -12,7 +12,6 @@ public class ShootFreeze : MonoBehaviour
     GameObject freezePrefab;
 
     private float lastShot = 0f;
-    private Freeze freeze;
     public static ShootFreeze dummy;
 
 
@@ -20,7 +19,6 @@ public class ShootFreeze : MonoBehaviour
     void Awake()
     {
         dummy = GetComponent<ShootFreeze>();
-        freeze = new Freeze();
     }
 
     // Update is called once per frame
@@ -28,11 +26,10 @@ public class ShootFreeze : MonoBehaviour
     {
         if (lastShot + 1f <= Time.time)
         {
-            Debug.Log("Freeze Attack!");
             lastShot = Time.time;
             StartCoroutine(Active());
             GameObject particles = Instantiate(freezePrefab, shootPoint.position, shootPoint.rotation);
-            Destroy(particles, 2f);
+            Destroy(particles, 1f);
             return true;
         }
         return false;

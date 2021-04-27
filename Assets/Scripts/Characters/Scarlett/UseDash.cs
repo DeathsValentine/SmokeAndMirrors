@@ -11,11 +11,18 @@ public class UseDash : MonoBehaviour
     private float dashSpeed;
     Vector3 target;
 
+    public Transform attackPoint;
+    public float atkRange = 1f;
+    public LayerMask enemyLayer;
+
+    private Dash dash;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         dummy = GetComponent<UseDash>();
         dashSpeed = 15;
+        dash = new Dash(Player.Strength);
     }
 
     public bool Dash()
@@ -35,6 +42,11 @@ public class UseDash : MonoBehaviour
                 target.y = 0f;
                 rb.velocity = target * dashSpeed;
                 Debug.DrawRay(ray.origin, ray.origin + ray.direction * 100, Color.yellow, 1);
+            }
+            Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, atkRange, enemyLayer);
+            foreach (Collider enemy in hitEnemies)
+            {
+                enemy.GetComponent<Enemy>().Damage(dash.getDamage());
             }
         }
         return useSkill;

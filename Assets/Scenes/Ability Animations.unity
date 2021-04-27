@@ -271,7 +271,7 @@ Transform:
   m_GameObject: {fileID: 431643869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.13, y: 0, z: 0}
-  m_LocalScale: {x: 0.325, y: 0.19, z: 0.21}
+  m_LocalScale: {x: 0.325, y: 0.2, z: 0.21}
   m_Children: []
   m_Father: {fileID: 935467902}
   m_RootOrder: 0
@@ -347,8 +347,8 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431643869}
   serializedVersion: 6
-  lengthInSec: 1
-  simulationSpeed: 1
+  lengthInSec: 2
+  simulationSpeed: 3
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -362,7 +362,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 1
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -475,7 +475,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 20
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -907,7 +907,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 3
+    maxNumParticles: 100
     size3D: 1
     rotation3D: 0
     gravityModifier:
@@ -1172,7 +1172,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10059,9 +10059,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1292229952534652, guid: 1a1c02facd51d87458dcaa3a761e2c03, type: 3}
+      propertyPath: m_TagString
+      value: Freeze
+      objectReference: {fileID: 0}
     - target: {fileID: 1820680284854294, guid: 1a1c02facd51d87458dcaa3a761e2c03, type: 3}
       propertyPath: m_Name
       value: IceLance
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820680284854294, guid: 1a1c02facd51d87458dcaa3a761e2c03, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4897860267909952, guid: 1a1c02facd51d87458dcaa3a761e2c03, type: 3}
       propertyPath: m_RootOrder
@@ -10077,7 +10085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4897860267909952, guid: 1a1c02facd51d87458dcaa3a761e2c03, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.83
+      value: 2.022
       objectReference: {fileID: 0}
     - target: {fileID: 4897860267909952, guid: 1a1c02facd51d87458dcaa3a761e2c03, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10109,12 +10117,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198433943929519872, guid: 1a1c02facd51d87458dcaa3a761e2c03,
         type: 3}
+      propertyPath: cullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198433943929519872, guid: 1a1c02facd51d87458dcaa3a761e2c03,
+        type: 3}
       propertyPath: lengthInSec
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198433943929519872, guid: 1a1c02facd51d87458dcaa3a761e2c03,
         type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198433943929519872, guid: 1a1c02facd51d87458dcaa3a761e2c03,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 198433943929519872, guid: 1a1c02facd51d87458dcaa3a761e2c03,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 198433943929519872, guid: 1a1c02facd51d87458dcaa3a761e2c03,
+        type: 3}
       propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198433943929519872, guid: 1a1c02facd51d87458dcaa3a761e2c03,
+        type: 3}
+      propertyPath: InitialModule.startRotationX.minScalar
+      value: 0.010471975
+      objectReference: {fileID: 0}
+    - target: {fileID: 198563964752515286, guid: 1a1c02facd51d87458dcaa3a761e2c03,
+        type: 3}
+      propertyPath: lengthInSec
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 199141469417565000, guid: 1a1c02facd51d87458dcaa3a761e2c03,

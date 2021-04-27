@@ -12,12 +12,14 @@ public class FireBallMovement : MonoBehaviour
 
     [SerializeField]
     private GameObject explosionPrefab;
+    private FireBall fireball;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         firingPoint = transform.position;
+        fireball = new FireBall(Player.Intelligence);
     }
 
     // Update is called once per frame
@@ -34,5 +36,10 @@ public class FireBallMovement : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         Destroy(this.gameObject);
+    }
+    
+    public float getDamage()
+    {
+        return fireball.getDamage();
     }
 }

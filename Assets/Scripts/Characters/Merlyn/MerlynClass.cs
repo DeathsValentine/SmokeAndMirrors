@@ -5,11 +5,11 @@ using UnityEngine;
 public class MerlynClass : BaseCharacter
 {
     
-    public void Merlyn()
+    public MerlynClass()
     {
-        CharacterName="Merlyn";
+        CharacterName = "Merlyn";
 
-        Endurance=3;
+        Endurance =3;
         Strength=3;
         Intelligence=7;
         Dexterity=5;

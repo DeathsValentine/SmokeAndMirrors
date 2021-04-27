@@ -18,6 +18,8 @@ public class DamageOverTime : AbilityBehaviors
     private bool isHitting;
     private float timeBetweenTicks;
 
+    private int stats;
+
     //base() calls the parent class constructor
     public DamageOverTime(float duration) : base(new ObjectInformation(name, description), times)
     {
@@ -26,7 +28,7 @@ public class DamageOverTime : AbilityBehaviors
         timeBetweenTicks = 1f;
     }
 
-    public override void doBehavior()
+    public override void doBehavior(int stat)
     {
         StartCoroutine(DOT());
     }
@@ -39,7 +41,7 @@ public class DamageOverTime : AbilityBehaviors
         while (timer.Elapsed.TotalSeconds <= duration)
         {
             //deal damagehere
-
+            UnityEngine.Debug.Log("Ticks for 50 damage");
             //comes back after a set amount of time
             yield return new WaitForSeconds(timeBetweenTicks);
         }

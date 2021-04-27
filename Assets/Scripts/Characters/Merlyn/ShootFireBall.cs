@@ -12,18 +12,14 @@ public class ShootFireBall : MonoBehaviour
     GameObject fireballPrefab;
 
     private float lastShot = 0f;
-    private FireBall fireball;
     public static ShootFireBall dummy;
 
 
-    // Start is called before the first frame update
     void Awake()
     {
         dummy = GetComponent<ShootFireBall>();
-        fireball = new FireBall();
     }
 
-    // Update is called once per frame
     public bool Shoot()
     {
         if (lastShot +1f  <= Time.time)

@@ -34,4 +34,9 @@ public class AbilityBehaviors : MonoBehaviour
     {
         Debug.Log("NEED TO ADD BEHAVIOR");
     }
+
+    public virtual void doBehavior(int multiplier)
+    {
+
+    }
 }
