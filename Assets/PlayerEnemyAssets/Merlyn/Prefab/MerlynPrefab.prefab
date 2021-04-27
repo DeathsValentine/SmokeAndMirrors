@@ -29,11 +29,7 @@ Transform:
   m_GameObject: {fileID: 1701528270322337917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
-=======
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
->>>>>>> parent of 1cd3054 (character models stop tposing)
   m_Children:
   - {fileID: 8079806193171627089}
   m_Father: {fileID: 0}
