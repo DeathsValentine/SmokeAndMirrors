@@ -5,11 +5,14 @@ using UnityEngine;
 public class RepeatableDialogueTrigger : MonoBehaviour
 {
     public DialogManager dialogManager;
-    public DialogData dialogData;
+    public string dialogData;
 
     private void OnTriggerEnter(Collider other)
     {
-        dialogManager.dialogData = dialogData;
-        dialogManager.BeginDialog();
+        if(other.gameObject.tag == "Player")
+        {
+            dialogManager.dialogData = dialogData;
+            dialogManager.BeginDialog();
+        }
     }
 }

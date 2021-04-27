@@ -17,6 +17,8 @@ public class MainMenu : MonoBehaviour
     private GameObject loginError;
     private GameObject registerError;
 
+    private Button selectButton;
+
     private Text loginText;
     private Text registerText;
 
@@ -31,6 +33,8 @@ public class MainMenu : MonoBehaviour
         loginError=GameObject.Find("LoginError");
         registerError=GameObject.Find("RegisterError");
 
+        selectButton=GameObject.Find("Select").GetComponent<Button>();
+
         loginText=loginError.GetComponent<Text>();
         registerText=registerError.GetComponent<Text>();
 
@@ -40,9 +44,14 @@ public class MainMenu : MonoBehaviour
 
         loginError.SetActive(false);
         registerError.SetActive(false);
+
+        selectButton.interactable=false;
     }
     
-
+    void Update()
+    {
+        selectButton.interactable=CreateNewCharacter.selected;
+    }
     #region LoginMenu
     //upon clicking filling data and login button click
     public void OnLoginClick()
@@ -94,7 +103,7 @@ public class MainMenu : MonoBehaviour
             Debug.Log("Password too short");
             registerText.text="Password too Short (Must Be More Than 6 Characters/Numbers)";
         }
-        else if (!passwordInput.Equals(passwordInput2))
+        else if (!passwordInput.text.Equals(passwordInput2.text))
         {
             registerError.SetActive(true);
             Debug.Log("Passwords dont match");
@@ -138,9 +147,9 @@ public class MainMenu : MonoBehaviour
             loginText.text="Invalid Username or Password";
         }
     }
-    
+
     #region CharacterCreation
-    /*
+ 
     public void SelectMerlyn()
     {
         //temporary until database is setup
@@ -152,7 +161,6 @@ public class MainMenu : MonoBehaviour
         //temporary until database is setup
         PlayerPrefs.SetString("Character", "Scarlett");
     }
-    */
     public void OnSelectClick()
     {
         SceneManager.LoadScene("Tutorial");
@@ -160,7 +168,6 @@ public class MainMenu : MonoBehaviour
     }
 
     #endregion
- 
 
 
     //Exit Game from Main Menu
