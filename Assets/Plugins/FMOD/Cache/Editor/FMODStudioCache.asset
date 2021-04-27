@@ -1,6 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9158498003964132915
+--- !u!114 &-6219734470073073941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Menu
+  guid: cb947f0aad0d5546ac25a5c73376fb5c
+  Banks:
+  - {fileID: -4515866919965263416}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 84000
+--- !u!114 &-4515866919965263416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19,132 +42,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-8962021930128099772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/SFX_Fireball
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/SFX_Fireball
-  guid: 2695468658f2764dba0e5b941a54f1d4
-  Banks:
-  - {fileID: -9158498003964132915}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1650
---- !u!114 &-3424995514332389153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Music_Hub
-  m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  Path: event:/Music/Music_Hub
-  guid: 69a7fa497ebd334d9fe67868c2a18cca
-  Banks:
-  - {fileID: -9158498003964132915}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 96778
---- !u!114 &-2620178608750547875
-=======
-  EditorBanks:
-  - {fileID: 3215853723585159618}
-  - {fileID: 5535987541618218781}
-  EditorEvents:
-  - {fileID: 6312257825784565587}
-  - {fileID: 6087790734386455499}
-  - {fileID: 5766950599949980837}
-  - {fileID: -579341578722418130}
-  - {fileID: -5680771165974438076}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 5535987541618218781}
-  StringsBanks:
-  - {fileID: 3215853723585159618}
-  stringsBankWriteTime: 637550539253033783
-  cacheVersion: 6
---- !u!114 &3215853723585159618
->>>>>>> edb1f4e0e82ce86e8e33b396a5e7fa215e720192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-<<<<<<< HEAD
-  lastModified: 637550677439964616
-=======
-  lastModified: 637550539253033783
->>>>>>> edb1f4e0e82ce86e8e33b396a5e7fa215e720192
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 962
-  Exists: 1
---- !u!114 &-2481384834329443524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Music_Menu
-  m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  Path: event:/Music/Music_Menu
-  guid: cb947f0aad0d5546ac25a5c73376fb5c
-  Banks:
-  - {fileID: -9158498003964132915}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 84000
 --- !u!114 &11400000
-=======
-  Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637550539253014281
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &5766950599949980837
->>>>>>> edb1f4e0e82ce86e8e33b396a5e7fa215e720192
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,22 +55,22 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2620178608750547875}
-  - {fileID: -9158498003964132915}
+  - {fileID: 7298259089338870184}
+  - {fileID: -4515866919965263416}
   EditorEvents:
-  - {fileID: -8962021930128099772}
-  - {fileID: -3424995514332389153}
-  - {fileID: 6390537692378148703}
-  - {fileID: -2481384834329443524}
-  - {fileID: 7837982538375245155}
+  - {fileID: 3027451405151878254}
+  - {fileID: 7596168873136897278}
+  - {fileID: 2875098832861011028}
+  - {fileID: -6219734470073073941}
+  - {fileID: 3006548646964372700}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -9158498003964132915}
+  - {fileID: -4515866919965263416}
   StringsBanks:
-  - {fileID: -2620178608750547875}
+  - {fileID: 7298259089338870184}
   stringsBankWriteTime: 637550677439964616
   cacheVersion: 6
---- !u!114 &6390537692378148703
+--- !u!114 &2875098832861011028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,7 +85,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_IceAttack
   guid: 89aaec909158fc4ebff0e9edb7ba9a3c
   Banks:
-  - {fileID: -9158498003964132915}
+  - {fileID: -4515866919965263416}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -195,7 +93,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1280
---- !u!114 &7837982538375245155
+--- !u!114 &3006548646964372700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,7 +108,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Footsteps
   guid: d32958d580a3d34d9cee7f75d9a523ab
   Banks:
-  - {fileID: -9158498003964132915}
+  - {fileID: -4515866919965263416}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -218,3 +116,70 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 206
+--- !u!114 &3027451405151878254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Fireball
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_Fireball
+  guid: 2695468658f2764dba0e5b941a54f1d4
+  Banks:
+  - {fileID: -4515866919965263416}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1650
+--- !u!114 &7298259089338870184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637550677439964616
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 962
+  Exists: 1
+--- !u!114 &7596168873136897278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Hub
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Hub
+  guid: 69a7fa497ebd334d9fe67868c2a18cca
+  Banks:
+  - {fileID: -4515866919965263416}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 96778
