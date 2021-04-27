@@ -9815,7 +9815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 222369746}
-  dialogData: 
+  dialogData: IntroDialogue
 --- !u!1001 &1399514704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11096,7 +11096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 222369746}
-  dialogData: 
+  dialogData: TutorialBattle
 --- !u!65 &1584548511
 BoxCollider:
   m_ObjectHideFlags: 0
