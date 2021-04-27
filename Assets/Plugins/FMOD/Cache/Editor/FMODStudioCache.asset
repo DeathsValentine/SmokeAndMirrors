@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Music/Music_Hub
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Path: event:/Music/Music_Hub
   guid: 69a7fa497ebd334d9fe67868c2a18cca
   Banks:
@@ -66,6 +67,25 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 96778
 --- !u!114 &-2620178608750547875
+=======
+  EditorBanks:
+  - {fileID: 3215853723585159618}
+  - {fileID: 5535987541618218781}
+  EditorEvents:
+  - {fileID: 6312257825784565587}
+  - {fileID: 6087790734386455499}
+  - {fileID: 5766950599949980837}
+  - {fileID: -579341578722418130}
+  - {fileID: -5680771165974438076}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 5535987541618218781}
+  StringsBanks:
+  - {fileID: 3215853723585159618}
+  stringsBankWriteTime: 637550539253033783
+  cacheVersion: 6
+--- !u!114 &3215853723585159618
+>>>>>>> edb1f4e0e82ce86e8e33b396a5e7fa215e720192
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,7 +100,11 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 637550677439964616
+=======
+  lastModified: 637550539253033783
+>>>>>>> edb1f4e0e82ce86e8e33b396a5e7fa215e720192
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -98,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Music/Music_Menu
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Path: event:/Music/Music_Menu
   guid: cb947f0aad0d5546ac25a5c73376fb5c
   Banks:
@@ -110,6 +135,16 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 84000
 --- !u!114 &11400000
+=======
+  Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637550539253014281
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5766950599949980837
+>>>>>>> edb1f4e0e82ce86e8e33b396a5e7fa215e720192
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
