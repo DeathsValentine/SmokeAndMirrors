@@ -8,6 +8,7 @@ TagManager:
   - Freeze
   - Enemy
   - Attack
+  - MinimapCamera
   layers:
   - Default
   - TransparentFX
