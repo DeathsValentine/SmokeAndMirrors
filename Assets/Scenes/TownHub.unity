@@ -7953,6 +7953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Child3
+  isClose: 0
 --- !u!135 &683624487
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8778,6 +8779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Townsman3
+  isClose: 0
 --- !u!135 &759633627
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9429,7 +9431,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c9a8d37e92270ac47ad470759437a23a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.238
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9a8d37e92270ac47ad470759437a23a,
         type: 3}
@@ -9439,7 +9441,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c9a8d37e92270ac47ad470759437a23a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.333
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9a8d37e92270ac47ad470759437a23a,
         type: 3}
@@ -10134,6 +10136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Townswoman1
+  isClose: 0
 --- !u!135 &951770047
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13099,6 +13102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Ophelia
+  isClose: 0
 --- !u!135 &1237673942
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13159,6 +13163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Townswoman2
+  isClose: 0
 --- !u!135 &1242109795
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13649,6 +13654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Natalia
+  isClose: 0
 --- !u!135 &1291902208
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15422,6 +15428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Townsman1
+  isClose: 0
 --- !u!135 &1503190936
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16572,6 +16579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Townsman2
+  isClose: 0
 --- !u!135 &1588302129
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17507,6 +17515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Child1
+  isClose: 0
 --- !u!135 &1663023622
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18123,7 +18132,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c46f5b4a04617d14ca2660f67c80a100,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c46f5b4a04617d14ca2660f67c80a100,
         type: 3}
@@ -19021,6 +19030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Ymir
+  isClose: 0
 --- !u!4 &1792036248
 Transform:
   m_ObjectHideFlags: 0
@@ -19029,7 +19039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792036245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 485.13, y: 1.27, z: 455}
+  m_LocalPosition: {x: 485.13, y: 1.27, z: 453.76}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 896577376}
@@ -23174,6 +23184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Child2
+  isClose: 0
 --- !u!135 &2056732241
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23573,6 +23584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Townswoman3
+  isClose: 0
 --- !u!135 &2081451478
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23723,6 +23735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 300794160}
   dialogData: Orik
+  isClose: 0
 --- !u!135 &2111915154
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -86,8 +86,13 @@ MonoBehaviour:
   - {fileID: 2875098832861011028}
   - {fileID: -6219734470073073941}
   - {fileID: 3006548646964372700}
+<<<<<<< Updated upstream
   - {fileID: -6861069876247225681}
   - {fileID: 4512750259735511387}
+=======
+  - {fileID: 1455067914746607923}
+  - {fileID: 9143739086812462673}
+>>>>>>> Stashed changes
   EditorParameters: []
   MasterBanks:
   - {fileID: -4515866919965263416}
@@ -95,6 +100,29 @@ MonoBehaviour:
   - {fileID: 7298259089338870184}
   stringsBankWriteTime: 637551164355477388
   cacheVersion: 6
+--- !u!114 &1455067914746607923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Teleport
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_Teleport
+  guid: 42825f82f8f495439ac09bb61eca9904
+  Banks:
+  - {fileID: -4515866919965263416}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1340
 --- !u!114 &2875098832861011028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,3 +259,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 96778
+--- !u!114 &9143739086812462673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UI_Select
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UI_Select
+  guid: ad39d13e2f732c4182a3c53c1fa8c510
+  Banks:
+  - {fileID: -4515866919965263416}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4106
