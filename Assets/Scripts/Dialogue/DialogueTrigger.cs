@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    // Add a on finish trigger so it can trigger other things
+
     public DialogManager dialogManager;
     public string dialogData;
 
