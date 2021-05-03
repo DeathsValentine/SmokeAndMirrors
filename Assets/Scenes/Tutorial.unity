@@ -1825,7 +1825,7 @@ MonoBehaviour:
   dialogPanel: {fileID: 1697354881}
   text: {fileID: 407050022}
   dialogData: 
-  DialogSound: 
+  DialogSound: event:/VO/VO_Intro
 --- !u!4 &222369747
 Transform:
   m_ObjectHideFlags: 0
