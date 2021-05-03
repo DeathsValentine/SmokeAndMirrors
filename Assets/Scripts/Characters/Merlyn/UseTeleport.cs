@@ -7,6 +7,7 @@ public class UseTeleport : MonoBehaviour
 {
     [SerializeField]
     private GameObject teleportFX;
+    public GameObject TeleportSound;
 
     private float lastUsed = 0f;
     public static UseTeleport dummy;
@@ -19,6 +20,7 @@ public class UseTeleport : MonoBehaviour
 
     public void Tele()
     {
+        TeleportSound.SetActive (false);
         Vector3 currentPos = transform.position;
         if (lastUsed + 1f <= Time.time)
         {
@@ -35,10 +37,13 @@ public class UseTeleport : MonoBehaviour
             }
             GameObject start = Instantiate(teleportFX, currentPos, transform.rotation);
             GameObject end = Instantiate(teleportFX, target, transform.rotation);
+            
 
             Destroy(start, 2.0f);
             Destroy(end, 2.0f);
         }
+            TeleportSound.SetActive (true);
+            
     }
 
     IEnumerator Active()

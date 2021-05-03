@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FMODUnity;
 
 public class DialogManager : MonoBehaviour
 {
     public GameObject dialogPanel;
     public TextMeshProUGUI text;
     public string dialogData;
+
+    [FMODUnity.EventRef]
+    public string DialogSound;
+    FMOD.Studio.EventInstance DialogVO;
 
     private bool isInDialog;
     private int index;
@@ -24,6 +29,8 @@ public class DialogManager : MonoBehaviour
         {
             isInDialog = true;
             index = 0;
+            DialogVO = FMODUnity.RuntimeManager.CreateInstance ("DialogSound");
+            DialogVO.start();
 
             List<string> temp = NewDialogueManager.GetDialogue(dialogData);
 

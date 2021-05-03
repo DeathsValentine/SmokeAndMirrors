@@ -98,7 +98,13 @@ public class Enemy : MonoBehaviour
             Debug.Log("took " + damage + " damage, Health is now at " + health);
         }
 
-
+/*        if(other.collider.tag == "Player")
+        {
+            if (other.collider.name == player.gameObject.name)
+            {
+                Debug.Log("ok");
+            }
+        }*/
     }
 
     void OnParticleCollision(GameObject other)

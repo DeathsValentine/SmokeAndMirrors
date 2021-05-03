@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HUD : MonoBehaviour
 {
@@ -13,10 +14,10 @@ public class HUD : MonoBehaviour
 
     public Text playerLevel;
 
-    public Text enduranceVal;
-    public Text strengthVal;
-    public Text intelligenceVal;
-    public Text dexterityVal;
+    private Text enduranceVal;
+    private Text strengthVal;
+    private Text intelligenceVal;
+    private Text dexterityVal;
 
     public Button ability1;
     public Button ability2;
@@ -29,7 +30,6 @@ public class HUD : MonoBehaviour
     public Sprite dash;
     public Sprite bladeDance;
     public Sprite overwhelm;
-
 
     void Start()
     {
@@ -69,6 +69,9 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
+        Text location = GameObject.Find("Location").GetComponent<Text>();
+        location.text= SceneManager.GetActiveScene().name;
+
         //when escape key on keyboard is pressed show menu
         if (Input.GetKeyDown(KeyCode.Escape))
         {
