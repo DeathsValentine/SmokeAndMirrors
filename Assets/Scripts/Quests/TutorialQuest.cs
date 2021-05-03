@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TutorialQuest : MonoBehaviour
-{   
+{
+    public GameObject bandit;
+    
     // Add functions for quest
 
     public void SpawnBandits()
@@ -13,7 +15,7 @@ public class TutorialQuest : MonoBehaviour
 
     public void CompleteQuest()
     {
-            //give rewards
+            // give rewards
             // call in OnCompleted
     }
 }

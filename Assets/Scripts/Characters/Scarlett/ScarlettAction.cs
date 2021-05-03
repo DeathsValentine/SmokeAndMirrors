@@ -47,7 +47,7 @@ public class ScarlettAction : MonoBehaviour
             FindObjectOfType<GameManager>().OnlineMovement(x,z,angle);
         }*/
         /*Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));*/
-        if (dialogManager.getInDialog())
+        if (dialogManager.GetInDialog())
         {
             inDialogue = true;
         }

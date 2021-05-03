@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Attack
   - MinimapCamera
+  - Bandit
   layers:
   - Default
   - TransparentFX

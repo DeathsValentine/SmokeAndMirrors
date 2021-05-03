@@ -92,12 +92,13 @@ MonoBehaviour:
   - {fileID: 4412276780482042109}
   - {fileID: 1653971567272065212}
   - {fileID: -4586093707889172998}
+  - {fileID: 5731242776025940778}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3206364850740702802}
   StringsBanks:
   - {fileID: 4880732195030162316}
-  stringsBankWriteTime: 637553840484513301
+  stringsBankWriteTime: 637556463864671633
   cacheVersion: 6
 --- !u!114 &26694827308648386
 MonoBehaviour:
@@ -183,7 +184,7 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637553840484493345
+  lastModified: 637556463864651684
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -225,9 +226,32 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637553840484513301
+  lastModified: 637556463864671633
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1044
+    Value: 1086
   Exists: 1
+--- !u!114 &5731242776025940778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VO/VO_Intro
+  m_EditorClassIdentifier: 
+  Path: event:/VO/VO_Intro
+  guid: b2afa82b47bc76418f62074e116669a5
+  Banks:
+  - {fileID: 3206364850740702802}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6900

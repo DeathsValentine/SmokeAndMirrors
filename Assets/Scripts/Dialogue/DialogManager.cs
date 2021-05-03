@@ -29,7 +29,7 @@ public class DialogManager : MonoBehaviour
         {
             isInDialog = true;
             index = 0;
-            DialogVO = FMODUnity.RuntimeManager.CreateInstance ("DialogSound");
+            DialogVO = FMODUnity.RuntimeManager.CreateInstance (DialogSound);
             DialogVO.start();
 
             List<string> temp = NewDialogueManager.GetDialogue(dialogData);
@@ -74,7 +74,7 @@ public class DialogManager : MonoBehaviour
             MoveForward();
         }
     }
-    public bool getInDialog()
+    public bool GetInDialog()
     {
         return isInDialog;
     }
