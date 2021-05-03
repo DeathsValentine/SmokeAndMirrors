@@ -10,9 +10,9 @@ public class DialogManager : MonoBehaviour
     public TextMeshProUGUI text;
     public string dialogData;
 
-    [FMODUnity.EventRef]
-    public string DialogSound;
-    FMOD.Studio.EventInstance DialogVO;
+    //[FMODUnity.EventRef]
+    //public string DialogSound;
+    //FMOD.Studio.EventInstance DialogVO;
 
     private bool isInDialog;
     private int index;
@@ -29,8 +29,10 @@ public class DialogManager : MonoBehaviour
         {
             isInDialog = true;
             index = 0;
-            DialogVO = FMODUnity.RuntimeManager.CreateInstance (DialogSound);
-            DialogVO.start();
+
+            //dont use this
+            //DialogVO = FMODUnity.RuntimeManager.CreateInstance (DialogSound);
+            //DialogVO.start();
 
             List<string> temp = NewDialogueManager.GetDialogue(dialogData);
 
@@ -54,7 +56,9 @@ public class DialogManager : MonoBehaviour
     {
         if (isInDialog)
         {
+            DialogVO.release();
             index = index + 1;
+            DialogVO.start();
             List<string> temp = NewDialogueManager.GetDialogue(dialogData);
 
             if (index < temp.Count)

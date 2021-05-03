@@ -9,6 +9,10 @@ public class DialogueTrigger : MonoBehaviour
     public DialogManager dialogManager;
     public string dialogData;
 
+    [FMODUnity.EventRef]
+    public string DialogSound;
+    FMOD.Studio.EventInstance DialogVO;
+
     private int count = 0;
 
     private void Awake()
@@ -24,6 +28,8 @@ public class DialogueTrigger : MonoBehaviour
             {
                 dialogManager.dialogData = dialogData;
                 dialogManager.BeginDialog();
+                DialogVO = FMODUnity.RuntimeManager.CreateInstance(DialogSound);
+                DialogVO.start();
                 count++;
             }
         }
