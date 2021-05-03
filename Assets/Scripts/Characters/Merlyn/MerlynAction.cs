@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class MerlynAction : NetworkBehaviour
+public class MerlynAction : MonoBehaviour
 {
     Animator animator;
     public Rigidbody rb;
@@ -13,22 +12,21 @@ public class MerlynAction : NetworkBehaviour
     /*public static int gold;
     public static int playerName;*/
 
+    private DialogManager dialogManager;
+    private bool noMovement;
+    private bool noRotation;
+    private bool inDialogue;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
-        
+        dialogManager = GameObject.Find("DialogueManager").GetComponent<DialogManager>();
     }
 
     // Update is called once per frame
-    
     void FixedUpdate()
     {
-        if (!isLocalPlayer)
-        {
-            return;
-        }
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -47,8 +45,19 @@ public class MerlynAction : NetworkBehaviour
             FindObjectOfType<GameManager>().OnlineMovement(x,z,angle);
         }*/
         /*Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));*/
-
-        move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (dialogManager.getInDialog())
+        {
+            inDialogue = true;
+        }
+        else
+        {
+            inDialogue = false;
+        }
+        if (!inDialogue)
+        {
+            if (Input.GetKey("left shift")) speed = 5;
+            move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        }
         /*this.transform.position += Movement * speed * Time.deltaTime;*/
         /*rotate(angle);*/
         /*ShootingUpdate();*/
@@ -60,10 +69,6 @@ public class MerlynAction : NetworkBehaviour
     //character rotation towards mouse 
     void Update()
     {
-        if (!isLocalPlayer)
-        {
-            return;
-        }
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -74,11 +79,21 @@ public class MerlynAction : NetworkBehaviour
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
 
         //rotate the player object towards mouse
-        transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
-        Freeze();
-        Teleport();
-        Fireball();
-        Animation();
+        if (!inDialogue)
+        {
+            if (!noRotation)
+            {
+                transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
+            }
+            Freeze();
+            Teleport();
+            Fireball();
+            Animation();
+        }
+        else
+        {
+            SetAnimationFalse();
+        }
     }
 
     //finding angle between two points
@@ -91,6 +106,7 @@ public class MerlynAction : NetworkBehaviour
     {
         Vector3 Movement = new Vector3(x, 0, z);
         transform.position += Movement * speed * Time.deltaTime;
+        speed = 10;
     }
 
     public void rotate(float angle)
@@ -164,6 +180,7 @@ public class MerlynAction : NetworkBehaviour
     {
         if (animator.GetBool("fireballSkill")) animator.SetBool("fireballSkill", false);
         if (animator.GetBool("iceSkill")) animator.SetBool("iceSkill", false);
-
+        if (animator.GetBool("isRunning")) animator.SetBool("isRunning", false);
+        if (animator.GetBool("isWalking")) animator.SetBool("isWalking", false);
     }
 }

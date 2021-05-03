@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class ScarlettAction : NetworkBehaviour
+public class ScarlettAction : MonoBehaviour
 {
     Animator animator;
     public Rigidbody rb;
@@ -30,11 +29,6 @@ public class ScarlettAction : NetworkBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!isLocalPlayer)
-        {
-            return;
-        }
-
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -76,10 +70,6 @@ public class ScarlettAction : NetworkBehaviour
     //character rotation towards mouse 
     void Update()
     {
-        if (!isLocalPlayer)
-        {
-            return;
-        }
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
