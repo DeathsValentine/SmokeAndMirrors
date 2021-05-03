@@ -74,7 +74,7 @@ public class DialogManager : MonoBehaviour
             MoveForward();
         }
     }
-    public bool getInDialog()
+    public bool GetInDialog()
     {
         return isInDialog;
     }

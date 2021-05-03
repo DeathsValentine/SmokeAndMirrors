@@ -28,4 +28,14 @@ public class DialogueTrigger : MonoBehaviour
             }
         }
     }
+
+    public string CurrentDialogue()
+    {
+        return dialogManager.dialogData;
+    }
+
+    public bool IsInDialogue()
+    {
+        return dialogManager.GetInDialog();
+    }
 }
