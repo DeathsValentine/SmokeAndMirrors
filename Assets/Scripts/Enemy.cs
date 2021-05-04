@@ -63,7 +63,6 @@ public class Enemy : MonoBehaviour
         {
             animator.SetBool("wolfRun", false);
         }
-        Debug.Log(transform.position);
     }
     public void moveEnemy(float playerX, float playerY)
     {
@@ -73,9 +72,11 @@ public class Enemy : MonoBehaviour
         rb.rotation =  Quaternion.Euler (new Vector3(0f,angle,0f));
         direction.Normalize();
         var distance = Vector3.Distance(new Vector3 (playerX , 0 , playerY), transform.position);
-        if(distance > 3)
+        if(distanceFromPlayer > 3)
         {
-            rb.MovePosition(transform.position + direction *moveSpeed *Time.deltaTime);
+            transform.position += direction * moveSpeed * Time.deltaTime;
+            Debug.Log(transform.position);
+            Debug.Log("movespeed : " + moveSpeed);
         }
         transform.LookAt(player);
     }

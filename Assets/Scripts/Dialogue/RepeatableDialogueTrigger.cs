@@ -29,7 +29,7 @@ public class RepeatableDialogueTrigger : MonoBehaviour
         if (isClose && Input.GetKeyDown(KeyCode.Mouse0))
         {
             dialogManager.dialogData = dialogData;
-            dialogManager.BeginDialog();
+            dialogManager.BeginDialog("");
         }
     }
 }

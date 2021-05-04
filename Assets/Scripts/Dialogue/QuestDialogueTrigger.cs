@@ -22,7 +22,7 @@ public class QuestDialogueTrigger : MonoBehaviour
             if (count < 1)
             {
                 dialogManager.dialogData = dialogData;
-                dialogManager.BeginDialog();
+                dialogManager.BeginDialog("");
                 count++;
             }
         }

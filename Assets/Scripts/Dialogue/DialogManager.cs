@@ -13,7 +13,7 @@ public class DialogManager : MonoBehaviour
     //[FMODUnity.EventRef]
     //public string DialogSound;
     //FMOD.Studio.EventInstance DialogVO;
-
+    DialogueTrigger dialogTrigger;
     private bool isInDialog;
     private int index;
 
@@ -23,13 +23,13 @@ public class DialogManager : MonoBehaviour
         dialogPanel.SetActive(false);
     }
 
-    public void BeginDialog()
+    public void BeginDialog(string objectName)
     {
         if (!isInDialog)
         {
             isInDialog = true;
             index = 0;
-
+            dialogTrigger = GameObject.Find(objectName).GetComponent<DialogueTrigger>();
             //dont use this
             //DialogVO = FMODUnity.RuntimeManager.CreateInstance (DialogSound);
             //DialogVO.start();
@@ -56,9 +56,9 @@ public class DialogManager : MonoBehaviour
     {
         if (isInDialog)
         {
-            DialogVO.release();
+            dialogTrigger.DialogVO.release();
             index = index + 1;
-            DialogVO.start();
+            dialogTrigger.DialogVO.start();
             List<string> temp = NewDialogueManager.GetDialogue(dialogData);
 
             if (index < temp.Count)

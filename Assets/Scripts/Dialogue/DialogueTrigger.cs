@@ -11,7 +11,7 @@ public class DialogueTrigger : MonoBehaviour
 
     [FMODUnity.EventRef]
     public string DialogSound;
-    FMOD.Studio.EventInstance DialogVO;
+    public FMOD.Studio.EventInstance DialogVO;
 
     private int count = 0;
 
@@ -26,8 +26,9 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (count < 1)
             {
+                string objectName = gameObject.name;
                 dialogManager.dialogData = dialogData;
-                dialogManager.BeginDialog();
+                dialogManager.BeginDialog(objectName);
                 DialogVO = FMODUnity.RuntimeManager.CreateInstance(DialogSound);
                 DialogVO.start();
                 count++;

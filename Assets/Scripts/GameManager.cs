@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
     
     public void SpawnEnemy()
     {
-        ene1 = Instantiate(enemy1, new Vector3(20, 0, -20), Quaternion.identity);
+        ene1 = Instantiate(enemy1, new Vector3(20, 0.5f, -24), Quaternion.identity);
     }
     
     public void removeEnemy(GameObject enemy)
