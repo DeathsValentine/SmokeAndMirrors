@@ -54,17 +54,7 @@ public class GameManager : MonoBehaviour
         }
         if(sceneName == "TownHub")
         {
-            //char1 = Instantiate(merlyn, new Vector3(485, 2, 475), Quaternion.identity);
             Destroy (char1);
-            if(PlayerPrefs.GetString("Character")=="Merlyn")
-            {
-                char1 = Instantiate(merlyn, new Vector3(480, 0.5f, 450), Quaternion.identity);
-            }
-
-            if(PlayerPrefs.GetString("Character")=="Scarlett")
-            {
-                char1 = Instantiate(scarlett, new Vector3(480, 0.5f, 450), Quaternion.identity);
-            }
         }
         if (sceneName == "Hostile Area 1")
         {
