@@ -6,13 +6,8 @@ public class QuestManager : MonoBehaviour
 {
     public Quest[] quests;
 
-    void Start()
+    public void CompleteQuest(int questID)
     {
-        
-    }
-
-    void Update()
-    {
-        
+        quests[questID].Complete();
     }
 }

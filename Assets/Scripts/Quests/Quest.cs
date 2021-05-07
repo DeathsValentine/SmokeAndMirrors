@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -24,5 +25,13 @@ public class Quest
     public UnityEvent OnCompleted;
 
     public virtual void Accept() { }
-    public virtual void Complete() { }
+    public virtual void Complete() {
+        if(state != State.Active)
+        {
+            throw new Exception("Quest is not active.");
+        }
+
+        state = State.Completed;
+        OnCompleted.Invoke();
+    }
 }

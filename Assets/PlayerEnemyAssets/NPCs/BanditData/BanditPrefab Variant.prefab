@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7324726226578068573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3252027543610868492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ffdc7eea8b9f3043aa9773c374eebf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  moveSpeed: 1
+  health: 300
+  x: 0
+  z: 0
+  distanceFromPlayer: 0
+  lastHitByFreeze: 0
 --- !u!1001 &2441210499098705501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30,17 +49,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7c062d1d6da71b944a266c88b468d66d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.0757265
+      value: -5.743805
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c062d1d6da71b944a266c88b468d66d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c062d1d6da71b944a266c88b468d66d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -46.75
+      value: 4.851322
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c062d1d6da71b944a266c88b468d66d,
         type: 3}
@@ -80,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7c062d1d6da71b944a266c88b468d66d,
         type: 3}
       propertyPath: m_Name
-      value: BanditPrefab
+      value: BanditPrefab Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7c062d1d6da71b944a266c88b468d66d,
         type: 3}
@@ -89,3 +108,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c062d1d6da71b944a266c88b468d66d, type: 3}
+--- !u!1 &3252027543610868492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c062d1d6da71b944a266c88b468d66d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2441210499098705501}
+  m_PrefabAsset: {fileID: 0}
