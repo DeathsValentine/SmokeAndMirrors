@@ -9,9 +9,10 @@ public class DialogueTrigger : MonoBehaviour
     public DialogManager dialogManager;
     public string dialogData;
 
-    [FMODUnity.EventRef]
-    public string DialogSound;
+    //[FMODUnity.EventRef]
+    //public string DialogSound;
     public FMOD.Studio.EventInstance DialogVO;
+    public GameObject VOEvent;
 
     private int count = 0;
 
@@ -29,8 +30,9 @@ public class DialogueTrigger : MonoBehaviour
                 string objectName = gameObject.name;
                 dialogManager.dialogData = dialogData;
                 dialogManager.BeginDialog(objectName);
-                DialogVO = FMODUnity.RuntimeManager.CreateInstance(DialogSound);
-                DialogVO.start();
+                //DialogVO = FMODUnity.RuntimeManager.CreateInstance(DialogSound);
+                //DialogVO.start();
+                //VOEvent.SetActive (true);
                 count++;
             }
         }
