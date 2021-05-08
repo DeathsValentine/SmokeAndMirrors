@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class MerlynAction : MonoBehaviour
+using Mirror;
+public class MerlynAction : NetworkBehaviour
 {
     Animator animator;
     public Rigidbody rb;
@@ -27,6 +27,10 @@ public class MerlynAction : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -69,6 +73,10 @@ public class MerlynAction : MonoBehaviour
     //character rotation towards mouse 
     void Update()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -150,6 +158,10 @@ public class MerlynAction : MonoBehaviour
 
     void Animation()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         bool isRunning = animator.GetBool("isRunning");
         bool isWalking = animator.GetBool("isWalking");
         bool movePressed = Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("d") || Input.GetKey("s");

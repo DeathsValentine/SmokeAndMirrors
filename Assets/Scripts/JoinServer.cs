@@ -8,26 +8,40 @@ public class JoinServer : NetworkManager
     // Start is called before the first frame update
     public override void Awake()
     {
-        if (!NetworkServer.active)
-        {
-            StartHost();
-            Debug.Log("Creating Host Server");
-            OnServerAddPlayer(NetworkServer.connections[0]);
-            Debug.Log(PlayerPrefs.GetString("Character"));
-        }
-        else if(NetworkServer.active)
-        {
-            //networkAddress = "localhost";
-            StartClient();
-            //networkAddress = "localhost";
-        }
-        
+        base.Awake();
+        //StartServer();
+        StartClient();
+        //StartHost();
     }
-
+    public override void Start()
+    {
+        //NetworkClient.active;
+        if (!isNetworkActive)
+        {
+            Debug.Log("Server isnt Active");
+        }
+        if(isNetworkActive)
+        {
+            Debug.Log("Server is  active");
+        }
+        if (NetworkClient.active)
+        {
+            Debug.Log("Client Active");
+            //NetworkClient.ConnectLocalServer();
+            //Debug.Log(NetworkClient.);
+            if (NetworkClient.isConnected) { Debug.Log("Connected"); }
+            else { Debug.Log("Not Connected"); }
+        }
+        if (!NetworkClient.active)
+        {
+            Debug.Log("Client isnt Active");
+        }
+    }
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
         Transform startPos = GetStartPosition();
-        //GameObject playerPrefab;
+        GameObject playerPrefab = spawnPrefabs[0];
+        /*
         if (PlayerPrefs.GetString("Character") == "Merlyn")
         {
             playerPrefab = spawnPrefabs[0];
@@ -36,9 +50,9 @@ public class JoinServer : NetworkManager
         {
             playerPrefab = spawnPrefabs[1];
         }
-
+        */
             GameObject player = startPos != null
-            ? Instantiate(playerPrefab, startPos.position, startPos.rotation)
+            ? Instantiate(playerPrefab, startPos.position, Quaternion.identity)
             : Instantiate(playerPrefab);
 
         // instantiating a "Player" prefab gives it the name "Player(clone)"
