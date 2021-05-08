@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepeatableDialogueTrigger : MonoBehaviour
+public class RepeatableDialogueTrigger : DialogueTrigger
 {
-    public DialogManager dialogManager;
-    public string dialogData;
     public bool isClose = false;
 
     private void OnTriggerEnter(Collider other)
@@ -29,7 +27,7 @@ public class RepeatableDialogueTrigger : MonoBehaviour
         if (isClose && Input.GetKeyDown(KeyCode.Mouse0))
         {
             dialogManager.dialogData = dialogData;
-            dialogManager.BeginDialog();
+            dialogManager.BeginDialog(this);
         }
     }
 }

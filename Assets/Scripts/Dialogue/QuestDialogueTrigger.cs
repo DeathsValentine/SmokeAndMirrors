@@ -1,19 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class QuestDialogueTrigger : MonoBehaviour
+public class QuestDialogueTrigger : DialogueTrigger
 {
-    public DialogManager dialogManager;
     public DialogueTrigger dialogueTrigger;
-    public string dialogData;
+    public UnityEvent onComplete;
 
     private int count = 0;
-
-    private void Awake()
-    {
-        dialogManager.dialogData = dialogData;
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,19 +17,9 @@ public class QuestDialogueTrigger : MonoBehaviour
             if (count < 1)
             {
                 dialogManager.dialogData = dialogData;
-                dialogManager.BeginDialog();
+                dialogManager.BeginDialog(this);
                 count++;
             }
         }
-    }
-
-    public string CurrentDialogue()
-    {
-        return dialogManager.dialogData;
-    }
-
-    public bool IsInDialogue()
-    {
-        return dialogManager.GetInDialog();
     }
 }

@@ -24,7 +24,15 @@ public class Quest
     public UnityEvent OnActive;
     public UnityEvent OnCompleted;
 
-    public virtual void Accept() { }
+    public virtual void Accept() {
+        if (state != State.Ready)
+        {
+            throw new Exception("Quest is not ready.");
+        }
+
+        state = State.Active;
+        OnActive.Invoke();
+    }
     public virtual void Complete() {
         if(state != State.Active)
         {

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour
 {
     public DialogManager dialogManager;
     public string dialogData;
+    public UnityEvent OnComplete;
 
     private int count = 0;
 
@@ -16,12 +18,17 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!enabled)
+        {
+            return;
+        }
+
         if(other.gameObject.tag == "Player")
         {
             if (count < 1)
             {
                 dialogManager.dialogData = dialogData;
-                dialogManager.BeginDialog();
+                dialogManager.BeginDialog(this);
                 count++;
             }
         }

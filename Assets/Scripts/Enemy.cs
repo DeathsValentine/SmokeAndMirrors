@@ -53,15 +53,15 @@ public class Enemy : MonoBehaviour
     {
         player=GameObject.FindWithTag("Player").transform;
         distanceFromPlayer = Vector3.Distance(transform.position, player.position);
-        bool isRunning = animator.GetBool("wolfRun");
+        //bool isRunning = animator.GetBool("wolfRun");
         if (distanceFromPlayer <= 20)
         {
             moveEnemy(player.position.x, player.position.z);
-            animator.SetBool("wolfRun", true);
+            animator?.SetBool("wolfRun", true);
         }
         else
         {
-            animator.SetBool("wolfRun", false);
+            animator?.SetBool("wolfRun", false);
         }
         Debug.Log(transform.position);
     }

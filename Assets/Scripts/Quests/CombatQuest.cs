@@ -21,16 +21,10 @@ public class CombatQuest : MonoBehaviour
         // trigger NPC attack
         text.text = questText;
         dialogPanel.SetActive(true);
-
-        if (questIndicator != null)
-        {
-            questIndicator.SetActive(false);
-        }
     }
 
     public void CompleteQuest()
     {
-        dialogPanel.SetActive(false);
         qMan.CompleteQuest(questNum);
     }
 
