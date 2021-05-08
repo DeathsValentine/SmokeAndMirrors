@@ -2433,10 +2433,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: BanditPrefab Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3252027543610868492, guid: d00d86cab8c19b5479a81ded96176350,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274266847575044769, guid: d00d86cab8c19b5479a81ded96176350,
+        type: 3}
+      propertyPath: m_Drag
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4274266847575044769, guid: d00d86cab8c19b5479a81ded96176350,
         type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324726226578068573, guid: d00d86cab8c19b5479a81ded96176350,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d00d86cab8c19b5479a81ded96176350, type: 3}
@@ -4311,6 +4326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BanditPrefab Variant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252027543610868492, guid: d00d86cab8c19b5479a81ded96176350,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4274266847575044769, guid: d00d86cab8c19b5479a81ded96176350,
         type: 3}
@@ -7526,6 +7546,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BanditPrefab Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3252027543610868492, guid: d00d86cab8c19b5479a81ded96176350,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4274266847575044769, guid: d00d86cab8c19b5479a81ded96176350,
         type: 3}
       propertyPath: m_Constraints
@@ -8483,6 +8508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BanditPrefab Variant (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252027543610868492, guid: d00d86cab8c19b5479a81ded96176350,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4274266847575044769, guid: d00d86cab8c19b5479a81ded96176350,
         type: 3}
@@ -11241,6 +11271,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BanditPrefab Variant (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252027543610868492, guid: d00d86cab8c19b5479a81ded96176350,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4274266847575044769, guid: d00d86cab8c19b5479a81ded96176350,
         type: 3}
@@ -17903,6 +17938,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BanditPrefab Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252027543610868492, guid: d00d86cab8c19b5479a81ded96176350,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4274266847575044769, guid: d00d86cab8c19b5479a81ded96176350,
         type: 3}
