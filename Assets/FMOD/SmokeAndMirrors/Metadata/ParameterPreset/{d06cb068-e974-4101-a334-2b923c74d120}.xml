@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{d06cb068-e974-4101-a334-2b923c74d120}">
+		<property name="name">
+			<value>Dialogue Tree</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d2f070dc-3040-42a3-9018-b1250e868df2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9dcc4c1f-bdd1-4ae9-a4d0-6d77709b1d93}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9dcc4c1f-bdd1-4ae9-a4d0-6d77709b1d93}">
+		<property name="maximum">
+			<value>6</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
