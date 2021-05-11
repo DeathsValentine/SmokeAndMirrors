@@ -533,7 +533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8367209557489981997
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1807,7 +1807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3035255618028077114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2484,6 +2484,8 @@ MonoBehaviour:
   ability1: {fileID: 3170829904454476960}
   ability2: {fileID: 2605907724050165695}
   ability3: {fileID: 2108202069606405498}
+  merlyn: {fileID: 21300000, guid: 62149874f2286a14dbbb76e7b26ae43f, type: 3}
+  scarlett: {fileID: 21300000, guid: b508cc1992679884f9f1c07a63c140aa, type: 3}
   fireball: {fileID: 21300000, guid: 0f0e1c3a4333eda478e84d54b7f533db, type: 3}
   freeze: {fileID: 21300000, guid: 1ef6cb22f5b08d24db656a446c66ded1, type: 3}
   teleport: {fileID: 21300000, guid: a8fa40ec72c8ecd4b88bd05044a22e58, type: 3}
@@ -4658,7 +4660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6109519709082732815
 RectTransform:
   m_ObjectHideFlags: 0
