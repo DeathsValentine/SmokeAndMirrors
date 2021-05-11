@@ -1937,7 +1937,8 @@ MonoBehaviour:
   dialogPanel: {fileID: 1697354881}
   text: {fileID: 407050022}
   dialogData: 
-  DialogSound: event:/VO/VO_Intro
+  DialogSound: event:/VO/Tutorial_Dialogue
+  VOEvent: {fileID: 0}
 --- !u!4 &222369747
 Transform:
   m_ObjectHideFlags: 0
@@ -10956,6 +10957,7 @@ GameObject:
   - component: {fileID: 1394149015}
   - component: {fileID: 1394149019}
   - component: {fileID: 1394149020}
+  - component: {fileID: 1394149021}
   m_Layer: 0
   m_Name: IntroDialogueTrigger
   m_TagString: Untagged
@@ -11079,6 +11081,22 @@ MonoBehaviour:
   text: {fileID: 1440924438}
   questText: Kill all of the bandits
   questIndicator: {fileID: 0}
+--- !u!114 &1394149021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394149014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  parameter: Dialogue
+  TriggerEvent: 3
+  value: 1
 --- !u!1001 &1399514704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12626,6 +12644,7 @@ GameObject:
   - component: {fileID: 1584548512}
   - component: {fileID: 1584548511}
   - component: {fileID: 1584548510}
+  - component: {fileID: 1584548514}
   m_Layer: 0
   m_Name: TutorialBattleTrigger
   m_TagString: Untagged
@@ -12724,6 +12743,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584548508}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1584548514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584548508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  parameter: Dialogue
+  TriggerEvent: 3
+  value: 2
 --- !u!1001 &1593883292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16263,10 +16298,10 @@ RectTransform:
   m_Father: {fileID: 3035255617740338435}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 577.7, y: 113}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -100, y: 0}
+  m_SizeDelta: {x: 1314, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040678113
 MonoBehaviour:

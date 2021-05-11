@@ -23,6 +23,11 @@ public class HUD : MonoBehaviour
     public Button ability2;
     public Button ability3;
 
+    private Image charImage;
+
+    public Sprite merlyn;
+    public Sprite scarlett;
+
     public Sprite fireball;
     public Sprite freeze;
     public Sprite teleport;
@@ -48,6 +53,8 @@ public class HUD : MonoBehaviour
         Text playerClass = GameObject.Find("PlayerClass").GetComponent<Text>();
         playerLevel = GameObject.Find("PlayerLevel").GetComponent<Text>();
 
+        charImage= GameObject.Find("CharacterImage").GetComponent<Image>();
+
         playerName.text=Player.playerName;
         //Debug.Log(PlayerPrefs.GetInt("Level"));
         playerLevel.text= Player.level.ToString();
@@ -55,12 +62,14 @@ public class HUD : MonoBehaviour
         
         if(PlayerPrefs.GetString("Character")=="Merlyn")
         {
+            charImage.sprite=merlyn;
             ability1.image.sprite=fireball;
             ability2.image.sprite=freeze;
             ability3.image.sprite=teleport;
         }
         if(PlayerPrefs.GetString("Character")=="Scarlett")
         {
+            charImage.sprite=scarlett;
             ability1.image.sprite=dash;
             ability2.image.sprite=bladeDance;
             ability3.image.sprite=overwhelm;
