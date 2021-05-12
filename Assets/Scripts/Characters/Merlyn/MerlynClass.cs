@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class MerlynClass : BaseCharacter
 {
-    
+    public int enduranceVal = 3;
+    public int strengthVal = 3;
+    public int intelligenceVal = 7;
+    public int dexterityVal = 5;
+
     public MerlynClass()
     {
         CharacterName = "Merlyn";

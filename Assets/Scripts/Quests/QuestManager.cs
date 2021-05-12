@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,13 +7,13 @@ public class QuestManager : MonoBehaviour
 {
     public Quest[] quests;
 
-    void Start()
+    public void CompleteQuest(int questID)
     {
-        
+        quests[questID].Complete();
     }
 
-    void Update()
+    public void AcceptQuest(int questNum)
     {
-        
+        quests[questNum].Accept();
     }
 }

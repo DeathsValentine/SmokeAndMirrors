@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/HUDassets/InventoryItems/Weapons.meta
 guid: 6a710ff6ead1e44cabe3ffdf80765d61
+=======
+guid: 0bb360779d1a39c49be0fc2f6e5088af
+>>>>>>> BaseGame:Assets/FMOD/SmokeAndMirrors/Assets/VO/Mori.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

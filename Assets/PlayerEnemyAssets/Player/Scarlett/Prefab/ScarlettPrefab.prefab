@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   speed: 10
+  hp: 100
 --- !u!54 &782931279791795135
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -200,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 5995395615168285110}
-  atkRange: 1
+  atkRange: 3
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -308,6 +309,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Scarlett
+      objectReference: {fileID: 0}
+    - target: {fileID: 5712585744341891653, guid: d2c1dd6db3bb078479d8e3ac9d9aca43,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2c1dd6db3bb078479d8e3ac9d9aca43, type: 3}

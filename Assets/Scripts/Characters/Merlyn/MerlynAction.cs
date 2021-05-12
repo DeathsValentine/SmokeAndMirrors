@@ -12,6 +12,7 @@ public class MerlynAction : NetworkBehaviour
     /*public static int gold;
     public static int playerName;*/
 
+    public float hp;
     private DialogManager dialogManager;
     private bool noMovement;
     private bool noRotation;
@@ -59,7 +60,7 @@ public class MerlynAction : NetworkBehaviour
         }
         if (!inDialogue)
         {
-            if (Input.GetKey("left shift")) speed = 5;
+            if (Input.GetKey("left shift")) speed = 3;
             move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         }
         /*this.transform.position += Movement * speed * Time.deltaTime;*/
@@ -154,6 +155,14 @@ public class MerlynAction : NetworkBehaviour
         {
             UseTeleport.dummy.Tele();
         }
+    }
+
+    public void Damage(int damageDealt)
+    {
+        this.hp -= damageDealt;
+        Debug.Log("damage dealt: " + damageDealt);
+        Debug.Log("hp left: " + hp);
+         
     }
 
     void Animation()

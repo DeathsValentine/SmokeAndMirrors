@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/HUDassets/InventoryItems/Potions.meta
 guid: c26244df0e7844b02a36df8c651a23a9
+=======
+guid: 0a4eef8bd29610c4bbf12c9093396c72
+>>>>>>> BaseGame:Assets/FMOD/SmokeAndMirrors/Assets/VO/Alex.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

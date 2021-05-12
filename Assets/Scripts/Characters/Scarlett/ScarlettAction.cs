@@ -15,6 +15,7 @@ public class ScarlettAction : MonoBehaviour
     private bool inAnimation;
     private bool inDialogue;
 
+    public float hp;
     private DialogManager dialogManager;
     private Vector3 scarlettRotation;
     private Vector3 emptyRotation;
@@ -164,6 +165,12 @@ public class ScarlettAction : MonoBehaviour
                 Invoke("SetInAnimation", 2.5f);
             }
         }
+    }
+
+    public void Damage(int damageDealt)
+    {
+        this.hp -= damageDealt;
+        Debug.Log("damage dealt: " + damageDealt);
     }
 
     void Animation()

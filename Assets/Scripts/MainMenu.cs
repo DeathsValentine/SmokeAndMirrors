@@ -161,13 +161,72 @@ public class MainMenu : MonoBehaviour
         //temporary until database is setup
         PlayerPrefs.SetString("Character", "Scarlett");
     }
+
     public void OnSelectClick()
     {
         SceneManager.LoadScene("Tutorial");
         Debug.Log("Scene Loaded");
+        getCharacter();
     }
 
     #endregion
+
+    void createNewCharacter(String character)
+    {
+        var request = new UpdateUserDataRequest();
+        if (character.Equals("Scarlett"))
+        {
+            request = new UpdateUserDataRequest
+            {
+                Data = new Dictionary<string, string>
+                {
+                    {character, JsonUtility.ToJson(new ScarlettClass()) }
+                }
+            };
+        }
+        else
+        {
+            request = new UpdateUserDataRequest
+            {
+                Data = new Dictionary<string, string>
+                {
+                    {character, JsonUtility.ToJson(new MerlynClass()) }
+                }
+            };
+        }
+        PlayFabClientAPI.UpdateUserData(request, sendDataSuccess, onDataError);
+    }
+
+    void onDataError(PlayFabError obj)
+    {
+        Debug.Log("error");
+    }
+
+    void sendDataSuccess(UpdateUserDataResult obj)
+    {
+        Debug.Log("Success in Sending Data");
+    }
+
+    void getCharacter()
+    {
+        PlayFabClientAPI.GetUserData(new GetUserDataRequest(), onDataRecieved, onDataError);
+    }
+
+    void onDataRecieved(GetUserDataResult result)
+    {
+        if (result.Data != null && result.Data.ContainsKey(PlayerPrefs.GetString("Character")))
+        {
+            createNewCharacter(PlayerPrefs.GetString("Character"));
+            Debug.Log(result.Data[PlayerPrefs.GetString("Character")].ToString());
+        }
+        else
+        {
+            Debug.Log("Character Doesn't exist!. Creating new charactar");
+            Debug.Log(result.Data[PlayerPrefs.GetString("Character")].ToString());
+        }
+    }
+
+
 
 
     //Exit Game from Main Menu
