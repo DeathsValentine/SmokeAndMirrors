@@ -10,6 +10,11 @@ public class Enemy : MonoBehaviour
     //public GameObject player2;
     Animator animator;
 
+    public Transform attackPoint;
+    public LayerMask playerLayer;
+    public float atkRange = 100f;
+
+    private float lastAttacked = 0f;
     private Rigidbody rb;
     private Vector3 movement;
     public float moveSpeed;
@@ -54,32 +59,56 @@ public class Enemy : MonoBehaviour
         player=GameObject.FindWithTag("Player").transform;
         distanceFromPlayer = Vector3.Distance(transform.position, player.position);
         //bool isRunning = animator.GetBool("wolfRun");
-        if (distanceFromPlayer <= 20)
+        if (distanceFromPlayer <= 20) 
         {
             moveEnemy(player.position.x, player.position.z);
-            animator?.SetBool("wolfRun", true);
         }
-        else
-        {
-            animator?.SetBool("wolfRun", false);
-        }
-        Debug.Log(transform.position);
+      
     }
     public void moveEnemy(float playerX, float playerY)
     {
-
         Vector3 direction = (new Vector3 (playerX , 0 , playerY))-transform.position;
         float angle = Mathf.Atan2(direction.y,direction.x)* Mathf.Rad2Deg;
         rb.rotation =  Quaternion.Euler (new Vector3(0f,angle,0f));
         direction.Normalize();
         var distance = Vector3.Distance(new Vector3 (playerX , 0 , playerY), transform.position);
-        if(distance > 3)
+        if (distance > 2f)
         {
-            rb.MovePosition(transform.position + direction *moveSpeed *Time.deltaTime);
+            rb.MovePosition(transform.position + direction * moveSpeed * Time.deltaTime);
+        }
+        else if(lastAttacked + 2f <= Time.time){
+            lastAttacked = Time.time;
+            Attack();
         }
         transform.LookAt(player);
     }
 
+    public void Attack()
+    {
+        bool alreadyHit = false;
+        if (gameObject.tag == "Bandit")
+        {
+            bool isRunning = animator.GetBool("attack");
+            animator.SetBool("attack", true);
+            Invoke("SetAnimationFalse", 0.5f);
+            Collider[] hitPlayer = Physics.OverlapSphere(attackPoint.position, atkRange, playerLayer);
+            foreach (Collider player in hitPlayer)
+            {
+                Debug.Log("hits someone called " + player.gameObject.name);
+                if (player.gameObject.name == "Priestess_model" && alreadyHit == false)
+                {
+                    alreadyHit = true;
+                    player.GetComponentInParent<MerlynAction>().Damage(10);
+                }
+                if (player.gameObject.name == "Priestess_model" && alreadyHit == false)
+                {
+
+                    alreadyHit = true;
+                    player.GetComponent<ScarlettAction>().Damage(10);
+                }
+            }
+        }
+    }
     public void Damage(float damage)
     {
         health -= damage;
@@ -120,5 +149,9 @@ public class Enemy : MonoBehaviour
             if (health < 0) health = 0;
             Debug.Log("took " + damage + " damage, Health is now at " + health);
         }
+    }
+    void SetAnimationFalse()
+    {
+        if (animator.GetBool("attack")) animator.SetBool("attack", false);
     }
 }

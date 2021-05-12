@@ -25,7 +25,6 @@ public class UseOverwhelm : MonoBehaviour
         bool useSkill = false;
         if (lastUsed + 1f <= Time.time)
         {
-            Debug.Log("overwhelm activates");
             useSkill = true;
             StartCoroutine(Active());
             lastUsed = Time.time;
