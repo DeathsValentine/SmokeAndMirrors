@@ -10,6 +10,7 @@ TagManager:
   - Attack
   - MinimapCamera
   - Bandit
+  - Dragon Fireball
   layers:
   - Default
   - TransparentFX
