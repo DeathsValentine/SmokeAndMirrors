@@ -18,11 +18,34 @@ MonoBehaviour:
   - {fileID: -8216303455256052802}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 16500
+--- !u!114 &-8687448701754167619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Forest
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Forest
+  guid: cb889da465f45d43939d7fed9409d6a2
+  Banks:
+  - {fileID: -8216303455256052802}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 67813
 --- !u!114 &-8216303455256052802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,7 +61,7 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637564542231375920
+  lastModified: 637564741090662122
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -64,7 +87,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 4900
+  Length: 5750
 --- !u!114 &-6755484472209355729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +157,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1650
+--- !u!114 &-4100055774972955946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Manager
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Manager
+  guid: eeb72f9137efa44e8e063802d4cea1be
+  Banks:
+  - {fileID: -8216303455256052802}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 16500
 --- !u!114 &-3628889291803483596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,11 +218,11 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637564542231525857
+  lastModified: 637564741090672163
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1338
+    Value: 1472
   Exists: 1
 --- !u!114 &-1552691233235450794
 MonoBehaviour:
@@ -275,14 +321,37 @@ MonoBehaviour:
   - {fileID: 3812765658073875231}
   - {fileID: 5297836035888685318}
   - {fileID: -1552691233235450794}
+  - {fileID: -8687448701754167619}
+  - {fileID: -4100055774972955946}
   EditorParameters:
   - {fileID: 2168838344485923725}
+  - {fileID: 1754480933692789820}
   MasterBanks:
   - {fileID: -8216303455256052802}
   StringsBanks:
   - {fileID: -2087701139825790499}
-  stringsBankWriteTime: 637564542231525857
+  stringsBankWriteTime: 637564741090672163
   cacheVersion: 6
+--- !u!114 &1754480933692789820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music
+  m_EditorClassIdentifier: 
+  Name: Music
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1181440736
+    data2: 2953247013
+  Exists: 1
 --- !u!114 &2147957089179102088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,6 +395,28 @@ MonoBehaviour:
     data1: 2331749447
     data2: 2048972442
   Exists: 1
+--- !u!114 &3707243342066401780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VO/VO_Intro
+  m_EditorClassIdentifier: 
+  Path: event:/VO/VO_Intro
+  guid: b2afa82b47bc76418f62074e116669a5
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6900
 --- !u!114 &3812765658073875231
 MonoBehaviour:
   m_ObjectHideFlags: 0
