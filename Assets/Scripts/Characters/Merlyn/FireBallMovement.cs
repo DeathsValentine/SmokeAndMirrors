@@ -35,6 +35,18 @@ public class FireBallMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        if(other.gameObject.tag == "Player")
+        {
+            Debug.Log(other.gameObject.name);
+            if (other.gameObject.name == "MerlynPrefab(Clone)")
+            {
+                other.gameObject.GetComponentInParent<MerlynAction>().Damage(10);
+            }
+            if (other.gameObject.name == "ScarlettPrefab(Clone)")
+            {
+                other.gameObject.GetComponentInParent<ScarlettAction>().Damage(10);
+            }
+        }
         Destroy(this.gameObject);
     }
     

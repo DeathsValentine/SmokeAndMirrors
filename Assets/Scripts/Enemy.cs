@@ -61,6 +61,10 @@ public class Enemy : MonoBehaviour
         //bool isRunning = animator.GetBool("wolfRun");
         if (distanceFromPlayer <= 20) 
         {
+            if(gameObject.tag == "Dragon")
+            {
+                Attack();
+            }
             moveEnemy(player.position.x, player.position.z);
         }
       
@@ -72,11 +76,11 @@ public class Enemy : MonoBehaviour
         rb.rotation =  Quaternion.Euler (new Vector3(0f,angle,0f));
         direction.Normalize();
         var distance = Vector3.Distance(new Vector3 (playerX , 0 , playerY), transform.position);
-        if (distance > 2f)
+        if (distance > 2f && gameObject.tag != "Dragon")
         {
             rb.MovePosition(transform.position + direction * moveSpeed * Time.deltaTime);
         }
-        else if(lastAttacked + 2f <= Time.time){
+        else if(lastAttacked + 2f <= Time.time && gameObject.tag != "Dragon"){
             lastAttacked = Time.time;
             Attack();
         }
@@ -100,12 +104,21 @@ public class Enemy : MonoBehaviour
                     alreadyHit = true;
                     player.GetComponentInParent<MerlynAction>().Damage(10);
                 }
-                if (player.gameObject.name == "Priestess_model" && alreadyHit == false)
+                if (player.gameObject.name == "Scarlett" && alreadyHit == false)
                 {
-
                     alreadyHit = true;
                     player.GetComponent<ScarlettAction>().Damage(10);
                 }
+            }
+        }
+
+        if (gameObject.tag == "Dragon")
+        {
+            bool shoots = DragonFire.dummy.Shoot();
+            if (shoots)
+            {
+                animator.SetBool("fireball", true);
+                Invoke("SetAnimationFalse", 0.5f);
             }
         }
     }
@@ -126,14 +139,6 @@ public class Enemy : MonoBehaviour
             if (health < 0) health = 0;
             Debug.Log("took " + damage + " damage, Health is now at " + health);
         }
-
-/*        if(other.collider.tag == "Player")
-        {
-            if (other.collider.name == player.gameObject.name)
-            {
-                Debug.Log("ok");
-            }
-        }*/
     }
 
     void OnParticleCollision(GameObject other)
@@ -152,6 +157,13 @@ public class Enemy : MonoBehaviour
     }
     void SetAnimationFalse()
     {
-        if (animator.GetBool("attack")) animator.SetBool("attack", false);
+        if (gameObject.tag == "Dragon")
+        {
+            if (animator.GetBool("fireball")) animator.SetBool("fireball", false);
+        }
+        if (gameObject.tag == "Bandit")
+        {
+            if (animator.GetBool("attack")) animator.SetBool("attack", false);
+        }
     }
 }
