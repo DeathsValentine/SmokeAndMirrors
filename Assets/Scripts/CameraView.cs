@@ -19,10 +19,9 @@ public class CameraView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player != null)
-        {
-            this.transform.position = GameObject.FindWithTag("Player").transform.position + camPos;
-        }
+        
+       this.transform.position = GameObject.FindWithTag("Player").transform.position + camPos;
+       
     }
 
    
