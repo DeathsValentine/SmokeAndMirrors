@@ -16,11 +16,18 @@ public class CameraView : MonoBehaviour
         }
     }
 
+    public void OnConnectedToServer()
+    {
+        player = GameObject.FindWithTag("Player");
+        camPos = GameObject.FindWithTag("MainCamera").transform.position;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
-       this.transform.position = GameObject.FindWithTag("Player").transform.position + camPos;
+        if (player == null)
+            return;
+        this.transform.position = GameObject.FindWithTag("Player").transform.position + camPos;
        
     }
 
