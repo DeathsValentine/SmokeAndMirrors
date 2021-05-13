@@ -9,19 +9,10 @@ public class CameraView : MonoBehaviour
 
     void Start()
     {
-        if (!NetworkServer.active)
-        {
             player = GameObject.FindWithTag("Player");
             camPos = GameObject.FindWithTag("MainCamera").transform.position;
-        }
+       
     }
-
-    public void OnConnectedToServer()
-    {
-        player = GameObject.FindWithTag("Player");
-        camPos = GameObject.FindWithTag("MainCamera").transform.position;
-    }
-
     // Update is called once per frame
     void Update()
     {
