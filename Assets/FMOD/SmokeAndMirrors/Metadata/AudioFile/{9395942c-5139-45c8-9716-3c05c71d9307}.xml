@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{9395942c-5139-45c8-9716-3c05c71d9307}">
+		<property name="assetPath">
+			<value>VO/Ambrose/VO_King_MeetKing4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.5182539682539682</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{49f453e3-3bff-4bbc-9a17-b48221e7e630}</destination>
+		</relationship>
+	</object>
+</objects>

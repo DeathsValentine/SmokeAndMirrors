@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{a08688d2-b6ea-4326-aa10-4490f2e8e561}">
 		<property name="assetPath">
-			<value>VO_Scarlett_Intro4.wav</value>
+			<value>VO/Scarlett/VO_Scarlett_Intro4.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

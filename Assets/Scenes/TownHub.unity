@@ -4912,6 +4912,7 @@ MonoBehaviour:
   text: {fileID: 1304979793}
   dialogData: 
   DialogSound: event:/VO/Hub_Dialogue
+  DialogReset: {fileID: 0}
   VOEvent: {fileID: 0}
 --- !u!4 &300794161
 Transform:
@@ -25131,6 +25132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1718611706}
   - component: {fileID: 1718611705}
+  - component: {fileID: 1718611708}
   - component: {fileID: 1718611704}
   - component: {fileID: 1718611707}
   m_Layer: 0
@@ -25217,6 +25219,22 @@ MonoBehaviour:
   text: {fileID: 1125117461}
   questText: Speak to Leif (leave through the front gate)
   questIndicator: {fileID: 0}
+--- !u!114 &1718611708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718611703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  parameter: Dialogue
+  TriggerEvent: 3
+  value: 2
 --- !u!1001 &1722697290
 PrefabInstance:
   m_ObjectHideFlags: 0

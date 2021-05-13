@@ -13,6 +13,7 @@ public class DialogManager : MonoBehaviour
     [FMODUnity.EventRef]
     public string DialogSound;
     FMOD.Studio.EventInstance DialogVO;
+    public GameObject DialogReset;
     public GameObject VOEvent;
     DialogueTrigger dialogTrigger;
 
@@ -48,9 +49,12 @@ public class DialogManager : MonoBehaviour
     {
         if (isInDialog)
         {
+            
+            
             isInDialog = false;
             index = 0;
             text.SetText("");
+            
             dialogPanel.SetActive(false);
             if(lastTrigger != null)
             {

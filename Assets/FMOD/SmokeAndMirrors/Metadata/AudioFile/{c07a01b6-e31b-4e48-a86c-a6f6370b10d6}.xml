@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{c07a01b6-e31b-4e48-a86c-a6f6370b10d6}">
+		<property name="assetPath">
+			<value>VO/Scarlett/VO_Scarlett_MeetKing1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.2699319727891156</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{49f453e3-3bff-4bbc-9a17-b48221e7e630}</destination>
+		</relationship>
+	</object>
+</objects>

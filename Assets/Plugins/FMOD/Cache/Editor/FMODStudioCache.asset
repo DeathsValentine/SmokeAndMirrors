@@ -61,7 +61,7 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637564741090662122
+  lastModified: 637564790793187992
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -157,6 +157,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1650
+--- !u!114 &-4323331197391419475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_ScarlettFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_ScarlettFootsteps
+  guid: 0abb3a459634874c97d0b8915728c4d2
+  Banks:
+  - {fileID: -8216303455256052802}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &-4100055774972955946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,11 +241,11 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637564741090672163
+  lastModified: 637564790793218141
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1472
+    Value: 1574
   Exists: 1
 --- !u!114 &-1552691233235450794
 MonoBehaviour:
@@ -323,6 +346,8 @@ MonoBehaviour:
   - {fileID: -1552691233235450794}
   - {fileID: -8687448701754167619}
   - {fileID: -4100055774972955946}
+  - {fileID: 986181779297702389}
+  - {fileID: -4323331197391419475}
   EditorParameters:
   - {fileID: 2168838344485923725}
   - {fileID: 1754480933692789820}
@@ -330,8 +355,31 @@ MonoBehaviour:
   - {fileID: -8216303455256052802}
   StringsBanks:
   - {fileID: -2087701139825790499}
-  stringsBankWriteTime: 637564741090672163
+  stringsBankWriteTime: 637564790793218141
   cacheVersion: 6
+--- !u!114 &986181779297702389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_SwingAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_SwingAttack
+  guid: 07ac19d8ef1d084cb05730027c63d8e6
+  Banks:
+  - {fileID: -8216303455256052802}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
 --- !u!114 &1754480933692789820
 MonoBehaviour:
   m_ObjectHideFlags: 0
