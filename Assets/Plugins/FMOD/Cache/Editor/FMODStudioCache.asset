@@ -61,7 +61,7 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637564790793187992
+  lastModified: 637564809931863682
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -241,11 +241,11 @@ MonoBehaviour:
   Path: Assets/FMOD/SmokeAndMirrors/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637564790793218141
+  lastModified: 637564809931883687
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1574
+    Value: 1612
   Exists: 1
 --- !u!114 &-1552691233235450794
 MonoBehaviour:
@@ -348,6 +348,7 @@ MonoBehaviour:
   - {fileID: -4100055774972955946}
   - {fileID: 986181779297702389}
   - {fileID: -4323331197391419475}
+  - {fileID: 7267765504186731251}
   EditorParameters:
   - {fileID: 2168838344485923725}
   - {fileID: 1754480933692789820}
@@ -355,7 +356,7 @@ MonoBehaviour:
   - {fileID: -8216303455256052802}
   StringsBanks:
   - {fileID: -2087701139825790499}
-  stringsBankWriteTime: 637564790793218141
+  stringsBankWriteTime: 637564809931883687
   cacheVersion: 6
 --- !u!114 &986181779297702389
 MonoBehaviour:
@@ -511,3 +512,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 206
+--- !u!114 &7267765504186731251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VO/Hub_MeetKing
+  m_EditorClassIdentifier: 
+  Path: event:/VO/Hub_MeetKing
+  guid: 12fda70bd03d1542ae4c3cefe5da2fec
+  Banks:
+  - {fileID: -8216303455256052802}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 17500
