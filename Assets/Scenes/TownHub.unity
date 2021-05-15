@@ -6327,7 +6327,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474149996}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
@@ -6670,7 +6670,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504393583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85167a563c72f734daebca5e5bc0f6ff, type: 3}
   m_Name: 
@@ -9375,7 +9375,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660734911}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -9392,7 +9392,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660734911}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
@@ -9414,7 +9414,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660734911}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -12655,42 +12655,47 @@ PrefabInstance:
     - target: {fileID: 229169240907915123, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 229169240907915123, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 351603258973063269, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 351603258973063269, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659513733394778957, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3035255617953599672, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3035255617953599672, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3035255618267104878, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3035255618267104878, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3035255618833796344, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
@@ -12701,6 +12706,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035255618833796347, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035255618833796348, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3035255618833796350, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
@@ -12815,14 +12830,44 @@ PrefabInstance:
     - target: {fileID: 3035255619059982004, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3035255619059982004, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3275072017286131350, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3487061069640170790, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728685143304206209, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827598938675320118, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893856749177498411, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356373750040316264, guid: 00a18c7b50a1145439d7315cfe82d2db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364698227022107375, guid: 00a18c7b50a1145439d7315cfe82d2db,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -17919,7 +17964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
-  PersistNetworkManagerToOfflineScene: 1
+  PersistNetworkManagerToOfflineScene: 0
   runInBackground: 1
   autoStartServerBuild: 1
   serverTickRate: 30
@@ -17939,7 +17984,8 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 5768863159136648919, guid: 72718835029055142a781c900345548b, type: 3}
   - {fileID: 1701528270322337917, guid: 314f6844c4346824b892d73f306183a4, type: 3}
-  isServer: 1
+  mainCamera: {fileID: 474149998}
+  isServer: 0
 --- !u!114 &1334262605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24738,7 +24784,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844921403}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85167a563c72f734daebca5e5bc0f6ff, type: 3}
   m_Name: 

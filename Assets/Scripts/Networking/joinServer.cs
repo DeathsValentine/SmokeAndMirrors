@@ -5,6 +5,7 @@ using Mirror;
 
 public class joinServer : NetworkManager
 {
+    public Camera mainCamera;
     public struct createCharacMessage : NetworkMessage
     {
         public string character;
@@ -26,7 +27,13 @@ public class joinServer : NetworkManager
         {
             StartClient();
         }
+  
+    }
 
+    public override void OnStartHost()
+    {
+        base.OnStartHost();
+        mainCamera.GetComponent<CameraView>().connectCamera();
     }
 
     public override void OnStartServer()
@@ -43,6 +50,7 @@ public class joinServer : NetworkManager
         };
 
         conn.Send(mssg);
+        
     }
 
     public void OnCreateCharac(NetworkConnection conn,createCharacMessage msg)
@@ -65,7 +73,6 @@ public class joinServer : NetworkManager
         // => appending the connectionId is WAY more useful for debugging!
         player.name = $"{playerPrefab.name} [connId={conn.connectionId}]";
         NetworkServer.AddPlayerForConnection(conn, player);
-     
         
     }
     

@@ -17,13 +17,15 @@ public class MerlynAction : NetworkBehaviour
     private bool noMovement;
     private bool noRotation;
     private bool inDialogue;
-
+    private GameObject mainCamera;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         dialogManager = GameObject.Find("DialogueManager").GetComponent<DialogManager>();
-    }
+        mainCamera = GameObject.FindWithTag("MainCamera");
+        mainCamera.GetComponent<CameraView>().connectCamera();
+}
 
     // Update is called once per frame
     void FixedUpdate()
@@ -78,6 +80,8 @@ public class MerlynAction : NetworkBehaviour
         {
             return;
         }
+
+        mainCamera.GetComponent<CameraView>().followPlayer();
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -103,6 +107,8 @@ public class MerlynAction : NetworkBehaviour
         {
             SetAnimationFalse();
         }
+
+
     }
 
     //finding angle between two points
