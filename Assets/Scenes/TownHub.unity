@@ -6398,7 +6398,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474149996}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70040da8d1cc22b408a45ae03d9f94b0, type: 3}
   m_Name: 
@@ -17882,12 +17882,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1334262607}
+  - component: {fileID: 1334262604}
+  - component: {fileID: 1334262606}
   - component: {fileID: 1334262605}
   - component: {fileID: 1334262603}
   - component: {fileID: 1334262602}
   - component: {fileID: 1334262601}
-  - component: {fileID: 1334262604}
-  - component: {fileID: 1334262606}
   m_Layer: 0
   m_Name: Network Manager
   m_TagString: Untagged
@@ -17984,8 +17984,9 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 5768863159136648919, guid: 72718835029055142a781c900345548b, type: 3}
   - {fileID: 1701528270322337917, guid: 314f6844c4346824b892d73f306183a4, type: 3}
+  - {fileID: 5650342775657436102, guid: a9b6d9f4366c83944a21632f452fc902, type: 3}
   mainCamera: {fileID: 474149998}
-  isServer: 0
+  isServer: 1
 --- !u!114 &1334262605
 MonoBehaviour:
   m_ObjectHideFlags: 0
