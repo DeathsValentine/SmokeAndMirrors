@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class MerlynAction : MonoBehaviour
+using Mirror;
+public class MerlynAction : NetworkBehaviour
 {
     Animator animator;
     public Rigidbody rb;
@@ -17,17 +17,26 @@ public class MerlynAction : MonoBehaviour
     private bool noMovement;
     private bool noRotation;
     private bool inDialogue;
+    private GameObject mainCamera;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         dialogManager = GameObject.Find("DialogueManager").GetComponent<DialogManager>();
+        mainCamera = GameObject.FindWithTag("MainCamera");
+        mainCamera.GetComponent<CameraView>().connectCamera();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+        
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -70,6 +79,13 @@ public class MerlynAction : MonoBehaviour
     //character rotation towards mouse 
     void Update()
     {
+        mainCamera.GetComponent<CameraView>().followPlayer();
+        
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+        
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 

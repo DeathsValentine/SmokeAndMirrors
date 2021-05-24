@@ -5,17 +5,17 @@ using UnityEngine;
 public class CameraView : MonoBehaviour
 {
     GameObject player;
-    public Vector3 camPos;    
+    public Vector3 camPos;
 
-    void Start()
+
+    public void connectCamera()
     {
         player = GameObject.FindWithTag("Player");
         camPos = GameObject.FindWithTag("MainCamera").transform.position;
     }
-    // Update is called once per frame
-    void Update()
+
+    public void followPlayer()
     {
-        
         this.transform.position = GameObject.FindWithTag("Player").transform.position + camPos;
     }
 }
