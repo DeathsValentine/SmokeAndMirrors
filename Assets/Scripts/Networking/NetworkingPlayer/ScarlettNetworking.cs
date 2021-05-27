@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Mirror;
-public class MerlynAction : MonoBehaviour
+
+public class ScarlettNetworking : NetworkBehaviour
 {
     Animator animator;
     public Rigidbody rb;
@@ -11,12 +11,15 @@ public class MerlynAction : MonoBehaviour
     public int speed;
     /*public static int gold;
     public static int playerName;*/
+    private bool noMovement;
+    private bool noRotation;
+    private bool inAnimation;
+    private bool inDialogue;
 
     public float hp;
     private DialogManager dialogManager;
-    private bool noMovement;
-    private bool noRotation;
-    private bool inDialogue;
+    private Vector3 scarlettRotation;
+    private Vector3 emptyRotation;
     private GameObject mainCamera;
 
     void Start()
@@ -24,15 +27,21 @@ public class MerlynAction : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         dialogManager = GameObject.Find("DialogueManager").GetComponent<DialogManager>();
-        mainCamera = GameObject.FindWithTag("MainCamera");
-        mainCamera.GetComponent<CameraView>().connectCamera();
-        
+        //DontDestroyOnLoad(this.gameObject);
+        if (isLocalPlayer)
+        {
+            mainCamera = GameObject.FindWithTag("MainCamera");
+        }
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -61,12 +70,11 @@ public class MerlynAction : MonoBehaviour
         }
         if (!inDialogue)
         {
-            if (Input.GetKey("left shift")) speed = 3;
+            if (Input.GetKey("left shift")) speed = 5;
             move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         }
         /*this.transform.position += Movement * speed * Time.deltaTime;*/
         /*rotate(angle);*/
-        /*ShootingUpdate();*/
 
     }
 
@@ -75,8 +83,11 @@ public class MerlynAction : MonoBehaviour
     //character rotation towards mouse 
     void Update()
     {
-        
-        mainCamera.GetComponent<CameraView>().followPlayer();
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+        mainCamera.transform.position = this.transform.position + mainCamera.GetComponent<NetworkCamera>().camPos;
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -93,9 +104,9 @@ public class MerlynAction : MonoBehaviour
             {
                 transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
             }
-            Freeze();
-            Teleport();
-            Fireball();
+            BladeDance();
+            Overwhelm();
+            Dash();
             Animation();
         }
         else
@@ -119,45 +130,57 @@ public class MerlynAction : MonoBehaviour
 
     public void rotate(float angle)
     {
-        transform.rotation = Quaternion.Euler(new Vector3(0f, angle,0f));
+        transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
     }
 
-    void Fireball()
+    void Dash()
     {
-        if (Input.GetKey("q"))
+        if (Input.GetKey("q") && !inAnimation)
         {
-            bool shoots = ShootFireBall.dummy.Shoot();
-            if (NetworkClient.isConnected)
+            bool dashes = UseDash.dummy.Dash();
+            if (dashes)
             {
-                ShootFireBall.dummy.cmdShoot();
-                shoots = true;
-            }
-            if(shoots)
-            {
-                animator.SetBool("fireballSkill", true);
+                inAnimation = true;
+                animator.SetBool("dash", true);
                 Invoke("SetAnimationFalse", 0.5f);
+                Invoke("SetInAnimation", 1f);
             }
         }
     }
 
-    void Freeze()
+    void BladeDance()
     {
-        if (Input.GetKey("e"))
+        if (Input.GetKey("e") && !inAnimation)
         {
-            bool shoots = ShootFreeze.dummy.Shoot();
-            if (shoots)
+            bool dances = UseBladeDance.dummy.BladeDance();
+            if (dances)
             {
-                animator.SetBool("iceSkill", true);
-                Invoke("SetAnimationFalse", 0.5f);
+                inAnimation = true;
+                noRotation = true;
+                animator.SetBool("spin", true);
+                Invoke("SetNoRotation", 3.0f);
+                Invoke("SetAnimationFalse", 3.0f);
+                Invoke("SetInAnimation", 3.0f);
             }
         }
     }
 
-    void Teleport()
+    void Overwhelm()
     {
-        if (Input.GetKey("f"))
+        if (Input.GetKey("f") && !inAnimation)
         {
-            UseTeleport.dummy.Tele();
+            bool overwhelm = UseOverwhelm.dummy.Overwhelm();
+            if (overwhelm)
+            {
+                inAnimation = true;
+                noMovement = true;
+                noRotation = true;
+                animator.SetBool("overwhelm", true);
+                Invoke("SetAnimationFalse", 0.5f);
+                Invoke("SetNoMovement", 2.5f);
+                Invoke("SetNoRotation", 2.5f);
+                Invoke("SetInAnimation", 2.5f);
+            }
         }
     }
 
@@ -165,14 +188,14 @@ public class MerlynAction : MonoBehaviour
     {
         this.hp -= damageDealt;
         Debug.Log("damage dealt: " + damageDealt);
-        Debug.Log("hp left: " + hp);
-         
     }
+    
 
     void Animation()
     {
         bool isRunning = animator.GetBool("isRunning");
         bool isWalking = animator.GetBool("isWalking");
+        bool isBackwards = animator.GetBool("isBackwards");
         bool movePressed = Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("d") || Input.GetKey("s");
         bool walkPressed = Input.GetKey("left shift");
         bool jumpPressed = Input.GetKey("space");
@@ -195,13 +218,37 @@ public class MerlynAction : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
+        if (jumpPressed && !inAir) // jump if inAir is false
+        {
+            animator.SetBool("inAir", true);
+        }
+        if (!jumpPressed && inAir) // jump if inAir is true
+        {
+            animator.SetBool("inAir", false);
+        }
     }
 
     void SetAnimationFalse()
     {
-        if (animator.GetBool("fireballSkill")) animator.SetBool("fireballSkill", false);
-        if (animator.GetBool("iceSkill")) animator.SetBool("iceSkill", false);
+        if (animator.GetBool("overwhelm")) animator.SetBool("overwhelm", false);
+        if (animator.GetBool("dash")) animator.SetBool("dash", false);
+        if (animator.GetBool("spin")) animator.SetBool("spin", false);
         if (animator.GetBool("isRunning")) animator.SetBool("isRunning", false);
         if (animator.GetBool("isWalking")) animator.SetBool("isWalking", false);
+    }
+
+    void SetNoRotation()
+    {
+        noRotation = false;
+    }
+
+    void SetNoMovement()
+    {
+        noMovement = false;
+    }
+
+    void SetInAnimation()
+    {
+        inAnimation = false;
     }
 }

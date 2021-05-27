@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class ShootFireBall : MonoBehaviour
+using Mirror;
+public class ShootFireBall : NetworkBehaviour
 {
     [SerializeField]
     Transform shootPoint;
@@ -20,6 +20,18 @@ public class ShootFireBall : MonoBehaviour
         dummy = GetComponent<ShootFireBall>();
     }
 
+    [Command]
+    public void cmdShoot()
+    {
+        if (lastShot + 1f <= Time.time)
+        {
+            lastShot = Time.time;
+            StartCoroutine(Active());
+            Instantiate(fireballPrefab, shootPoint.position, shootPoint.rotation);
+            NetworkServer.Spawn(fireballPrefab);
+        }
+
+    }
     public bool Shoot()
     {
         if (lastShot +1f  <= Time.time)

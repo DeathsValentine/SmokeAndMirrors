@@ -9,15 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2743914065842949115}
-  - component: {fileID: 889456081278615161}
+  - component: {fileID: 6764047051443500133}
   - component: {fileID: 8755369369743870720}
   - component: {fileID: 3723675796155305953}
   - component: {fileID: 4496226497075080754}
   - component: {fileID: 8862940231413877665}
-  - component: {fileID: 4668533068606223827}
-  - component: {fileID: 5627912871534104293}
+  - component: {fileID: 4723391517241427569}
+  - component: {fileID: 1218421305803581843}
   m_Layer: 0
-  m_Name: MerlynPrefab
+  m_Name: MerlynNetworkingPrefab 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &889456081278615161
+--- !u!114 &6764047051443500133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,13 +48,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1701528270322337917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 076b382f8d681804e9a76cf57b61df07, type: 3}
+  m_Script: {fileID: 11500000, guid: 8379a639013f44162bcffb65bd281b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  shootPoint: {fileID: 0}
-  fireballPrefab: {fileID: 0}
   rb: {fileID: 0}
   speed: 10
   hp: 100
@@ -120,7 +118,7 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 
   hasSpawned: 0
---- !u!114 &4668533068606223827
+--- !u!114 &4723391517241427569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,7 +134,7 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 8170250957103173731}
---- !u!114 &5627912871534104293
+--- !u!114 &1218421305803581843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

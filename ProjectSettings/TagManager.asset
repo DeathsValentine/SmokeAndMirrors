@@ -12,6 +12,7 @@ TagManager:
   - Bandit
   - Dragon Fireball
   - Dragon
+  - NetworkManager
   layers:
   - Default
   - TransparentFX

@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Mirror;
-public class MerlynAction : MonoBehaviour
+
+
+public class NetworkPlayer : NetworkBehaviour
 {
     Animator animator;
     public Rigidbody rb;
@@ -13,26 +14,29 @@ public class MerlynAction : MonoBehaviour
     public static int playerName;*/
 
     public float hp;
-    private DialogManager dialogManager;
-    private bool noMovement;
-    private bool noRotation;
-    private bool inDialogue;
+    protected DialogManager dialogManager;
+    protected bool noMovement;
+    protected bool noRotation;
+    protected bool inDialogue;
     private GameObject mainCamera;
 
-    void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         dialogManager = GameObject.Find("DialogueManager").GetComponent<DialogManager>();
         mainCamera = GameObject.FindWithTag("MainCamera");
         mainCamera.GetComponent<CameraView>().connectCamera();
-        
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
-        
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -73,9 +77,12 @@ public class MerlynAction : MonoBehaviour
 
     //Code from: https://answers.unity.com/questions/855976/make-a-player-model-rotate-towards-mouse-location.html
     //character rotation towards mouse 
-    void Update()
+    protected virtual void Update()
     {
-        
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         mainCamera.GetComponent<CameraView>().followPlayer();
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
@@ -87,25 +94,24 @@ public class MerlynAction : MonoBehaviour
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
 
         //rotate the player object towards mouse
+        /*
         if (!inDialogue)
         {
             if (!noRotation)
             {
                 transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
             }
-            Freeze();
-            Teleport();
-            Fireball();
             Animation();
         }
         else
         {
             SetAnimationFalse();
         }
+        */
     }
 
     //finding angle between two points
-    float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
+    protected float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
     {
         return Mathf.Atan2(a.x - b.x, a.y - b.y) * Mathf.Rad2Deg;
     }
@@ -119,46 +125,7 @@ public class MerlynAction : MonoBehaviour
 
     public void rotate(float angle)
     {
-        transform.rotation = Quaternion.Euler(new Vector3(0f, angle,0f));
-    }
-
-    void Fireball()
-    {
-        if (Input.GetKey("q"))
-        {
-            bool shoots = ShootFireBall.dummy.Shoot();
-            if (NetworkClient.isConnected)
-            {
-                ShootFireBall.dummy.cmdShoot();
-                shoots = true;
-            }
-            if(shoots)
-            {
-                animator.SetBool("fireballSkill", true);
-                Invoke("SetAnimationFalse", 0.5f);
-            }
-        }
-    }
-
-    void Freeze()
-    {
-        if (Input.GetKey("e"))
-        {
-            bool shoots = ShootFreeze.dummy.Shoot();
-            if (shoots)
-            {
-                animator.SetBool("iceSkill", true);
-                Invoke("SetAnimationFalse", 0.5f);
-            }
-        }
-    }
-
-    void Teleport()
-    {
-        if (Input.GetKey("f"))
-        {
-            UseTeleport.dummy.Tele();
-        }
+        transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
     }
 
     public void Damage(int damageDealt)
@@ -166,10 +133,10 @@ public class MerlynAction : MonoBehaviour
         this.hp -= damageDealt;
         Debug.Log("damage dealt: " + damageDealt);
         Debug.Log("hp left: " + hp);
-         
+
     }
 
-    void Animation()
+    protected void Animation()
     {
         bool isRunning = animator.GetBool("isRunning");
         bool isWalking = animator.GetBool("isWalking");
@@ -197,11 +164,10 @@ public class MerlynAction : MonoBehaviour
         }
     }
 
-    void SetAnimationFalse()
+    protected void SetAnimationFalse()
     {
-        if (animator.GetBool("fireballSkill")) animator.SetBool("fireballSkill", false);
-        if (animator.GetBool("iceSkill")) animator.SetBool("iceSkill", false);
         if (animator.GetBool("isRunning")) animator.SetBool("isRunning", false);
         if (animator.GetBool("isWalking")) animator.SetBool("isWalking", false);
     }
 }
+

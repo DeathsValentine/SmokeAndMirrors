@@ -750,7 +750,7 @@ namespace Mirror
             }
 
             // Debug.Log("ServerChangeScene " + newSceneName);
-            NetworkServer.SetAllClientsNotReady();
+            //NetworkServer.SetAllClientsNotReady();
             networkSceneName = newSceneName;
 
             // Let server prepare for scene change

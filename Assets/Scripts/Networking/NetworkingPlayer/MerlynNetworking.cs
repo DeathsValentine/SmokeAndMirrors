@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
-public class MerlynAction : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class MerlynNetworking : NetworkBehaviour
 {
     Animator animator;
     public Rigidbody rb;
@@ -24,15 +25,23 @@ public class MerlynAction : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         dialogManager = GameObject.Find("DialogueManager").GetComponent<DialogManager>();
-        mainCamera = GameObject.FindWithTag("MainCamera");
-        mainCamera.GetComponent<CameraView>().connectCamera();
+        //DontDestroyOnLoad(this.gameObject);
+        if (isLocalPlayer)
+        {
+            mainCamera = GameObject.FindWithTag("MainCamera");
+        }
         
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -69,14 +78,19 @@ public class MerlynAction : MonoBehaviour
         /*ShootingUpdate();*/
 
     }
-
+   
 
     //Code from: https://answers.unity.com/questions/855976/make-a-player-model-rotate-towards-mouse-location.html
     //character rotation towards mouse 
     void Update()
     {
-        
-        mainCamera.GetComponent<CameraView>().followPlayer();
+
+
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+        mainCamera.transform.position = this.transform.position + mainCamera.GetComponent<NetworkCamera>().camPos;
         //Get the Screen positions of the object
         Vector3 positionOnScreen = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
 
@@ -119,7 +133,7 @@ public class MerlynAction : MonoBehaviour
 
     public void rotate(float angle)
     {
-        transform.rotation = Quaternion.Euler(new Vector3(0f, angle,0f));
+        transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
     }
 
     void Fireball()
@@ -127,12 +141,8 @@ public class MerlynAction : MonoBehaviour
         if (Input.GetKey("q"))
         {
             bool shoots = ShootFireBall.dummy.Shoot();
-            if (NetworkClient.isConnected)
-            {
-                ShootFireBall.dummy.cmdShoot();
-                shoots = true;
-            }
-            if(shoots)
+            
+            if (shoots)
             {
                 animator.SetBool("fireballSkill", true);
                 Invoke("SetAnimationFalse", 0.5f);
@@ -166,7 +176,7 @@ public class MerlynAction : MonoBehaviour
         this.hp -= damageDealt;
         Debug.Log("damage dealt: " + damageDealt);
         Debug.Log("hp left: " + hp);
-         
+
     }
 
     void Animation()

@@ -18,12 +18,18 @@ public class ToHostileArea1 : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
     {
+        GameObject NM = GameObject.FindGameObjectWithTag("NetworkManager");
+        //NM.GetComponent<NewNetworkManager>().ServerChangeScene("Hostile Area 1");
         if (!enabled)
         {
             return;
         }
 
         Debug.Log("Hostile Area 1 Scene starts");
-        if (other.gameObject.tag == "Player") SceneManager.LoadScene("Hostile Area 1");
+        if (other.gameObject.tag == "Player")
+        {
+            NM.GetComponent<NewNetworkManager>().ServerChangeScene("Hostile Area 1");
+            NM.GetComponent<NewNetworkManager>().OnServerSceneChanged("Hostile Area 1");
+        }
     }
 }
